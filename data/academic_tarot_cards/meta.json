@@ -1,0 +1,64 @@
+{
+  "id": "academic_tarot_cards",
+  "title": "Academic Tarot Cards box",
+  "category": "object",
+  "tags": [
+    "box",
+    "packaging",
+    "cardboard",
+    "print",
+    "indoor",
+    "boxy"
+  ],
+  "author": "Marcel Padilla",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "added": "2026-07-17",
+  "file": "academic_tarot_cards.splat",
+  "thumbnail": "thumb.jpg",
+  "format": "splat",
+  "splats": 114865,
+  "bytes": 3675680,
+  "sha256": "7d7afbd5e2d03a1061febb4218195a0e0d203bb93e07801a094c90d9985068fe",
+  "spherical_harmonics": false,
+  "geometry": {
+    "extent": [
+      1.5545,
+      1.9702,
+      1.5692
+    ],
+    "up_axis": "-y",
+    "units": "COLMAP reconstruction scale, not metric"
+  },
+  "capture": {
+    "date": "2026-07-15",
+    "device": "Google Pixel 5",
+    "video": "4K 60fps, portrait, ~50 s handheld orbit",
+    "surface": "irregular dotted mat (texture for COLMAP feature matching)",
+    "object_pose": "standing upright"
+  },
+  "pipeline": {
+    "frames": 190,
+    "poses": "COLMAP 4.1 (GPU), 190/190 images registered, 142680 sparse points",
+    "training": "Brush (built from main), 30000 iters, 500k splat cap, 647 s"
+  },
+  "editing": {
+    "tool": "SuperSplat (manual)",
+    "steps": [
+      "cropped from the 500k full scene to the object alone",
+      "recolored (RGBA-only change; positions/scales/rotations unchanged)",
+      "trimmed 101 stretched floater splats (max splat scale 0.61 -> 0.32)"
+    ]
+  },
+  "quality": {
+    "psnr": 25.97,
+    "ssim": 0.906
+  },
+  "caveats": [
+    "Colors are NOT colorimetrically faithful to the physical object: the lineage includes a manual recolor step that altered RGBA only. Geometry is unaltered.",
+    "Spherical harmonics were dropped (SH degree 0), so there is no view-dependent shading.",
+    "Scale is the COLMAP reconstruction scale and is not metric.",
+    "The source video and the trained 500k .ply were deleted, so this file cannot be regenerated."
+  ],
+  "known_gaps": []
+}

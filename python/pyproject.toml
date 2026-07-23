@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "padillasplats"
+version = "0.1.0"
+description = "Load Marcel Padilla's hand-cleaned Gaussian splat collection in one line."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "0BSD"
+license-files = ["LICENSE"]
+authors = [{ name = "Marcel Padilla" }]
+keywords = ["gaussian-splatting", "3dgs", "splat", "dataset", "3d", "geometry"]
+dependencies = ["numpy>=1.20"]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Multimedia :: Graphics :: 3D Rendering",
+  "Topic :: Scientific/Engineering :: Image Processing",
+]
+
+[project.urls]
+Homepage = "https://github.com/marcelpadilla/splats"
+Source = "https://github.com/marcelpadilla/splats"
+Issues = "https://github.com/marcelpadilla/splats/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/padillasplats"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "LICENSE", "pyproject.toml"]

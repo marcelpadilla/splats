@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "name": "splats",
+  "description": "A small, hand-cleaned collection of everyday objects scanned as 3D Gaussian splats.",
+  "homepage": "https://github.com/marcelpadilla/splats",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "Marcel Padilla",
+  "base_url": "https://raw.githubusercontent.com/marcelpadilla/splats/main/data/",
+  "updated": "2026-07-23",
+  "categories": [
+    "object",
+    "scene"
+  ],
+  "objects": [
+    {
+      "id": "plant",
+      "title": "Houseplant",
+      "category": "object",
+      "tags": [
+        "plant",
+        "houseplant",
+        "foliage",
+        "organic",
+        "indoor",
+        "glossy"
+      ],
+      "file": "plant/plant.splat",
+      "thumbnail": "plant/thumb.jpg",
+      "meta": "plant/meta.json",
+      "splats": 113648,
+      "bytes": 3636736,
+      "sha256": "5abd7cbcf15393533d66a701aec6ef51d42bd4267b7c8b485538d6bdfac36c00",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "extent": [
+        1.312,
+        2.5367,
+        1.5468
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-4.0",
+      "author": "Marcel Padilla",
+      "added": "2026-07-23"
+    },
+    {
+      "id": "academic_tarot_cards",
+      "title": "Academic Tarot Cards box",
+      "category": "object",
+      "tags": [
+        "box",
+        "packaging",
+        "cardboard",
+        "print",
+        "indoor",
+        "boxy"
+      ],
+      "file": "academic_tarot_cards/academic_tarot_cards.splat",
+      "thumbnail": "academic_tarot_cards/thumb.jpg",
+      "meta": "academic_tarot_cards/meta.json",
+      "splats": 114865,
+      "bytes": 3675680,
+      "sha256": "7d7afbd5e2d03a1061febb4218195a0e0d203bb93e07801a094c90d9985068fe",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "extent": [
+        1.5545,
+        1.9702,
+        1.5692
+      ],
+      "psnr": 25.97,
+      "ssim": 0.906,
+      "license": "CC-BY-4.0",
+      "author": "Marcel Padilla",
+      "added": "2026-07-17"
+    }
+  ]
+}
