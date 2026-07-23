@@ -1,0 +1,66 @@
+name: release
+
+# Publishes padillasplats to PyPI using a Trusted Publisher, so there is no API
+# token stored anywhere: GitHub's OIDC identity proves to PyPI that this exact
+# workflow, in this exact repository, is the one allowed to upload.
+#
+# The matching PyPI configuration (Your account -> Publishing) is:
+#   PyPI Project Name  padillasplats
+#   Owner              marcelpadilla
+#   Repository name    splats
+#   Workflow name      release.yml
+#   Environment name   pypi
+#
+# Triggered by publishing a GitHub Release. Bump the version in
+# python/pyproject.toml first: PyPI refuses to overwrite an existing version.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: build distributions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Refuse to ship a wheel whose bundled inventory has drifted from the data.
+      - name: Check the inventory is in sync
+        run: |
+          python python/sync_inventory.py
+          git diff --exit-code
+
+      - name: Build wheel and sdist
+        run: |
+          python -m pip install --upgrade pip build
+          python -m build python
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: python/dist/
+
+  pypi-publish:
+    name: upload to PyPI
+    needs: build
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      # Mandatory for Trusted Publishing. Nothing else is needed, and no
+      # username, password or token is set anywhere in this workflow.
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          # The publish action defaults to dist/, so land the files there.
+          path: dist/
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
