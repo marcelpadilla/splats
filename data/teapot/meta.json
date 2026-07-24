@@ -1,0 +1,81 @@
+{
+  "id": "teapot",
+  "title": "Utah Teapot",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "teapot",
+    "utah",
+    "classic",
+    "newell"
+  ],
+  "license": "Public Domain",
+  "license_url": null,
+  "author": "Martin Newell (University of Utah)",
+  "attribution": "Utah teapot, Martin Newell, University of Utah, 1975 (public domain).",
+  "license_open": true,
+  "source_mesh": "Utah teapot (Newell, 1975)",
+  "added": "2026-07-24",
+  "file": "teapot_500k.splat",
+  "thumbnail": "thumb.jpg",
+  "format": "splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "c67778bd2d74f7d6630f625fd0d748dd89908aaa3d5abf1007f98ea9c9bd98b6",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "082b8253cc625425ab68cae60a54383c910e0ad782fa04d257ec3f02e3885074",
+      "file": "teapot_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "d1ada48148b8e4e5d25b287a8a66a862278f03cd75420101631cb6a486afe92f",
+      "file": "teapot_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "c67778bd2d74f7d6630f625fd0d748dd89908aaa3d5abf1007f98ea9c9bd98b6",
+      "file": "teapot_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "7d365087b83fdd3166e41cac6ae878fd9c461af79d6a092d12f78bdbcacb6f34",
+      "file": "teapot_1m.splat"
+    }
+  ],
+  "geometry": {
+    "extent": [
+      1.9991,
+      0.9791,
+      1.2432
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "Utah teapot (Newell, 1975)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

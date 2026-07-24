@@ -1,0 +1,55 @@
+{
+  "id": "textile_ball",
+  "title": "Textile ball",
+  "category": "object",
+  "source_method": "capture",
+  "tags": [
+    "ball",
+    "textile",
+    "fabric",
+    "sphere",
+    "decor",
+    "bumpy"
+  ],
+  "author": "Marcel Padilla",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "added": "2026-07-24",
+  "file": "textile_ball.splat",
+  "thumbnail": "thumb.jpg",
+  "format": "splat",
+  "splats": 384589,
+  "bytes": 12306848,
+  "sha256": "5e92877d80cf01a0f7032fc5e0546cc43a84c7841557a60aac6a7b95874c01c6",
+  "spherical_harmonics": false,
+  "geometry": {
+    "extent": [1.3438, 1.3944, 1.3317],
+    "up_axis": "-y",
+    "units": "COLMAP reconstruction scale, not metric"
+  },
+  "capture": {
+    "date": "2026-07",
+    "device": "phone, handheld orbit",
+    "surface": "speckle mat (texture for COLMAP feature matching)",
+    "object_pose": "resting on the mat"
+  },
+  "pipeline": {
+    "poses": "COLMAP 4.1 (GPU)",
+    "training": "Brush (built from main), 30000 iters, 500k splat cap"
+  },
+  "editing": {
+    "tool": "SuperSplat (manual)",
+    "steps": [
+      "cropped to the object alone, then recentred on its bounding box"
+    ]
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Spherical harmonics were dropped (SH degree 0), so there is no view-dependent shading.",
+    "Scale is the COLMAP reconstruction scale and is not metric.",
+    "The exact source capture is not pinned, so quality metrics are unset."
+  ]
+}

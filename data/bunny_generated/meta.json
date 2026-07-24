@@ -1,0 +1,46 @@
+{
+  "id": "bunny_generated",
+  "title": "Stanford bunny (generated)",
+  "category": "object",
+  "source_method": "image-to-3d-generation",
+  "tags": [
+    "bunny",
+    "stanford-bunny",
+    "generated",
+    "ai",
+    "test-model",
+    "single-image"
+  ],
+  "author": "Marcel Padilla",
+  "license": "As-is (no warranty)",
+  "license_open": false,
+  "attribution": "Input derived from the Stanford Bunny STL by Makerbot (via Wikimedia Commons, File:Stanford_Bunny.stl), CC BY 3.0.",
+  "added": "2026-07-24",
+  "file": "bunny_generated.splat",
+  "thumbnail": "thumb.jpg",
+  "format": "splat",
+  "splats": 262144,
+  "bytes": 8388608,
+  "sha256": "5b06c57f1d0b7437c15a06d3434593e9508ea02298d9aa74b3691046c0b3b2c8",
+  "spherical_harmonics": false,
+  "geometry": {
+    "extent": [0.8213, 1.0007, 0.9918],
+    "up_axis": "-y",
+    "units": "model output units, not metric"
+  },
+  "generation": {
+    "model": "TripoSplat (VAST-AI-Research), MIT weights",
+    "input": "one rendered view of the bunny_render object (a matte, textured Blender frame)",
+    "params": "steps 20, guidance 3.0, seed 42, 262144 gaussians",
+    "note": "companion to bunny_render: same object, made by image-to-3d generation instead of render+train. A better-lit textured input than a plain grey render, so the colour survives."
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "GENERATED, not a photographic capture: one rendered view in, a whole object out. The unseen hemisphere is invented, and colour on the back is muddier.",
+    "Its input was a render of a CC BY 3.0 mesh (credit Makerbot as above), but the model invents geometry from an undisclosed corpus, so the output is released as-is, with no warranty of rights (NOT under CC-BY).",
+    "Spherical harmonics dropped; scale is not metric; no ground truth, so no PSNR/SSIM."
+  ]
+}

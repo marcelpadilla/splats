@@ -1,0 +1,48 @@
+{
+  "id": "bunny_render",
+  "title": "Stanford bunny (rendered)",
+  "category": "object",
+  "source_method": "synthetic-render",
+  "tags": [
+    "bunny",
+    "stanford-bunny",
+    "rendered",
+    "synthetic",
+    "test-model"
+  ],
+  "author": "Marcel Padilla",
+  "license": "CC-BY-3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "attribution": "Derived from the Stanford Bunny STL by Makerbot (via Wikimedia Commons, File:Stanford_Bunny.stl), CC BY 3.0.",
+  "added": "2026-07-24",
+  "file": "bunny_render.splat",
+  "thumbnail": "thumb.jpg",
+  "format": "splat",
+  "splats": 185964,
+  "bytes": 5950848,
+  "sha256": "aee426bf8f07d40e6a6cc8e1d850f1f94657034ff066568640615911c0d2aa32",
+  "spherical_harmonics": false,
+  "geometry": {
+    "extent": [1.9924, 1.9959, 1.6234],
+    "up_axis": "-y",
+    "units": "render units (mesh normalized so its longest axis = 2.0), not metric"
+  },
+  "render": {
+    "tool": "Blender 5.1 (Cycles) -> Brush, no COLMAP",
+    "input_mesh": "Wikimedia Commons File:Stanford_Bunny.stl (CC BY 3.0, Makerbot)",
+    "views": 160,
+    "resolution": 800,
+    "poses": "known camera-to-world (NeRF transforms.json), so structure-from-motion is skipped",
+    "material": "matte, high-frequency procedural texture (a scanning target)",
+    "training": "Brush (from main), 30000 iters, 500k cap, alpha-mode transparent"
+  },
+  "quality": {
+    "psnr": 42.66,
+    "ssim": 0.9964
+  },
+  "caveats": [
+    "SYNTHETIC, not a photographic capture: a known mesh rendered from known poses and reconstructed as a splat. Geometry and appearance are exact (not invented), but this is a render, not a real scene.",
+    "Licensed CC-BY-3.0 (not 4.0) because it is a derivative of a CC BY 3.0 mesh; credit Makerbot as above.",
+    "The colourful texture is a deliberate scanning target (matte, high-frequency), chosen so reconstruction is crisp, not for realism."
+  ]
+}

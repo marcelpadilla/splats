@@ -1,0 +1,79 @@
+{
+  "id": "ring",
+  "title": "Ring",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "primitive",
+    "ring",
+    "torus"
+  ],
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "\u2014",
+  "attribution": "Geometric primitive (CC0).",
+  "source_mesh": "primitive",
+  "added": "2026-07-24",
+  "file": "ring_500k.splat",
+  "thumbnail": "thumb.jpg",
+  "format": "splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "da274bd6847f6f21d7b3c6c5ed78daffbd58425e70485f2d83492ddb6bab5a22",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "92a357a714c6e1ef2c72552ceb97e5fae5764241a6ec51fc459ab68f0ee7c106",
+      "file": "ring_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "1da00a04bab5674953114113a63d115cf7c6c2c283aee642e91c64d43fdcc670",
+      "file": "ring_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "da274bd6847f6f21d7b3c6c5ed78daffbd58425e70485f2d83492ddb6bab5a22",
+      "file": "ring_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "831c684b23a19455280a42099e35f248f0f4976e5a1c69a2af5bd29de75edf74",
+      "file": "ring_1m.splat"
+    }
+  ],
+  "geometry": {
+    "extent": [
+      1.9999,
+      0.7232,
+      0.179
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "primitive",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

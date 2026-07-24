@@ -1,0 +1,81 @@
+{
+  "id": "spot",
+  "title": "Spot",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "cow",
+    "keenan-crane",
+    "classic",
+    "test-model",
+    "cute"
+  ],
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "Keenan Crane",
+  "attribution": "\u201cSpot\u201d by Keenan Crane, CC0 (public domain).",
+  "source_mesh": "Keenan Crane 3D Model Repository (https://www.cs.cmu.edu/~kmcrane/Projects/ModelRepository/)",
+  "added": "2026-07-24",
+  "file": "spot_500k.splat",
+  "thumbnail": "thumb.jpg",
+  "format": "splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "7fe53991da29828e152de0b071dacdc7ced02cb3fc1ca7081176c2629ba47c9b",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "de156f9c4c27c05ed0b03a6541afc140079e81239dac5caa486def1eed501d9e",
+      "file": "spot_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "cef4dcfff12ee0ebd1a943c9e1ab705822116d21fcd4e85efd3da0a371348b4a",
+      "file": "spot_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "7fe53991da29828e152de0b071dacdc7ced02cb3fc1ca7081176c2629ba47c9b",
+      "file": "spot_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "410eaa59225a850a4080974fbcbf04ec7efcc215932d3669494095476f51ef96",
+      "file": "spot_1m.splat"
+    }
+  ],
+  "geometry": {
+    "extent": [
+      1.0957,
+      1.9674,
+      1.9996
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "Keenan Crane 3D Model Repository (https://www.cs.cmu.edu/~kmcrane/Projects/ModelRepository/)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

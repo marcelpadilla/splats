@@ -1,0 +1,45 @@
+{
+  "id": "plant_generated",
+  "title": "Houseplant (generated)",
+  "category": "object",
+  "source_method": "image-to-3d-generation",
+  "tags": [
+    "plant",
+    "houseplant",
+    "foliage",
+    "generated",
+    "ai",
+    "single-image"
+  ],
+  "author": "Marcel Padilla",
+  "license": "As-is (no warranty)",
+  "license_open": false,
+  "added": "2026-07-24",
+  "file": "plant_generated.splat",
+  "thumbnail": "thumb.jpg",
+  "format": "splat",
+  "splats": 262144,
+  "bytes": 8388608,
+  "sha256": "03bbe15131f87742c00574c766fab19324f8a133a52435ae50da674bec360c81",
+  "spherical_harmonics": false,
+  "geometry": {
+    "extent": [0.6251, 1.0009, 0.7572],
+    "up_axis": "-y",
+    "units": "model output units, not metric"
+  },
+  "generation": {
+    "model": "TripoSplat (VAST-AI-Research), MIT weights",
+    "input": "a single photo the author took (first frame of the plant4 capture)",
+    "params": "steps 20, guidance 3.0, seed 42, 262144 gaussians",
+    "renamed_from": "plant_triposplat"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "GENERATED, not a photographic capture: one image in, a whole object out. The unseen hemisphere is invented, not measured, so there is no ground truth and no PSNR/SSIM.",
+    "Made with an open (MIT-weighted) model from the author's own photo. The model's training corpus is undisclosed, so this is released as-is, with no warranty of rights (NOT under CC-BY): you clear any rights for your use.",
+    "Spherical harmonics dropped; scale is not metric."
+  ]
+}

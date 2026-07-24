@@ -39,9 +39,10 @@ RAW = "https://raw.githubusercontent.com/marcelpadilla/splats/main/data/"
 # How each source_method reads in the human-facing "Type" column, combined with
 # category so a reader sees both what it is and how it was made in one phrase.
 METHOD_WORD = {
-    "capture": "Captured",
+    "capture": "Scanned",
     "image-to-3d-generation": "Generated",
     "synthetic-render": "Rendered",
+    "mesh2splat": "Geometry",
 }
 
 
@@ -54,35 +55,53 @@ def approx_count(n: int) -> str:
     return f"~{n // 1000}k" if n >= 1000 else str(n)
 
 
-def type_label(o: dict) -> str:
-    """e.g. 'Captured object', 'Generated object', 'Rendered scene'."""
-    word = METHOD_WORD.get(o.get("source_method", ""), o.get("source_method", "?"))
-    return f"{word} {o.get('category', '')}".strip()
+def source_word(o: dict) -> str:
+    """How the object was made: Scanned / Generated / Rendered."""
+    return METHOD_WORD.get(o.get("source_method", ""), o.get("source_method", "?"))
+
+
+def kind_word(o: dict) -> str:
+    """Object or Scene (everything is an object for now)."""
+    return (o.get("category", "") or "").capitalize()
 
 
 def gallery(doc: dict) -> str:
+    # Two dedicated columns: Source (how it was made) and Kind (object/scene).
     rows = [
-        "| | Object | Type | Size | Download |",
-        "|---|---|---|--:|:--:|",
+        "| | Object | Source | Kind | Size | Download |",
+        "|---|---|---|---|--:|:--:|",
     ]
     for o in doc["objects"]:
         name = (
             f"**{o['title']}**<br><sub>`{o['id']}`</sub>"
             f"<br><sub>{', '.join(o.get('tags', []))}</sub>"
         )
-        size = f"{approx_count(o['splats'])} · {human_size(o['bytes'])}"
+        # License sits under the source word, so how it was made and what you may
+        # do with it read together. Generated objects flag their as-is notice here.
+        source = f"{source_word(o)}<br><sub>{o.get('license', '')}</sub>"
+        # A multi-LOD object lists every tier (count + size) and a download link per
+        # level; a single-file object keeps the one size and one link.
+        if o.get("lods"):
+            size = "<br>".join(
+                f"{approx_count(l['splats'])} · {human_size(l['bytes'])}" for l in o["lods"])
+            links = " · ".join(f"[{l['lod']}]({RAW}{l['file']})" for l in o["lods"])
+            download = f"{links}<br><sub>[meta](data/{o['meta']})</sub>"
+        else:
+            size = f"{approx_count(o['splats'])} · {human_size(o['bytes'])}"
+            download = f"[.splat]({RAW}{o['file']}) · [meta](data/{o['meta']})"
         rows.append(
             f"| <img src=\"data/{o['thumbnail']}\" width=\"220\"> | {name} | "
-            f"{type_label(o)} | {size} | "
-            f"[.splat]({RAW}{o['file']}) · [meta](data/{o['meta']}) |"
+            f"{source} | {kind_word(o)} | {size} | {download} |"
         )
     n = len(doc["objects"])
     total_g = sum(o["splats"] for o in doc["objects"])
     total_b = sum(o["bytes"] for o in doc["objects"])
+    licenses = sorted({o.get("license", "CC-BY-4.0") for o in doc["objects"]})
+    lic = licenses[0] if len(licenses) == 1 else "licenses per object (see Source)"
     rows.append("")
     rows.append(
         f"<sub>{n} object{'s' if n != 1 else ''} · {approx_count(total_g)} gaussians · "
-        f"{human_size(total_b)} total · every splat CC-BY-4.0</sub>"
+        f"{human_size(total_b)} total · {lic}</sub>"
     )
     return "\n".join(rows)
 

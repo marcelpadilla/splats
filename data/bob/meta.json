@@ -1,0 +1,80 @@
+{
+  "id": "bob",
+  "title": "Bob",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "blob",
+    "keenan-crane",
+    "classic",
+    "test-model"
+  ],
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "Keenan Crane",
+  "attribution": "\u201cBob\u201d by Keenan Crane, CC0 (public domain).",
+  "source_mesh": "Keenan Crane 3D Model Repository (https://www.cs.cmu.edu/~kmcrane/Projects/ModelRepository/)",
+  "added": "2026-07-24",
+  "file": "bob_500k.splat",
+  "thumbnail": "thumb.jpg",
+  "format": "splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "9c9b8a286f0ad3c70e2f59feec59ddf306b26d51e4cc66913098aa0865b9235c",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "dba264d15ce6a6f311c18077cd1fedbcd66135a78d56e2a674016d69cb5ef5cc",
+      "file": "bob_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "38b3ee76c48ee3ec72191b8f3f11ef02dda7bd01ad69f3328a6315b2c6a60e6e",
+      "file": "bob_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "9c9b8a286f0ad3c70e2f59feec59ddf306b26d51e4cc66913098aa0865b9235c",
+      "file": "bob_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "403764914b6e97a3f262a6e242b9678ef3b2331396575edb000e08460de95f4e",
+      "file": "bob_1m.splat"
+    }
+  ],
+  "geometry": {
+    "extent": [
+      1.9999,
+      1.0478,
+      1.5766
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "Keenan Crane 3D Model Repository (https://www.cs.cmu.edu/~kmcrane/Projects/ModelRepository/)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}
