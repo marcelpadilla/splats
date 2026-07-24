@@ -26,10 +26,23 @@ instant. Nothing downloads until you load.
 
 ```python
 ps.find(category="object", min_splats=100_000)
+ps.find(source_method="capture")   # real scans only, not generated
 ps.find(tags=["plant"])
 ps.find(has_quality=True)          # only objects carrying PSNR and SSIM
-ps.tags(); ps.categories()
+ps.tags(); ps.categories(); ps.source_methods()
 ```
+
+Every object carries a `category` (`object` or `scene`, what it is) and a
+`source_method` (how it was made). `ps.source_methods()` lists them:
+
+| `source_method` | meaning |
+|---|---|
+| `capture` | real photogrammetry: a phone video reconstructed with COLMAP + Brush |
+| `image-to-3d-generation` | a generative model invented it from a single image |
+| `synthetic-render` | trained from renders of a known 3D asset |
+
+Keeping real scans apart from generated ones usually matters for how a splat may
+be used, so it is a first-class filter.
 
 Loop over a selection, downloading one at a time:
 
@@ -65,6 +78,13 @@ Plus `len(s)`, `s.rgb`, `s.opacity`, `s.bounds()`.
 Up is `-y`, following the Inria and Brush convention. Scale is the COLMAP
 reconstruction scale and is not metric. Spherical harmonics are dropped, so
 there is no view-dependent shading.
+
+## Citing
+
+```python
+print(ps.citation())          # BibTeX
+print(ps.citation("text"))    # one-line plain text
+```
 
 ## Caching and safety
 

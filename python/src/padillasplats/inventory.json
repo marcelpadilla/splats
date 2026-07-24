@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "name": "splats",
   "description": "A small, hand-cleaned collection of everyday objects scanned as 3D Gaussian splats.",
   "homepage": "https://github.com/marcelpadilla/splats",
@@ -7,16 +7,27 @@
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "Marcel Padilla",
   "base_url": "https://raw.githubusercontent.com/marcelpadilla/splats/main/data/",
-  "updated": "2026-07-23",
+  "zip_url": "https://github.com/marcelpadilla/splats/archive/refs/heads/main.zip",
+  "updated": "2026-07-24",
   "categories": [
     "object",
     "scene"
   ],
+  "source_methods": [
+    "capture",
+    "image-to-3d-generation",
+    "synthetic-render"
+  ],
+  "citation": {
+    "bibtex": "@misc{padilla_splats,\n  author       = {Marcel Padilla},\n  title        = {splats: a small collection of Gaussian splat objects},\n  year         = {2026},\n  howpublished = {\\url{https://github.com/marcelpadilla/splats}}\n}",
+    "text": "Marcel Padilla. splats: a small collection of Gaussian splat objects. 2026. https://github.com/marcelpadilla/splats"
+  },
   "objects": [
     {
       "id": "plant",
       "title": "Houseplant",
       "category": "object",
+      "source_method": "capture",
       "tags": [
         "plant",
         "houseplant",
@@ -48,6 +59,7 @@
       "id": "academic_tarot_cards",
       "title": "Academic Tarot Cards box",
       "category": "object",
+      "source_method": "capture",
       "tags": [
         "box",
         "packaging",

@@ -33,11 +33,34 @@ def test_ids_nonempty():
 
 def test_every_record_has_required_fields():
     for r in ps.inventory():
-        for key in ("id", "title", "category", "file", "sha256", "splats", "bytes", "license"):
+        for key in ("id", "title", "category", "source_method", "file", "sha256",
+                    "splats", "bytes", "license"):
             assert key in r, f"{r.get('id')} is missing {key!r}"
         assert r["category"] in ps.categories()
+        assert r["source_method"] in ps.source_methods()
         assert len(r["sha256"]) == 64
         assert r["splats"] * 32 == r["bytes"], "a .splat is exactly 32 bytes per gaussian"
+
+
+def test_source_method_filter():
+    everything = ps.inventory()
+    methods = ps.source_methods()
+    assert methods, "expected at least one source method"
+    covered = 0
+    for m in methods:
+        got = ps.find(source_method=m)
+        assert all(r["source_method"] == m for r in got)
+        covered += len(got)
+    assert covered == len([r for r in everything if r.get("source_method")])
+    assert ps.find(source_method="no-such-method") == []
+
+
+def test_citation():
+    bib = ps.citation()
+    assert "@" in bib and "padilla" in bib.lower()
+    assert ps.citation("text")
+    with pytest.raises(ValueError):
+        ps.citation("markdown")
 
 
 def test_get_and_missing():

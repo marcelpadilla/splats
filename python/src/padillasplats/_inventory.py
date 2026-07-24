@@ -71,6 +71,7 @@ def get(obj_id: str) -> Record:
 def find(
     *,
     category: Optional[str] = None,
+    source_method: Optional[str] = None,
     tags: Optional[Sequence[str]] = None,
     match_any_tag: bool = False,
     min_splats: Optional[int] = None,
@@ -81,10 +82,16 @@ def find(
 ) -> List[Record]:
     """Select objects by inventory conditions. Every argument is optional.
 
-    ``category`` is ``"object"`` or ``"scene"``. ``tags`` requires all of the
-    given tags by default, or any of them with ``match_any_tag=True``.
-    ``has_quality=True`` keeps only objects that carry PSNR and SSIM numbers,
-    which is what you want when the metrics are part of your experiment.
+    ``category`` is ``"object"`` or ``"scene"`` (what the thing is).
+    ``source_method`` is how the splat was made, one of ``"capture"`` (real
+    photogrammetry from a video), ``"image-to-3d-generation"`` (a generative
+    model invented it from an image) or ``"synthetic-render"`` (trained from
+    renders of a known 3D asset). Filter on it to keep real scans apart from
+    generated ones, which usually matters for how you may use them.
+    ``tags`` requires all of the given tags by default, or any of them with
+    ``match_any_tag=True``. ``has_quality=True`` keeps only objects that carry
+    PSNR and SSIM numbers, which is what you want when the metrics are part of
+    your experiment.
     """
     out = objects()
     if ids_ is not None:
@@ -92,6 +99,8 @@ def find(
         out = [o for o in out if o["id"] in want]
     if category is not None:
         out = [o for o in out if o.get("category") == category]
+    if source_method is not None:
+        out = [o for o in out if o.get("source_method") == source_method]
     if tags:
         want = set(tags)
         if match_any_tag:
@@ -122,3 +131,26 @@ def tags() -> List[str]:
 def categories() -> List[str]:
     """Every category the collection declares."""
     return list(_bundled().get("categories", []))
+
+
+def source_methods() -> List[str]:
+    """Every way a splat here was made, e.g. ``capture``, ``synthetic-render``."""
+    doc = _bundled()
+    declared = doc.get("source_methods")
+    if declared:
+        return list(declared)
+    # Older inventory without the field: read the values actually in use.
+    return sorted({o["source_method"] for o in doc["objects"] if o.get("source_method")})
+
+
+def citation(fmt: str = "bibtex") -> str:
+    """How to cite the collection. ``fmt`` is ``"bibtex"`` or ``"text"``."""
+    c = _bundled().get("citation") or {}
+    if fmt not in ("bibtex", "text"):
+        raise ValueError("fmt must be 'bibtex' or 'text'")
+    value = c.get(fmt)
+    if value:
+        return value
+    # No citation block: fall back to a plain line built from dataset fields.
+    doc = _bundled()
+    return f"{doc.get('attribution', '')}. {doc.get('name', 'splats')}. {doc.get('homepage', '')}".strip()

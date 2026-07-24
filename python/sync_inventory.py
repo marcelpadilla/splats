@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Propagate data/inventory.json to everywhere else that repeats it.
 
-data/inventory.json is the single source of truth. Two places repeat it and both
-are generated from it here, so neither can drift:
+data/inventory.json is the single source of truth. Three places repeat it and
+all are generated from it here, so none can drift:
 
   1. src/padillasplats/inventory.json, the copy shipped in the wheel, which is
      what makes ids() and find() work offline.
   2. the gallery table in the root README, between the inventory markers.
+  3. the BibTeX block in the root README, between the citation markers.
 
 Run after adding or changing an object:
 
@@ -28,19 +29,35 @@ SRC = REPO / "data" / "inventory.json"
 PKG_COPY = HERE / "src" / "padillasplats" / "inventory.json"
 README = REPO / "README.md"
 
-START = "<!-- inventory:start -->"
-END = "<!-- inventory:end -->"
+INV_START = "<!-- inventory:start -->"
+INV_END = "<!-- inventory:end -->"
+CITE_START = "<!-- citation:start -->"
+CITE_END = "<!-- citation:end -->"
 
 RAW = "https://raw.githubusercontent.com/marcelpadilla/splats/main/data/"
+
+# How each source_method reads in the human-facing "Type" column, combined with
+# category so a reader sees both what it is and how it was made in one phrase.
+METHOD_WORD = {
+    "capture": "Captured",
+    "image-to-3d-generation": "Generated",
+    "synthetic-render": "Rendered",
+}
 
 
 def human_size(n: int) -> str:
     return f"{n / 1e6:.1f} MB" if n >= 1e6 else f"{n / 1e3:.0f} kB"
 
 
+def type_label(o: dict) -> str:
+    """e.g. 'Captured object', 'Generated object', 'Rendered scene'."""
+    word = METHOD_WORD.get(o.get("source_method", ""), o.get("source_method", "?"))
+    return f"{word} {o.get('category', '')}".strip()
+
+
 def gallery(doc: dict) -> str:
     rows = [
-        "| | Object | Category | Gaussians | Size | PSNR / SSIM | Download |",
+        "| | Object | Type | Gaussians | Size | PSNR / SSIM | Download |",
         "|---|---|---|--:|--:|:--:|:--:|",
     ]
     for o in doc["objects"]:
@@ -55,7 +72,7 @@ def gallery(doc: dict) -> str:
         )
         rows.append(
             f"| <img src=\"data/{o['thumbnail']}\" width=\"220\"> | {name} | "
-            f"{o['category']} | {o['splats']:,} | {human_size(o['bytes'])} | {quality} | "
+            f"{type_label(o)} | {o['splats']:,} | {human_size(o['bytes'])} | {quality} | "
             f"[.splat]({RAW}{o['file']}) · [meta](data/{o['meta']}) |"
         )
     n = len(doc["objects"])
@@ -67,6 +84,19 @@ def gallery(doc: dict) -> str:
         f"{human_size(total_b)} total</sub>"
     )
     return "\n".join(rows)
+
+
+def citation_block(doc: dict) -> str:
+    bib = (doc.get("citation") or {}).get("bibtex", "")
+    return "```bibtex\n" + bib + "\n```"
+
+
+def splice(text: str, start: str, end: str, body: str, what: str) -> str:
+    if start not in text or end not in text:
+        raise SystemExit(f"markers {start} / {end} not found in {README}")
+    head, rest = text.split(start, 1)
+    _, tail = rest.split(end, 1)
+    return f"{head}{start}\n{body}\n{end}{tail}"
 
 
 def main() -> int:
@@ -81,12 +111,8 @@ def main() -> int:
     print(f"{'unchanged' if was == SRC.read_bytes() else 'updated  '}  {PKG_COPY}")
 
     text = README.read_text(encoding="utf-8")
-    if START not in text or END not in text:
-        print(f"markers {START} / {END} not found in {README}", file=sys.stderr)
-        return 1
-    head, rest = text.split(START, 1)
-    _, tail = rest.split(END, 1)
-    new = f"{head}{START}\n{gallery(doc)}\n{END}{tail}"
+    new = splice(text, INV_START, INV_END, gallery(doc), "gallery")
+    new = splice(new, CITE_START, CITE_END, citation_block(doc), "citation")
     changed = new != text
     README.write_text(new, encoding="utf-8")
     print(f"{'updated  ' if changed else 'unchanged'}  {README}  "

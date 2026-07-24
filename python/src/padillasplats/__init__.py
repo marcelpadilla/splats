@@ -27,12 +27,13 @@ from ._fetch import fetch as _fetch_file
 from ._paths import cache_dir, check_id, clear_cache
 from ._splat import RECORD_BYTES, Splat, decode, load_file
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 __all__ = [
     "Splat",
     "cache_dir",
     "categories",
+    "citation",
     "clear_cache",
     "decode",
     "download",
@@ -45,6 +46,7 @@ __all__ = [
     "load_file",
     "path",
     "refresh_inventory",
+    "source_methods",
     "tags",
     "__version__",
 ]
@@ -79,9 +81,25 @@ def categories() -> List[str]:
     return _inventory.categories()
 
 
+def source_methods() -> List[str]:
+    """How the splats here were made: ``capture``, ``image-to-3d-generation``,
+    ``synthetic-render``. Filter on it with ``find(source_method=...)``."""
+    return _inventory.source_methods()
+
+
+def citation(fmt: str = "bibtex") -> str:
+    """How to cite the collection, as ``"bibtex"`` (default) or ``"text"``.
+
+        >>> print(ps.citation())
+        >>> print(ps.citation("text"))
+    """
+    return _inventory.citation(fmt)
+
+
 def find(
     *,
     category: Optional[str] = None,
+    source_method: Optional[str] = None,
     tags: Optional[Sequence[str]] = None,
     match_any_tag: bool = False,
     min_splats: Optional[int] = None,
@@ -93,11 +111,13 @@ def find(
     """Select objects by inventory conditions. Nothing is downloaded.
 
         >>> ps.find(category="object", min_splats=100_000)
+        >>> ps.find(source_method="capture")   # real scans only, not generated
         >>> ps.find(tags=["plant"])
         >>> ps.find(has_quality=True)          # only objects with PSNR and SSIM
     """
     return _inventory.find(
         category=category,
+        source_method=source_method,
         tags=tags,
         match_any_tag=match_any_tag,
         min_splats=min_splats,
