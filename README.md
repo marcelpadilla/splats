@@ -60,12 +60,12 @@ image, `synthetic-render` is trained from renders of a known 3D asset. The
 **Type** column below reads both at once.
 
 <!-- inventory:start -->
-| | Object | Type | Gaussians | Size | PSNR / SSIM | Download |
-|---|---|---|--:|--:|:--:|:--:|
-| <img src="data/plant/thumb.jpg" width="220"> | **Houseplant**<br><sub>`plant`</sub><br><sub>plant, houseplant, foliage, organic, indoor, glossy</sub> | Captured object | 113,648 | 3.6 MB | not measured | [.splat](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/plant/plant.splat) · [meta](data/plant/meta.json) |
-| <img src="data/academic_tarot_cards/thumb.jpg" width="220"> | **Academic Tarot Cards box**<br><sub>`academic_tarot_cards`</sub><br><sub>box, packaging, cardboard, print, indoor, boxy</sub> | Captured object | 114,865 | 3.7 MB | 25.97 / 0.906 | [.splat](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/academic_tarot_cards/academic_tarot_cards.splat) · [meta](data/academic_tarot_cards/meta.json) |
+| | Object | Type | Size | Download |
+|---|---|---|--:|:--:|
+| <img src="data/plant/thumb.jpg" width="220"> | **Houseplant**<br><sub>`plant`</sub><br><sub>plant, houseplant, foliage, organic, indoor, glossy</sub> | Captured object | ~113k · 3.6 MB | [.splat](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/plant/plant.splat) · [meta](data/plant/meta.json) |
+| <img src="data/academic_tarot_cards/thumb.jpg" width="220"> | **Academic Tarot Cards box**<br><sub>`academic_tarot_cards`</sub><br><sub>box, packaging, cardboard, print, indoor, boxy</sub> | Captured object | ~114k · 3.7 MB | [.splat](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/academic_tarot_cards/academic_tarot_cards.splat) · [meta](data/academic_tarot_cards/meta.json) |
 
-<sub>2 objects · 228,513 gaussians · 7.3 MB total</sub>
+<sub>2 objects · ~228k gaussians · 7.3 MB total · every splat CC-BY-4.0</sub>
 <!-- inventory:end -->
 
 The machine-readable index of all of this is

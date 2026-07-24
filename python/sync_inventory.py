@@ -49,6 +49,11 @@ def human_size(n: int) -> str:
     return f"{n / 1e6:.1f} MB" if n >= 1e6 else f"{n / 1e3:.0f} kB"
 
 
+def approx_count(n: int) -> str:
+    """Gaussian count, shown approximately in thousands (an exact count is noise)."""
+    return f"~{n // 1000}k" if n >= 1000 else str(n)
+
+
 def type_label(o: dict) -> str:
     """e.g. 'Captured object', 'Generated object', 'Rendered scene'."""
     word = METHOD_WORD.get(o.get("source_method", ""), o.get("source_method", "?"))
@@ -57,22 +62,18 @@ def type_label(o: dict) -> str:
 
 def gallery(doc: dict) -> str:
     rows = [
-        "| | Object | Type | Gaussians | Size | PSNR / SSIM | Download |",
-        "|---|---|---|--:|--:|:--:|:--:|",
+        "| | Object | Type | Size | Download |",
+        "|---|---|---|--:|:--:|",
     ]
     for o in doc["objects"]:
-        quality = (
-            f"{o['psnr']:.2f} / {o['ssim']:.3f}"
-            if o.get("psnr") is not None and o.get("ssim") is not None
-            else "not measured"
-        )
         name = (
             f"**{o['title']}**<br><sub>`{o['id']}`</sub>"
             f"<br><sub>{', '.join(o.get('tags', []))}</sub>"
         )
+        size = f"{approx_count(o['splats'])} · {human_size(o['bytes'])}"
         rows.append(
             f"| <img src=\"data/{o['thumbnail']}\" width=\"220\"> | {name} | "
-            f"{type_label(o)} | {o['splats']:,} | {human_size(o['bytes'])} | {quality} | "
+            f"{type_label(o)} | {size} | "
             f"[.splat]({RAW}{o['file']}) · [meta](data/{o['meta']}) |"
         )
     n = len(doc["objects"])
@@ -80,8 +81,8 @@ def gallery(doc: dict) -> str:
     total_b = sum(o["bytes"] for o in doc["objects"])
     rows.append("")
     rows.append(
-        f"<sub>{n} object{'s' if n != 1 else ''} · {total_g:,} gaussians · "
-        f"{human_size(total_b)} total</sub>"
+        f"<sub>{n} object{'s' if n != 1 else ''} · {approx_count(total_g)} gaussians · "
+        f"{human_size(total_b)} total · every splat CC-BY-4.0</sub>"
     )
     return "\n".join(rows)
 
