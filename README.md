@@ -1,11 +1,13 @@
 # splats
 
-A small, hand-cleaned collection of everyday objects scanned as 3D Gaussian splats, free to use.
+A small, hand-made collection of objects as 3D Gaussian splats, free to use.
 
-Every object here was captured, trained and cleaned by one person, so expect a
-handful of them rather than thousands. Each is a real capture with its real
-quirks, and each ships with its capture conditions, pipeline settings and known
-caveats written down next to it.
+Three ways of making one, in one place: everyday things **scanned** from a phone
+video, classic meshes converted straight **from geometry** at four resolutions,
+and a couple **generated** by an AI model from a single image. Everything here
+was made, cleaned and labelled by one person, so expect a handful of objects
+rather than thousands. Each ships with how it was made, its pipeline settings,
+its license and its known caveats written down next to it.
 
 [Browse in your browser](https://marcelpadilla.github.io/Projects/Gaussian_Splat_Object_Dataset/)
 &nbsp;·&nbsp;
@@ -41,9 +43,27 @@ ps.find(tags=["plant"])
 ps.download("./scans", open_license=True)   # local copies, safe licenses only
 ```
 
+The mesh-derived objects ship at **10k / 100k / 500k / 1M** gaussians, and every
+download path takes the tier you want, so you never assemble a URL:
+
+```python
+ps.load("lucy", lod="10k")                        # one object, small tier
+ps.find(source_method="mesh2splat", lod="10k")    # everything that has a 10k tier
+ps.download("./small", lod="min")                 # the smallest of each object
+ps.load_random(source_method="capture")           # or just give me one
+```
+
 Every object also carries its license, so you can stay on the safe side of the
-rights in one line: `open_license=True` drops the as-is generated objects (whose
-provenance is unsettled), and `ps.is_open_license("<id>")` checks a single one.
+rights in one line: `open_license=True` keeps only what has no condition
+attached, and `ps.is_open_license("<id>")` checks a single one.
+`print(ps.summary())` prints the whole picture.
+
+There is a command line too:
+
+```bash
+python -m padillasplats list --source mesh2splat --lod 10k
+python -m padillasplats get lucy --lod 1m
+```
 
 Full package docs: [python/README.md](python/README.md).
 
@@ -60,10 +80,15 @@ Full package docs: [python/README.md](python/README.md).
 
 Every object carries a **Kind** (`object` or `scene`, what it is) and a
 **Source** (how it was made): `capture` (Scanned) is real photogrammetry from a
-phone video, `synthetic-render` (Rendered) is trained from renders of a known 3D
-asset, and `image-to-3d-generation` (Generated) is invented by a model from a
-single image. The license sits under each Source, because it depends on how the
-object was made (see [Licensing](#licensing)).
+phone video, `mesh2splat` (Geometry) is converted directly from a known mesh with
+no photography and no training, `synthetic-render` (Rendered) is trained from
+renders of a known 3D asset, and `image-to-3d-generation` (Generated) is invented
+by a model from a single image. The license sits under each Source, because it
+depends on how the object was made (see [Licensing](#licensing)).
+
+Geometry objects list four levels of detail with a download link each; the colour
+of a mesh2splat object encodes its tier (10k red, 100k yellow, 500k green, 1M
+blue), so you can see at a glance which resolution you are looking at.
 
 <!-- inventory:start -->
 | | Object | Source | Kind | Size | Download |
@@ -74,14 +99,21 @@ object was made (see [Licensing](#licensing)).
 | <img src="data/plant_generated/thumb.jpg" width="220"> | **Houseplant (generated)**<br><sub>`plant_generated`</sub><br><sub>plant, houseplant, foliage, generated, ai, single-image</sub> | Generated<br><sub>As-is (no warranty)</sub> | Object | ~262k · 8.4 MB | [.splat](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/plant_generated/plant_generated.splat) · [meta](data/plant_generated/meta.json) |
 | <img src="data/bunny_render/thumb.jpg" width="220"> | **Stanford bunny (rendered)**<br><sub>`bunny_render`</sub><br><sub>bunny, stanford-bunny, rendered, synthetic, test-model</sub> | Rendered<br><sub>CC-BY-3.0</sub> | Object | ~185k · 6.0 MB | [.splat](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/bunny_render/bunny_render.splat) · [meta](data/bunny_render/meta.json) |
 | <img src="data/bunny_generated/thumb.jpg" width="220"> | **Stanford bunny (generated)**<br><sub>`bunny_generated`</sub><br><sub>bunny, stanford-bunny, generated, ai, test-model, single-image</sub> | Generated<br><sub>As-is (no warranty)</sub> | Object | ~262k · 8.4 MB | [.splat](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/bunny_generated/bunny_generated.splat) · [meta](data/bunny_generated/meta.json) |
-| <img src="data/spot/thumb.jpg" width="220"> | **Spot**<br><sub>`spot`</sub><br><sub>cow, keenan-crane, classic, test-model, cute</sub> | Geometry<br><sub>CC0-1.0</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1000k · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/spot/spot_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/spot/spot_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/spot/spot_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/spot/spot_1m.splat)<br><sub>[meta](data/spot/meta.json)</sub> |
-| <img src="data/bob/thumb.jpg" width="220"> | **Bob**<br><sub>`bob`</sub><br><sub>blob, keenan-crane, classic, test-model</sub> | Geometry<br><sub>CC0-1.0</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1000k · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/bob/bob_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/bob/bob_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/bob/bob_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/bob/bob_1m.splat)<br><sub>[meta](data/bob/meta.json)</sub> |
-| <img src="data/teapot/thumb.jpg" width="220"> | **Utah Teapot**<br><sub>`teapot`</sub><br><sub>teapot, utah, classic, newell</sub> | Geometry<br><sub>Public Domain</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1000k · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/teapot/teapot_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/teapot/teapot_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/teapot/teapot_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/teapot/teapot_1m.splat)<br><sub>[meta](data/teapot/meta.json)</sub> |
-| <img src="data/cylinder/thumb.jpg" width="220"> | **Cylinder**<br><sub>`cylinder`</sub><br><sub>primitive, cylinder</sub> | Geometry<br><sub>CC0-1.0</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1000k · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/cylinder/cylinder_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/cylinder/cylinder_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/cylinder/cylinder_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/cylinder/cylinder_1m.splat)<br><sub>[meta](data/cylinder/meta.json)</sub> |
-| <img src="data/torus/thumb.jpg" width="220"> | **Torus**<br><sub>`torus`</sub><br><sub>primitive, torus, donut</sub> | Geometry<br><sub>CC0-1.0</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1000k · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/torus/torus_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/torus/torus_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/torus/torus_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/torus/torus_1m.splat)<br><sub>[meta](data/torus/meta.json)</sub> |
-| <img src="data/ring/thumb.jpg" width="220"> | **Ring**<br><sub>`ring`</sub><br><sub>primitive, ring, torus</sub> | Geometry<br><sub>CC0-1.0</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1000k · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/ring/ring_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/ring/ring_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/ring/ring_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/ring/ring_1m.splat)<br><sub>[meta](data/ring/meta.json)</sub> |
+| <img src="data/spot/thumb.jpg" width="220"> | **Spot**<br><sub>`spot`</sub><br><sub>cow, keenan-crane, classic, test-model, cute</sub> | Geometry<br><sub>CC0-1.0</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1M · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/spot/spot_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/spot/spot_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/spot/spot_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/spot/spot_1m.splat)<br><sub>[meta](data/spot/meta.json)</sub> |
+| <img src="data/bob/thumb.jpg" width="220"> | **Bob**<br><sub>`bob`</sub><br><sub>blob, keenan-crane, classic, test-model</sub> | Geometry<br><sub>CC0-1.0</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1M · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/bob/bob_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/bob/bob_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/bob/bob_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/bob/bob_1m.splat)<br><sub>[meta](data/bob/meta.json)</sub> |
+| <img src="data/teapot/thumb.jpg" width="220"> | **Utah Teapot**<br><sub>`teapot`</sub><br><sub>teapot, utah, classic, newell</sub> | Geometry<br><sub>Public Domain</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1M · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/teapot/teapot_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/teapot/teapot_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/teapot/teapot_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/teapot/teapot_1m.splat)<br><sub>[meta](data/teapot/meta.json)</sub> |
+| <img src="data/cylinder/thumb.jpg" width="220"> | **Cylinder**<br><sub>`cylinder`</sub><br><sub>primitive, cylinder</sub> | Geometry<br><sub>CC0-1.0</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1M · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/cylinder/cylinder_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/cylinder/cylinder_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/cylinder/cylinder_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/cylinder/cylinder_1m.splat)<br><sub>[meta](data/cylinder/meta.json)</sub> |
+| <img src="data/torus/thumb.jpg" width="220"> | **Torus**<br><sub>`torus`</sub><br><sub>primitive, torus, donut</sub> | Geometry<br><sub>CC0-1.0</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1M · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/torus/torus_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/torus/torus_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/torus/torus_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/torus/torus_1m.splat)<br><sub>[meta](data/torus/meta.json)</sub> |
+| <img src="data/ring/thumb.jpg" width="220"> | **Ring**<br><sub>`ring`</sub><br><sub>primitive, ring, torus</sub> | Geometry<br><sub>CC0-1.0</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1M · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/ring/ring_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/ring/ring_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/ring/ring_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/ring/ring_1m.splat)<br><sub>[meta](data/ring/meta.json)</sub> |
+| <img src="data/stanford_bunny/thumb.jpg" width="220"> | **Stanford Bunny**<br><sub>`stanford_bunny`</sub><br><sub>bunny, stanford-bunny, classic, test-model</sub> | Geometry<br><sub>Stanford 3DSR (attribution)</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1M · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/stanford_bunny/stanford_bunny_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/stanford_bunny/stanford_bunny_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/stanford_bunny/stanford_bunny_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/stanford_bunny/stanford_bunny_1m.splat)<br><sub>[meta](data/stanford_bunny/meta.json)</sub> |
+| <img src="data/armadillo/thumb.jpg" width="220"> | **Armadillo**<br><sub>`armadillo`</sub><br><sub>armadillo, stanford, classic, test-model, organic</sub> | Geometry<br><sub>Stanford 3DSR (attribution)</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1M · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/armadillo/armadillo_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/armadillo/armadillo_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/armadillo/armadillo_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/armadillo/armadillo_1m.splat)<br><sub>[meta](data/armadillo/meta.json)</sub> |
+| <img src="data/dragon/thumb.jpg" width="220"> | **Stanford Dragon**<br><sub>`dragon`</sub><br><sub>dragon, stanford, classic, test-model, detailed</sub> | Geometry<br><sub>Stanford 3DSR (attribution)</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1M · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/dragon/dragon_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/dragon/dragon_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/dragon/dragon_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/dragon/dragon_1m.splat)<br><sub>[meta](data/dragon/meta.json)</sub> |
+| <img src="data/happy/thumb.jpg" width="220"> | **Happy Buddha**<br><sub>`happy`</sub><br><sub>buddha, happy-buddha, stanford, classic, test-model, detailed</sub> | Geometry<br><sub>Stanford 3DSR (attribution)</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1M · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/happy/happy_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/happy/happy_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/happy/happy_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/happy/happy_1m.splat)<br><sub>[meta](data/happy/meta.json)</sub> |
+| <img src="data/lucy/thumb.jpg" width="220"> | **Lucy**<br><sub>`lucy`</sub><br><sub>lucy, angel, statue, stanford, classic, test-model</sub> | Geometry<br><sub>Stanford 3DSR (attribution)</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1M · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/lucy/lucy_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/lucy/lucy_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/lucy/lucy_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/lucy/lucy_1m.splat)<br><sub>[meta](data/lucy/meta.json)</sub> |
+| <img src="data/xyzrgb_dragon/thumb.jpg" width="220"> | **XYZ RGB Dragon**<br><sub>`xyzrgb_dragon`</sub><br><sub>dragon, stanford, xyz-rgb, test-model, detailed, high-poly</sub> | Geometry<br><sub>Stanford 3DSR (attribution)</sub> | Object | ~10k · 320 kB<br>~100k · 3.2 MB<br>~500k · 16.0 MB<br>~1M · 32.0 MB | [10k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/xyzrgb_dragon/xyzrgb_dragon_10k.splat) · [100k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/xyzrgb_dragon/xyzrgb_dragon_100k.splat) · [500k](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/xyzrgb_dragon/xyzrgb_dragon_500k.splat) · [1m](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/xyzrgb_dragon/xyzrgb_dragon_1m.splat)<br><sub>[meta](data/xyzrgb_dragon/meta.json)</sub> |
+| <img src="data/shell/thumb.jpg" width="220"> | **Abalone shell**<br><sub>`shell`</sub><br><sub>shell, abalone, nacre, mother-of-pearl, iridescent, organic, natural</sub> | Scanned<br><sub>CC-BY-4.0</sub> | Object | ~187k · 6.0 MB | [.splat](https://raw.githubusercontent.com/marcelpadilla/splats/main/data/shell/shell.splat) · [meta](data/shell/meta.json) |
 
-<sub>12 objects · ~4323k gaussians · 138.3 MB total · licenses per object (see Source)</sub>
+<sub>19 objects · ~7.5M gaussians at the default level · 12 of them at four levels of detail · 666.6 MB for every file · licenses per object (see Source)</sub>
 <!-- inventory:end -->
 
 The machine-readable index of all of this is
@@ -133,14 +165,27 @@ in the table above, and in each object's `meta.json`):
 
 - **Scanned objects are [CC-BY-4.0](LICENSE).** Use them for anything, including
   commercially. You must credit the author.
-- **Rendered objects take the license of the 3D model they were rendered from.**
-  The rendered bunny is CC-BY-3.0 (Stanford Bunny STL by Makerbot, via Wikimedia
-  Commons); credit that original author as well.
+- **Geometry and rendered objects inherit the license of the mesh they came
+  from.** Converting a mesh to splats does not launder its license. Most are CC0
+  or public domain and ask for nothing (Spot and Bob by Keenan Crane, the Utah
+  teapot, the primitives). The rendered bunny is CC-BY-3.0 (Stanford Bunny STL by
+  Makerbot, via Wikimedia Commons); credit that author as well.
+- **The Stanford subset is free to use but is not Creative Commons.**
+  `stanford_bunny`, `armadillo`, `dragon`, `happy`, `lucy` and `xyzrgb_dragon`
+  come from the [Stanford 3D Scanning
+  Repository](http://graphics.stanford.edu/data/3Dscanrep/), which permits use
+  including in derivative and commercial work, but asks that you acknowledge the
+  source and do not misrepresent the data. Credit *Stanford University Computer
+  Graphics Laboratory* (and *XYZ RGB Inc.* for `xyzrgb_dragon`).
 - **Generated objects are provided as-is, with no warranty of rights.** They were
   invented by an AI image-to-3D model whose training data is undisclosed, so their
   copyright status cannot be warranted and they are **not under CC-BY**. You are
-  responsible for clearing any rights for your use. Filter them out with
-  `ps.find(open_license=True)`.
+  responsible for clearing any rights for your use.
+
+`ps.find(open_license=True)` keeps only what has no condition attached: the
+CC-licensed and public-domain objects, dropping the Stanford subset and the
+generated ones.
+
 - **The code in `python/` is [0BSD](python/LICENSE).** No attribution required.
 
 Credit line you can paste for a CC-BY object:
@@ -156,21 +201,26 @@ the industrial design of any object depicted.
 data/
   inventory.json          the machine-readable index, and the source of truth
   <id>/
-    <id>.splat            the gaussians
-    meta.json             capture, pipeline, quality, caveats
+    <id>.splat            the gaussians (a single-file object)
+    <id>_<lod>.splat      or one file per level of detail (10k/100k/500k/1m)
+    meta.json             provenance, pipeline, quality, caveats, every tier
     thumb.jpg             the gallery image above
 python/                   the padillasplats package
-LICENSE                   CC-BY-4.0, for the data
+LICENSE                   CC-BY-4.0, the license of the scanned objects
 ```
 
 ## Adding an object
 
-1. Put `data/<id>/<id>.splat`, its `meta.json` and a `thumb.jpg` in place.
-2. Add an entry to `data/inventory.json`, including its SHA-256, `category` and
-   `source_method`.
+1. Put `data/<id>/<id>.splat` (or one file per tier), its `meta.json` and a
+   `thumb.jpg` in place.
+2. Add an entry to `data/inventory.json`, including its SHA-256, `category`,
+   `source_method` and `license`. A multi-resolution object also lists every
+   tier under `lods` and names one in `default_lod`; the top-level
+   `file`/`splats`/`bytes`/`sha256` must be that tier's, not a fifth file.
 3. Run `python python/sync_inventory.py`, which refreshes the copy bundled in
    the package and regenerates the gallery and citation blocks above.
-4. Run `python -m pytest python/tests` to confirm the checksums and counts agree.
+4. Run `python -m pytest python/tests` to confirm the checksums and counts agree,
+   for every tier.
 
 The website reads `data/inventory.json` straight from this repository, and
 existing package installs pick up new objects with `ps.refresh_inventory()`, so

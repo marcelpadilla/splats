@@ -1,0 +1,64 @@
+{
+  "id": "shell",
+  "title": "Abalone shell",
+  "category": "object",
+  "source_method": "capture",
+  "tags": [
+    "shell",
+    "abalone",
+    "nacre",
+    "mother-of-pearl",
+    "iridescent",
+    "organic",
+    "natural"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "shell.splat",
+  "splats": 187643,
+  "bytes": 6004576,
+  "sha256": "886f386c0a1903bf360279d4def854c7356ffe41ad65ddd3b959c71db755e01c",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "license": "CC-BY-4.0",
+  "license_open": true,
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "Marcel Padilla",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      1.4615,
+      0.5698,
+      1.2365
+    ],
+    "up_axis": "-y",
+    "units": "COLMAP reconstruction scale of the parent capture, not metric"
+  },
+  "capture": {
+    "date": "2026-07-24",
+    "device": "phone, handheld orbit, 4K/60 landscape, 202 frames used",
+    "surface": "speckle mat (texture for COLMAP feature matching)",
+    "object_pose": "suspended on a bottle stand, so the orbit sees the underside too"
+  },
+  "pipeline": {
+    "poses": "COLMAP 4.1 (GPU), sequential matcher, 202/202 frames registered",
+    "training": "Brush (built from main), 30000 iters, 500k splat cap",
+    "frame": "canonical (object at the origin, up = -Y, first video frame's viewpoint on +Z)"
+  },
+  "editing": {
+    "tool": "SuperSplat (manual)",
+    "steps": [
+      "cropped to the object alone, then recentred on its bounding box"
+    ],
+    "parent_raw": "outbox/abalone_shell2_raw.splat"
+  },
+  "quality": {
+    "psnr": 29.08,
+    "ssim": 0.9362
+  },
+  "caveats": [
+    "Spherical harmonics were dropped (SH degree 0), so there is no view-dependent shading. That costs this object more than most: the nacre's iridescence IS view-dependent, so the colours are frozen at one viewing direction rather than shifting as you orbit.",
+    "Scale is the COLMAP reconstruction scale of the parent capture and is not metric.",
+    "A few residual gaussians float inside the concave side. 3D Gaussian splatting explains a specular concavity partly with floaters, and with SH dropped they stay as opaque flecks; the hand-crop removed the room but not these.",
+    "PSNR/SSIM are the parent capture's held-out evaluation at 30k iterations (abalone_shell2, 202/202 frames registered), not a measurement of this cropped file."
+  ]
+}

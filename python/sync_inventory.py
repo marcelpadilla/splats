@@ -51,8 +51,25 @@ def human_size(n: int) -> str:
 
 
 def approx_count(n: int) -> str:
-    """Gaussian count, shown approximately in thousands (an exact count is noise)."""
+    """Gaussian count, shown approximately (an exact count is noise to a reader)."""
+    if n >= 1_000_000:
+        return f"~{n / 1e6:.1f}M".replace(".0M", "M")
     return f"~{n // 1000}k" if n >= 1000 else str(n)
+
+
+def object_bytes(o: dict) -> int:
+    """Every byte an object ships, which for a multi-tier object is all its tiers.
+
+    The footer used to sum only the default tier, which understated the download
+    by more than half once the mesh objects arrived at four resolutions each.
+    """
+    return sum(l["bytes"] for l in o["lods"]) if o.get("lods") else o["bytes"]
+
+
+def object_gaussians(o: dict) -> int:
+    """Gaussians in an object's default tier: the total across tiers would just
+    count the same surface four times over."""
+    return o["splats"]
 
 
 def source_word(o: dict) -> str:
@@ -94,14 +111,17 @@ def gallery(doc: dict) -> str:
             f"{source} | {kind_word(o)} | {size} | {download} |"
         )
     n = len(doc["objects"])
-    total_g = sum(o["splats"] for o in doc["objects"])
-    total_b = sum(o["bytes"] for o in doc["objects"])
+    total_g = sum(object_gaussians(o) for o in doc["objects"])
+    total_b = sum(object_bytes(o) for o in doc["objects"])
+    tiered = sum(1 for o in doc["objects"] if o.get("lods"))
     licenses = sorted({o.get("license", "CC-BY-4.0") for o in doc["objects"]})
     lic = licenses[0] if len(licenses) == 1 else "licenses per object (see Source)"
+    tiers = (f" · {tiered} of them at four levels of detail" if tiered else "")
     rows.append("")
     rows.append(
-        f"<sub>{n} object{'s' if n != 1 else ''} · {approx_count(total_g)} gaussians · "
-        f"{human_size(total_b)} total · {lic}</sub>"
+        f"<sub>{n} object{'s' if n != 1 else ''} · {approx_count(total_g)} gaussians "
+        f"at the default level{tiers} · {human_size(total_b)} for every file · "
+        f"{lic}</sub>"
     )
     return "\n".join(rows)
 

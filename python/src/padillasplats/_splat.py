@@ -49,7 +49,46 @@ class Splat:
 
     def __repr__(self) -> str:
         title = self.meta.get("title", self.id)
-        return f"<Splat {self.id!r} ({title}) {len(self):,} gaussians>"
+        tier = f" @{self.meta['lod']}" if self.meta.get("lod") else ""
+        return f"<Splat {self.id!r}{tier} ({title}) {len(self):,} gaussians>"
+
+    @property
+    def license(self) -> str:
+        """This object's license id, e.g. ``"CC-BY-4.0"`` or, for generated
+        objects whose provenance is unsettled, ``"As-is (no warranty)"``."""
+        return self.meta.get("license", "")
+
+    @property
+    def source_method(self) -> str:
+        """How it was made: ``capture``, ``mesh2splat``, ``synthetic-render`` or
+        ``image-to-3d-generation``."""
+        return self.meta.get("source_method", "")
+
+    @property
+    def category(self) -> str:
+        """What it is: ``object`` or ``scene``."""
+        return self.meta.get("category", "")
+
+    @property
+    def lod(self) -> str:
+        """Which level of detail this is (``"10k"`` … ``"1m"``), or ``""``.
+
+        Empty for an object that ships a single file, which is every capture.
+        """
+        return str(self.meta.get("lod", ""))
+
+    @property
+    def open_license(self) -> bool:
+        """Whether this object is openly licensed (Creative Commons or public domain).
+
+        ``False`` for objects that are usable but carry a condition: the as-is
+        generated ones, and the mesh-derived ones whose source asks for
+        attribution instead. Read ``self.meta["license"]`` for the actual terms.
+        """
+        m = self.meta
+        if "license_open" in m:
+            return bool(m["license_open"])
+        return str(m.get("license", "")).upper().startswith("CC")
 
     @property
     def rgb(self) -> np.ndarray:

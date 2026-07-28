@@ -1,0 +1,83 @@
+{
+  "id": "armadillo",
+  "title": "Armadillo",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "armadillo",
+    "stanford",
+    "classic",
+    "test-model",
+    "organic"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "armadillo_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "83f522a458b0c3d1624c41b1c2a586de85996401a6c1cf0c6e30718617a072e6",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "b95bf1fed4b037c378cfda49015bfe51405d50b6593af6f415331c2d00e9c437",
+      "file": "armadillo_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "3b21e7e1b7f93a36d97b6f5576e628fa93c7251fc4e04ad8bd8ffa1cb0d16ef5",
+      "file": "armadillo_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "83f522a458b0c3d1624c41b1c2a586de85996401a6c1cf0c6e30718617a072e6",
+      "file": "armadillo_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "9ceb13ee0d00aaaae28320d11b455a34ec08de431d3c1e6505ee0fd6187a614c",
+      "file": "armadillo_1m.splat"
+    }
+  ],
+  "license": "Stanford 3DSR (attribution)",
+  "license_open": false,
+  "license_url": "http://graphics.stanford.edu/data/3Dscanrep/",
+  "license_note": "Derived from the Stanford 3D Scanning Repository, which is free to use, including in derivative works and commercially, but is NOT released under Creative Commons. Acknowledge the source and do not misrepresent the data. Converting the mesh to splats does not change its terms.",
+  "author": "Stanford University Computer Graphics Laboratory",
+  "attribution": "Source: Stanford University Computer Graphics Laboratory (Stanford 3D Scanning Repository).",
+  "source_mesh": "Stanford 3D Scanning Repository (http://graphics.stanford.edu/data/3Dscanrep/)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      1.6784,
+      1.9995,
+      1.5249
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "Stanford 3D Scanning Repository (http://graphics.stanford.edu/data/3Dscanrep/)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

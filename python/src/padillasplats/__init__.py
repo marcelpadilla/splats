@@ -2,22 +2,31 @@
 
     >>> import padillasplats as ps
     >>> ps.ids()
-    ['plant', 'academic_tarot_cards']
+    ['plant', 'academic_tarot_cards', ...]
     >>> s = ps.load("plant")
     >>> s.positions.shape
     (113648, 3)
+
+You never need a URL. Say what you want and it is fetched, checksum-verified and
+decoded:
+
+    >>> ps.load_random(source_method="capture")          # any real scan
+    >>> ps.find(source_method="mesh2splat", lod="10k")   # every 10k-gaussian mesh object
+    >>> ps.load("lucy", lod="1m")                        # one object at a chosen resolution
 
 Filtering happens on a copy of the inventory bundled in this package, so it is
 offline and instant. Only the splat bytes are downloaded, once, into a per-user
 cache directory, and every download is verified against the SHA-256 recorded in
 the inventory.
 
-The data is CC-BY-4.0 (credit Marcel Padilla). This package's code is 0BSD, so
-the code itself needs no attribution.
+The data's license is per object -- see ``ps.summary()`` and each record's
+``license``. This package's code is 0BSD, so the code itself needs no
+attribution.
 """
 
 from __future__ import annotations
 
+import random as _random
 import shutil
 from pathlib import Path
 from typing import Any, Dict, Iterable, Iterator, List, Optional, Sequence
@@ -27,7 +36,7 @@ from ._fetch import fetch as _fetch_file
 from ._paths import cache_dir, check_id, clear_cache
 from ._splat import RECORD_BYTES, Splat, decode, load_file
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 __all__ = [
     "Splat",
@@ -41,12 +50,20 @@ __all__ = [
     "get",
     "ids",
     "inventory",
+    "is_open_license",
+    "licenses",
     "load",
     "load_all",
     "load_file",
+    "load_random",
+    "lods",
+    "lods_of",
     "path",
+    "random",
     "refresh_inventory",
+    "sample",
     "source_methods",
+    "summary",
     "tags",
     "__version__",
 ]
@@ -66,9 +83,15 @@ def ids() -> List[str]:
     return _inventory.ids()
 
 
-def get(obj_id: str) -> Record:
-    """The inventory record for one object."""
-    return _inventory.get(obj_id)
+def get(obj_id: str, *, lod: Optional[str] = None) -> Record:
+    """The inventory record for one object, optionally at a chosen resolution.
+
+        >>> ps.get("lucy")["splats"]
+        500000
+        >>> ps.get("lucy", lod="10k")["splats"]
+        10000
+    """
+    return _inventory.resolve(_inventory.get(obj_id), lod)
 
 
 def tags() -> List[str]:
@@ -82,9 +105,53 @@ def categories() -> List[str]:
 
 
 def source_methods() -> List[str]:
-    """How the splats here were made: ``capture``, ``image-to-3d-generation``,
-    ``synthetic-render``. Filter on it with ``find(source_method=...)``."""
+    """How the splats here were made: ``capture``, ``mesh2splat``,
+    ``synthetic-render``, ``image-to-3d-generation``. Filter on it with
+    ``find(source_method=...)``."""
     return _inventory.source_methods()
+
+
+def lods() -> List[str]:
+    """Every level of detail in the collection, smallest first.
+
+        >>> ps.lods()
+        ['10k', '100k', '500k', '1m']
+
+    Objects derived from a mesh ship all of these; a capture ships one file and
+    has none. ``lods_of(id)`` says which an individual object has.
+    """
+    return _inventory.lods()
+
+
+def lods_of(obj: "str | Record") -> List[str]:
+    """The levels of detail one object ships, smallest first ([] if it has one file)."""
+    record = _inventory.get(obj) if isinstance(obj, str) else obj
+    return _inventory.lods_of(record)
+
+
+def licenses() -> List[str]:
+    """Every license id in the collection, sorted."""
+    return _inventory.licenses()
+
+
+def is_open_license(obj: "str | Record") -> bool:
+    """Whether an object is under an open license: Creative Commons or public domain.
+
+    Pass an id or a record. Objects that come with a condition return ``False``:
+    the as-is generated ones, whose provenance is unsettled, and the
+    mesh-derived ones whose source asks for attribution instead of releasing
+    under CC. Use ``find(open_license=True)`` to select only the open ones.
+    """
+    record = _inventory.get(obj) if isinstance(obj, str) else obj
+    return _inventory.is_open(record)
+
+
+def summary() -> str:
+    """A short plain-text overview: how many objects, made how, under what terms.
+
+        >>> print(ps.summary())
+    """
+    return _inventory.summary()
 
 
 def citation(fmt: str = "bibtex") -> str:
@@ -98,8 +165,11 @@ def citation(fmt: str = "bibtex") -> str:
 
 def find(
     *,
-    category: Optional[str] = None,
-    source_method: Optional[str] = None,
+    category: Optional[Any] = None,
+    source_method: Optional[Any] = None,
+    license: Optional[Any] = None,
+    open_license: Optional[bool] = None,
+    lod: Optional[str] = None,
     tags: Optional[Sequence[str]] = None,
     match_any_tag: bool = False,
     min_splats: Optional[int] = None,
@@ -111,13 +181,34 @@ def find(
     """Select objects by inventory conditions. Nothing is downloaded.
 
         >>> ps.find(category="object", min_splats=100_000)
-        >>> ps.find(source_method="capture")   # real scans only, not generated
+        >>> ps.find(source_method="capture")    # real scans only, not generated
+        >>> ps.find(open_license=True)          # only the freely-licensed ones
+        >>> ps.find(license="CC-BY-4.0")
+        >>> ps.find(source_method=["capture", "synthetic-render"])
+        >>> ps.find(source_method="mesh2splat", lod="10k")   # the small ones
+        >>> ps.find(lod="min", max_bytes=1_000_000)          # anything under a megabyte
         >>> ps.find(tags=["plant"])
-        >>> ps.find(has_quality=True)          # only objects with PSNR and SSIM
+        >>> ps.find(has_quality=True)           # only objects with PSNR and SSIM
+
+    ``category``, ``source_method`` and ``license`` accept either one value or a
+    list of allowed values. ``open_license=True`` keeps only objects under an
+    open license (Creative Commons or public domain), which is the quick way to
+    stay on the safe side of the licensing; the ones it drops are usable too,
+    but each carries a condition spelled out in its ``license_note``.
+
+    ``lod`` keeps only objects that ship that level of detail, each already
+    resolved to it -- so the returned records' ``file``, ``splats``, ``bytes``
+    and ``sha256`` describe that tier, and a later ``load(r["id"], lod=...)``
+    fetches exactly what the record says. ``"min"`` and ``"max"`` mean the
+    smallest and largest each object has, and keep single-file objects too.
+    Size limits are applied after the tier is chosen.
     """
     return _inventory.find(
         category=category,
         source_method=source_method,
+        license=license,
+        open_license=open_license,
+        lod=lod,
         tags=tags,
         match_any_tag=match_any_tag,
         min_splats=min_splats,
@@ -126,6 +217,51 @@ def find(
         has_quality=has_quality,
         ids_=ids,
     )
+
+
+def random(*, seed: Optional[int] = None, **filters: Any) -> Record:
+    """One record at random, from the objects matching :func:`find`.
+
+        >>> ps.random()                              # anything
+        >>> ps.random(source_method="capture")       # a real scan
+        >>> ps.random(lod="10k", seed=0)             # reproducible
+
+    Returns the record, not the data, so it costs nothing; :func:`load_random`
+    is the same choice already downloaded and decoded. Raises ``LookupError``
+    rather than returning ``None`` when the filters match nothing, so a typo in
+    a filter fails loudly instead of an object appearing later in the script.
+    """
+    return sample(1, seed=seed, **filters)[0]
+
+
+def sample(n: int = 1, *, seed: Optional[int] = None, **filters: Any) -> List[Record]:
+    """``n`` distinct records at random from the objects matching :func:`find`.
+
+        >>> ps.sample(3, category="object")
+        >>> ps.sample(5, source_method="mesh2splat", lod="100k", seed=0)
+
+    Asking for more than exist returns all of them, shuffled, rather than
+    failing: for "give me a handful to test with", a short list is the useful
+    answer.
+    """
+    pool = find(**filters)
+    if not pool:
+        raise LookupError(
+            f"nothing in the collection matches {filters!r}. "
+            f"Try ps.summary() to see what is there.")
+    rng = _random.Random(seed)
+    return rng.sample(pool, min(int(n), len(pool)))
+
+
+def load_random(*, seed: Optional[int] = None, verify: bool = True,
+                **filters: Any) -> Splat:
+    """Pick one object at random, download it if needed, and decode it.
+
+        >>> s = ps.load_random()
+        >>> s = ps.load_random(source_method="mesh2splat", lod="10k")
+    """
+    record = random(seed=seed, **filters)
+    return load(record["id"], lod=record.get("lod"), verify=verify)
 
 
 def refresh_inventory(url: Optional[str] = None) -> List[Record]:
@@ -138,18 +274,30 @@ def refresh_inventory(url: Optional[str] = None) -> List[Record]:
 
 # --- getting the data -------------------------------------------------------
 
-def path(obj_id: str, *, verify: bool = True, force: bool = False) -> Path:
-    """Local path to an object's ``.splat``, downloading and caching if needed."""
-    record = _inventory.get(check_id(obj_id))
+def path(obj_id: str, *, lod: Optional[str] = None, verify: bool = True,
+         force: bool = False) -> Path:
+    """Local path to an object's ``.splat``, downloading and caching if needed.
+
+        >>> ps.path("plant")
+        >>> ps.path("lucy", lod="10k")
+    """
+    record = _inventory.resolve(_inventory.get(check_id(obj_id)), lod)
     return _fetch_file(record, _inventory.raw()["base_url"], verify=verify, force=force)
 
 
-def load(obj_id: str, *, verify: bool = True, force: bool = False) -> Splat:
+def load(obj_id: str, *, lod: Optional[str] = None, verify: bool = True,
+         force: bool = False) -> Splat:
     """Download if needed, then decode. This is the one-liner.
 
         >>> s = ps.load("plant")
+        >>> s = ps.load("lucy", lod="1m")     # a chosen level of detail
+        >>> s = ps.load("lucy", lod="min")    # whichever is smallest
+
+    ``lod`` is only meaningful for the mesh-derived objects; ``ps.lods_of(id)``
+    says which levels an object has. Asking a single-file object for a named
+    tier is an error rather than a silent fallback to a different resolution.
     """
-    record = _inventory.get(check_id(obj_id))
+    record = _inventory.resolve(_inventory.get(check_id(obj_id)), lod)
     p = _fetch_file(record, _inventory.raw()["base_url"], verify=verify, force=force)
     return load_file(p, record["id"], record)
 
@@ -162,25 +310,37 @@ def load_all(**filters: Any) -> Iterator[Splat]:
 
         >>> for s in ps.load_all(category="object"):
         ...     print(s.id, len(s))
+        >>> for s in ps.load_all(source_method="mesh2splat", lod="10k"):
+        ...     print(s.id, len(s))          # 10k each, ~3 MB for the whole set
     """
+    lod = filters.get("lod")
     for record in find(**filters):
-        yield load(record["id"])
+        yield load(record["id"], lod=record.get("lod", lod))
 
 
 def download(dest: "str | Path", *, verify: bool = True, **filters: Any) -> List[Path]:
-    """Copy the matching objects into ``dest`` as ``<dest>/<id>.splat``.
+    """Copy the matching objects into ``dest``. Use this for a local working copy.
 
-    Use this for a local working copy. Omit the filters to take everything.
-
-        >>> ps.download("./splats")                      # all of them
+        >>> ps.download("./splats")                          # all of them
         >>> ps.download("./big", min_splats=100_000)
+        >>> ps.download("./small", lod="10k")                # every 10k tier
+        >>> ps.download("./safe", open_license=True)         # CC-licensed only
+
+    Files are named ``<id>.splat``, or ``<id>_<lod>.splat`` when a level of
+    detail was chosen, so two resolutions of the same object can sit in one
+    folder without one overwriting the other.
     """
     out_dir = Path(dest).expanduser()
     out_dir.mkdir(parents=True, exist_ok=True)
     written: List[Path] = []
     for record in find(**filters):
+        # find() has already resolved the tier, so the record's own `lod` is the
+        # concrete tier name -- never the "min"/"max" the caller may have asked
+        # for, which would make a misleading filename.
+        tier = record.get("lod")
         src = _fetch_file(record, _inventory.raw()["base_url"], verify=verify)
-        target = out_dir / f"{check_id(record['id'])}.splat"
+        name = check_id(record["id"]) + (f"_{tier}" if tier else "") + ".splat"
+        target = out_dir / name
         shutil.copyfile(src, target)
         written.append(target)
     return written

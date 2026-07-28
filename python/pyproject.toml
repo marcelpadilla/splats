@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "padillasplats"
-version = "0.2.0"
-description = "Load Marcel Padilla's hand-cleaned Gaussian splat collection in one line."
+version = "0.3.0"
+description = "Load Marcel Padilla's hand-made Gaussian splat collection in one line."
 readme = "README.md"
 requires-python = ">=3.9"
 license = "0BSD"
