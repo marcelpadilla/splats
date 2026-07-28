@@ -79,16 +79,15 @@ class Splat:
 
     @property
     def open_license(self) -> bool:
-        """Whether this object is openly licensed (Creative Commons or public domain).
+        """Whether this object is free to use for anything, with at most attribution.
 
-        ``False`` for objects that are usable but carry a condition: the as-is
-        generated ones, and the mesh-derived ones whose source asks for
-        attribution instead. Read ``self.meta["license"]`` for the actual terms.
+        ``False`` for anything carrying a further condition: the as-is generated
+        objects, the Stanford ones (free to use but not Creative Commons), and
+        the NonCommercial or ShareAlike meshes. Read ``self.meta["license"]``
+        and ``self.meta["license_note"]`` for the actual terms.
         """
-        m = self.meta
-        if "license_open" in m:
-            return bool(m["license_open"])
-        return str(m.get("license", "")).upper().startswith("CC")
+        from ._inventory import is_open
+        return is_open(self.meta)
 
     @property
     def rgb(self) -> np.ndarray:

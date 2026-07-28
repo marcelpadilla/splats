@@ -1,0 +1,82 @@
+{
+  "id": "goathead",
+  "title": "Goat head",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "goat",
+    "head",
+    "animal",
+    "horns"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "goathead_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "fb10872b3483c8ab7286ff71094208e4f730510232c28c13a9860839b80faa98",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "08a575ac9d7b00caa41fab1cd293c04c75f934c25e345803383cdcd9cb48436c",
+      "file": "goathead_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "9377f0abd9f55dbdd708e1c77fed271252d703966a03a77f0d546175eb619834",
+      "file": "goathead_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "fb10872b3483c8ab7286ff71094208e4f730510232c28c13a9860839b80faa98",
+      "file": "goathead_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "e33b54993d8c3742751ad05306f995d0512a83c76bd2eb46a542a12225e41fdd",
+      "file": "goathead_1m.splat"
+    }
+  ],
+  "license": "CC-BY-3.0",
+  "license_open": true,
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "license_note": "Derived from a CC-BY-3.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+  "author": "hugoelec",
+  "attribution": "\u201cGoat head\u201d mesh by hugoelec, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/goathead)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      1.5267,
+      1.9971,
+      1.4594
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/goathead)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

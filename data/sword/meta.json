@@ -1,0 +1,82 @@
+{
+  "id": "sword",
+  "title": "Sword",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "sword",
+    "weapon",
+    "blade",
+    "historical"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "sword_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "1b235462c8149b03079e14bbd59ca2c82739fb82672137061c101bfc88945821",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "aa12b4954f5c6f2330a616c793c0ffbee02e48911f84af0c3aff2f998a58a5e1",
+      "file": "sword_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "565f84d3008b4152cdba4f9b4a474d753fc087eb37a74ea29219f50582d70736",
+      "file": "sword_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "1b235462c8149b03079e14bbd59ca2c82739fb82672137061c101bfc88945821",
+      "file": "sword_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "088f98b5e0ee0aea4e365607714e251009052270cec6b3572d172e86247fb7bc",
+      "file": "sword_1m.splat"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "license_open": true,
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+  "author": "The Oakeshott Institute",
+  "attribution": "\u201cSword\u201d mesh by The Oakeshott Institute, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/sword), originally The Oakeshott Institute via Sketchfab (https://sketchfab.com/3d-models/moonbrand-early-14th-c-arming-sword-80fa91fc8c974fd0acd2a55cc513edec)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      0.0748,
+      0.5106,
+      1.9999
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/sword), originally The Oakeshott Institute via Sketchfab (https://sketchfab.com/3d-models/moonbrand-early-14th-c-arming-sword-80fa91fc8c974fd0acd2a55cc513edec)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

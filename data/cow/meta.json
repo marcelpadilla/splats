@@ -1,0 +1,82 @@
+{
+  "id": "cow",
+  "title": "Cow",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "cow",
+    "animal",
+    "farm",
+    "cattle"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "cow_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "1240a520c39cc9c43d5bdc479eb618c1ba2762efaf22fafc534ff7a0cb60da16",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "3b07e56fbef7822bde7d9d23a3db694ced1483f5caee1783131ab55fa23f19a6",
+      "file": "cow_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "1241414f953936cf129e9e389af5916c8d7abb7e817a878537347034e4db051f",
+      "file": "cow_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "1240a520c39cc9c43d5bdc479eb618c1ba2762efaf22fafc534ff7a0cb60da16",
+      "file": "cow_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "56b21c1495f04c6bee1a48fe99813e773c53d96b2194c912a3de074df961eb5e",
+      "file": "cow_1m.splat"
+    }
+  ],
+  "license": "CC-BY-NC-4.0",
+  "license_open": false,
+  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_note": "Derived from a CC-BY-NC-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
+  "author": "3dcs_ch",
+  "attribution": "\u201cCow\u201d mesh by 3dcs_ch, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/cow), originally 3dcs_ch via Thingiverse (https://www.thingiverse.com/thing:2431906)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      1.9998,
+      1.0961,
+      0.6098
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/cow), originally 3dcs_ch via Thingiverse (https://www.thingiverse.com/thing:2431906)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

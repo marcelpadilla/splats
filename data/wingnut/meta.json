@@ -1,0 +1,82 @@
+{
+  "id": "wingnut",
+  "title": "Wing nut",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "wingnut",
+    "hardware",
+    "cad",
+    "nut"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "wingnut_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "a311a5537cb718d2405e40eb41dcffd946df602be1b5452199acc576fc85b46c",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "2f9b1754d65576cfedabf31fef2833c7666bd705738936098e94c7ae7f279749",
+      "file": "wingnut_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "ae0b725a51eda98241bd6c9a105a3548a7e78f26b212aa89a9fca90706a95d8d",
+      "file": "wingnut_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "a311a5537cb718d2405e40eb41dcffd946df602be1b5452199acc576fc85b46c",
+      "file": "wingnut_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "f2f1aa109a6ca3fa497e519c5cd2b7b0e65c02e7456f56492df665feaa92c83f",
+      "file": "wingnut_1m.splat"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "license_open": true,
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+  "author": "Stein, Oded and Grinspun, Eitan and Crane, Keenan",
+  "attribution": "\u201cWing nut\u201d mesh by Stein, Oded and Grinspun, Eitan and Crane, Keenan, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/wingnut)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      0.8405,
+      1.1878,
+      1.9997
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/wingnut)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

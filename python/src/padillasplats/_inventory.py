@@ -155,25 +155,33 @@ def has_lod(record: Record, lod: str) -> bool:
 
 # --- licensing --------------------------------------------------------------
 
-_OPEN_LICENSE_PREFIX = "CC"      # the CC family: CC-BY-*, CC-BY-SA-*, CC0-*, ...
+#: Licence-id fragments that mean "there is a string attached". NonCommercial
+#: forbids a whole class of use; ShareAlike forces your own work open. Both are
+#: Creative Commons, so a plain "starts with CC" test would wave them through --
+#: which is the one mistake in this file that would actually mislead someone
+#: about what they are allowed to do.
+_CONDITIONAL = ("-NC", "-SA", "NONCOMMERCIAL", "SHAREALIKE")
 
 
 def is_open(record: Record) -> bool:
-    """Whether an object is under an open license: Creative Commons or public domain.
+    """Whether an object is free to use for anything, with at most attribution.
 
-    An explicit ``license_open`` flag in the record wins -- that is what marks
-    the public-domain objects, whose licenses do not spell "CC" -- and otherwise
-    any license in the Creative Commons family counts as open. Two kinds are
-    deliberately *not* open: generated ones, which carry an ``As-is (no
-    warranty)`` notice because an AI model's training corpus is undisclosed, and
-    mesh-derived ones whose source is free to use but attribution-bound rather
-    than CC (the Stanford repository objects). Both are perfectly usable -- they
-    just come with a condition, which is what a caller filtering on this wants
-    to know.
+    True for CC0, public domain and plain CC-BY. False for everything that
+    carries a condition beyond credit, which in this collection means three
+    things: the as-is generated objects, whose provenance is unsettled; the
+    Stanford-repository objects, which are free to use but not Creative Commons;
+    and the NonCommercial or ShareAlike meshes, which restrict commercial use or
+    force a licence onto your derivative.
+
+    An explicit ``license_open`` flag in the record always wins -- that is what
+    marks the public-domain objects, whose licence ids do not spell "CC".
     """
     if "license_open" in record:
         return bool(record["license_open"])
-    return str(record.get("license", "")).upper().startswith(_OPEN_LICENSE_PREFIX)
+    lic = str(record.get("license", "")).upper()
+    if any(flag in lic for flag in _CONDITIONAL):
+        return False
+    return lic.startswith("CC") or lic == "PUBLIC DOMAIN"
 
 
 def _matches(value: Any, wanted: Any) -> bool:

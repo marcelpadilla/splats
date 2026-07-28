@@ -1,0 +1,82 @@
+{
+  "id": "brucewick",
+  "title": "Brucewick",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "bust",
+    "head",
+    "portrait",
+    "character"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "brucewick_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "2de7e17f60a31a414f34f3302c20a36e957b4b6c15f2fca92b12e655042f5a7e",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "19f20feb585d8f89decb3da8b28c4118bc8b4fd1ecaf8f1327f9a1a8a8a27525",
+      "file": "brucewick_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "465c6df17d7345a07f51daa98c2a60f25ed3332df52f73c934d8eb6a18eec7c4",
+      "file": "brucewick_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "2de7e17f60a31a414f34f3302c20a36e957b4b6c15f2fca92b12e655042f5a7e",
+      "file": "brucewick_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "9c9e18144df31ad1985181937073d1f8c0c2683427fa58d63513b2edd2377a95",
+      "file": "brucewick_1m.splat"
+    }
+  ],
+  "license": "CC-BY-NC-4.0",
+  "license_open": false,
+  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_note": "Derived from a CC-BY-NC-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
+  "author": "Holinaty, Josh",
+  "attribution": "\u201cBrucewick\u201d mesh by Holinaty, Josh, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/brucewick)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      1.8093,
+      2.0,
+      1.8072
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/brucewick)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "skull",
+  "title": "Skull",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "skull",
+    "anatomy",
+    "bone",
+    "head"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "skull_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "5fade9501bcc9bf64a14fb0278853042758c6465ea25de4adf8d601d746e9a68",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "65f55d617285ca19a6c1b0f209609662a39711feb76985e4674fe5f5218accb8",
+      "file": "skull_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "7eee6a6576eac821a92b275416d583337de57b949584ffa207122671bd08fa3f",
+      "file": "skull_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "5fade9501bcc9bf64a14fb0278853042758c6465ea25de4adf8d601d746e9a68",
+      "file": "skull_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "9e07fa9e4a95a73ee4032b51036c626d76eacdd73d5039d56136ab5e3d9d4850",
+      "file": "skull_1m.splat"
+    }
+  ],
+  "license": "CC-BY-3.0",
+  "license_open": true,
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "license_note": "Derived from a CC-BY-3.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+  "author": "YahooJAPAN",
+  "attribution": "\u201cSkull\u201d mesh by YahooJAPAN, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/skull), originally YahooJAPAN via Thingiverse (https://www.thingiverse.com/thing:182365)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      1.2497,
+      1.9999,
+      1.7418
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/skull), originally YahooJAPAN via Thingiverse (https://www.thingiverse.com/thing:182365)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

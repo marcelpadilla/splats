@@ -1,0 +1,82 @@
+{
+  "id": "well",
+  "title": "Well",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "well",
+    "building",
+    "architecture",
+    "medieval"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "well_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "358f0be79718cc1b36dc2d6842a175479386d33671f3a221d9fc9f10fd6d812b",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "cc4a78363c39c81d3bd2e38f0e7b500fa06a656274c88af383ab30ffa085674e",
+      "file": "well_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "b9132f0898df130bd45f4bd08e7f7f4d2c84778fed7ced7bcc75f8a042a49a02",
+      "file": "well_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "358f0be79718cc1b36dc2d6842a175479386d33671f3a221d9fc9f10fd6d812b",
+      "file": "well_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "4410e32d2d354c774e45929533d22b9f7870f8579a7f9ca3052ef22b34515ca2",
+      "file": "well_1m.splat"
+    }
+  ],
+  "license": "CC-BY-NC-4.0",
+  "license_open": false,
+  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_note": "Derived from a CC-BY-NC-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
+  "author": "onmioji",
+  "attribution": "\u201cWell\u201d mesh by onmioji, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/well), originally onimoji via Thingiverse (https://www.thingiverse.com/thing:3587292)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      1.3412,
+      1.9999,
+      1.2932
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/well), originally onimoji via Thingiverse (https://www.thingiverse.com/thing:3587292)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

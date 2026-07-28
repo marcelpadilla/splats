@@ -1,0 +1,81 @@
+{
+  "id": "koala",
+  "title": "Koala",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "koala",
+    "animal",
+    "bear"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "koala_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "b1f9866e6ee6ca7ddf6c7a65794812ff31e03942dbcbabe68690bb91a2e80040",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "eb2f243db6830652d210438da5a7fef6722621ae2306d026f702b902da40bcb3",
+      "file": "koala_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "f8d65203a6f97d3fff93a682fcdeccf7ee771e3c968217001fd6c319d06029ea",
+      "file": "koala_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "b1f9866e6ee6ca7ddf6c7a65794812ff31e03942dbcbabe68690bb91a2e80040",
+      "file": "koala_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "d43cb8f10cca61048e480c47484f735efcc991bff85172b67fb2bcdc1b5819cc",
+      "file": "koala_1m.splat"
+    }
+  ],
+  "license": "CC-BY-3.0",
+  "license_open": true,
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "license_note": "Derived from a CC-BY-3.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+  "author": "YahooJAPAN",
+  "attribution": "\u201cKoala\u201d mesh by YahooJAPAN, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/koala), originally YahooJAPAN via Thingiverse (https://www.thingiverse.com/thing:182225)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      0.8157,
+      1.1577,
+      1.9999
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/koala), originally YahooJAPAN via Thingiverse (https://www.thingiverse.com/thing:182225)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "falconstatue",
+  "title": "Falcon statue",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "falcon",
+    "bird",
+    "statue",
+    "sculpture"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "falconstatue_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "a494eed2afd85009b74d5a15695676b880f7f5f815b47b9dc7be1497d30572df",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "346cd0722b802a4f8b5be032b0d060a59b348289acbb168154440b171c21d7e3",
+      "file": "falconstatue_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "5e3728d06ee61a29976bc6e5ae5ec96a4db5a6e8de7be536b30872fddc2fae67",
+      "file": "falconstatue_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "a494eed2afd85009b74d5a15695676b880f7f5f815b47b9dc7be1497d30572df",
+      "file": "falconstatue_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "a47a1bc88761133c9cf4a0b1494b7402aa17b1fda4d570a74784e4385968e9a4",
+      "file": "falconstatue_1m.splat"
+    }
+  ],
+  "license": "CC-BY-NC-SA-4.0",
+  "license_open": false,
+  "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "license_note": "Derived from a CC-BY-NC-SA-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. ShareAlike: a derivative must be released under the same licence. Credit the original author. Converting a mesh to splats does not change its terms.",
+  "author": "colinfizgig",
+  "attribution": "\u201cFalcon statue\u201d mesh by colinfizgig, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-SA-4.0.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/falconstatue), originally colinfizgig via Thingiverse (https://www.thingiverse.com/thing:46631)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      0.8127,
+      1.9999,
+      0.9954
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/falconstatue), originally colinfizgig via Thingiverse (https://www.thingiverse.com/thing:46631)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

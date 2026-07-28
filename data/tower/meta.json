@@ -1,0 +1,82 @@
+{
+  "id": "tower",
+  "title": "Tower",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "tower",
+    "building",
+    "architecture",
+    "lighthouse"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "tower_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "72ac92f13d90fe1d3443073f9afcdd80a5d3bad41c4a855c30ab92f134474063",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "b3711d3a9105e308b8d8ed43c3724be06add2e56e38be7ea8e317ad420232980",
+      "file": "tower_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "db8c799113366076430ebaa774643e571accee8f4b87efd5de8d53d565d81de0",
+      "file": "tower_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "72ac92f13d90fe1d3443073f9afcdd80a5d3bad41c4a855c30ab92f134474063",
+      "file": "tower_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "d6bcfdb4c8419f040eeecdd0124aad6da71d4fde7bda60738952bf5731802b00",
+      "file": "tower_1m.splat"
+    }
+  ],
+  "license": "CC-BY-NC-3.0",
+  "license_open": false,
+  "license_url": "https://creativecommons.org/licenses/by-nc/3.0/",
+  "license_note": "Derived from a CC-BY-NC-3.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
+  "author": "jansentee3d",
+  "attribution": "\u201cTower\u201d mesh by jansentee3d, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-3.0.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/tower), originally jansentee3d via Thingiverse (https://www.thingiverse.com/thing:3155868)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      1.0477,
+      2.0,
+      1.1031
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/tower), originally jansentee3d via Thingiverse (https://www.thingiverse.com/thing:3155868)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "strawberry",
+  "title": "Strawberry",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "strawberry",
+    "fruit",
+    "food"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "strawberry_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "1ecf550735ea49039df1666a7bb8babc31532f2788201abf5a53c4d6f89c36c1",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "6076f28ca869d4bd3c70c1d3e0392cb88d5561d2bc64488ddecc9701eb124c7c",
+      "file": "strawberry_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "87705b72721c573e02e0b4f6c08b091c9e2f22c8dc4093624ad92f4ef78b9c3a",
+      "file": "strawberry_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "1ecf550735ea49039df1666a7bb8babc31532f2788201abf5a53c4d6f89c36c1",
+      "file": "strawberry_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "5171c3e973246bfa31bbf80668c4fdb51ed219b82fce68defb81c566a8205ec5",
+      "file": "strawberry_1m.splat"
+    }
+  ],
+  "license": "CC-BY-NC-4.0",
+  "license_open": false,
+  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_note": "Derived from a CC-BY-NC-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
+  "author": "GSC_Nakamura",
+  "attribution": "\u201cStrawberry\u201d mesh by GSC_Nakamura, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/strawberry), originally GSC_Nakamura via Thingiverse (https://www.thingiverse.com/thing:153548)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      1.4755,
+      1.4128,
+      1.9999
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/strawberry), originally GSC_Nakamura via Thingiverse (https://www.thingiverse.com/thing:153548)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

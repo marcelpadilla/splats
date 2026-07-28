@@ -1,0 +1,82 @@
+{
+  "id": "violin",
+  "title": "Violin",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "violin",
+    "instrument",
+    "music",
+    "scan"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "violin_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "c485d61b6c561bee762deb277605d907cfde5bfac3d34b242bec61db5028b2da",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "406083a439e61352325fe9ecde9dcd6c2b9608e87a52c2483ef73c2f5d658194",
+      "file": "violin_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "0ab0ed0e70e90518374e77a9d70b750b0bc091b5ac46179bc531e527c2c1b984",
+      "file": "violin_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "c485d61b6c561bee762deb277605d907cfde5bfac3d34b242bec61db5028b2da",
+      "file": "violin_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "198b71fed8172bfdeadcea07588f9a2292bd0213d5373dcea563caef609acd5a",
+      "file": "violin_1m.splat"
+    }
+  ],
+  "license": "CC0-1.0",
+  "license_open": true,
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_note": "The source mesh is CC0 1.0 (public domain dedication), via the odedstein-meshes collection. No permission is needed; a credit is a courtesy.",
+  "author": "Virtual Museums of Malopolska",
+  "attribution": "\u201cViolin\u201d mesh by Virtual Museums of Malopolska, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC0-1.0.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/violin), originally Virtual Museums of Ma\u0142opolska via Sketchfab (https://sketchfab.com/3d-models/violin-a784af0713a643b19ffcf65194bc0fbf)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      1.9999,
+      0.3065,
+      0.6778
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/violin), originally Virtual Museums of Ma\u0142opolska via Sketchfab (https://sketchfab.com/3d-models/violin-a784af0713a643b19ffcf65194bc0fbf)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

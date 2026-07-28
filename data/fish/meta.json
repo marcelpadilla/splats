@@ -1,0 +1,80 @@
+{
+  "id": "fish",
+  "title": "Fish",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "fish",
+    "animal",
+    "sea"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "fish_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "4053a374f96a6dc5a3fd6046b539866fdf1d82e453bc068e5c6e1f16db97351c",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "d6ca46e2290e68d6a68925fdd52311ff2af8c93bbea3285e1c4d34bfc08eb368",
+      "file": "fish_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "61483857728d7b6e1fcf39026d0a593d8974f4c64cba0201b0b63ce8046bfa9f",
+      "file": "fish_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "4053a374f96a6dc5a3fd6046b539866fdf1d82e453bc068e5c6e1f16db97351c",
+      "file": "fish_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "1492f865eab63472a8e3d0e7aeae9bda52b1ff9b7958371067d8b857f8a5931c",
+      "file": "fish_1m.splat"
+    }
+  ],
+  "license": "Public Domain",
+  "license_open": true,
+  "license_note": "The source mesh was released into the public domain by its creator, via the odedstein-meshes collection. No permission is needed; a credit is a courtesy.",
+  "author": "Crane, Keenan",
+  "attribution": "\u201cFish\u201d mesh by Crane, Keenan, via odedstein-meshes (https://github.com/odedstein/meshes), licensed Public Domain.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/fish)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      1.0497,
+      1.1946,
+      1.9999
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/fish)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

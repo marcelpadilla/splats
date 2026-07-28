@@ -1,0 +1,82 @@
+{
+  "id": "boot",
+  "title": "Boot",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "boot",
+    "shoe",
+    "footwear",
+    "leather"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "boot_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "715fedeac39420826213a326ad52954cd359b93abcd38e34fbd485402a6583d8",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "f9df1f45277df25c399f908041d0aad02eadb610f3faf09b3ab6fa734cd15110",
+      "file": "boot_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "fad12968905287a4f2d0f5d837e5b87031557ffa3997cfbb68d812d84667594b",
+      "file": "boot_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "715fedeac39420826213a326ad52954cd359b93abcd38e34fbd485402a6583d8",
+      "file": "boot_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "1bd5134cc316d3e77daca87539cedd1a6fe77d042e297746f049b5f31c441d49",
+      "file": "boot_1m.splat"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "license_open": true,
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+  "author": "inciprocal",
+  "attribution": "\u201cBoot\u201d mesh by inciprocal, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/boot), originally inciprocal via Sketchfab (https://sketchfab.com/3d-models/harrison-work-boot-d9506d9a318e4c56ac3d8ab273bd2540)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      1.9996,
+      1.3179,
+      0.7185
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/boot), originally inciprocal via Sketchfab (https://sketchfab.com/3d-models/harrison-work-boot-d9506d9a318e4c56ac3d8ab273bd2540)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

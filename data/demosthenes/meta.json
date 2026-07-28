@@ -1,0 +1,83 @@
+{
+  "id": "demosthenes",
+  "title": "Demosthenes",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "bust",
+    "statue",
+    "sculpture",
+    "portrait",
+    "classical"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "demosthenes_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "e0f31f0e4863bb4512f0ab894b620eaf682700e278447647f7061197611d9e32",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "0dcfe5a20b73c6f145bd034551744531c99bd293f0d40f66b09621d200b349a9",
+      "file": "demosthenes_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "802a9a76f2049158ea3d8cd947338376bf22ba2c878e7eb4b06c38e77a75dc77",
+      "file": "demosthenes_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "e0f31f0e4863bb4512f0ab894b620eaf682700e278447647f7061197611d9e32",
+      "file": "demosthenes_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "758ad8fe242fc9e73dfab031766e47f55bf38f77a809aa7f6f276dbb5f2f9076",
+      "file": "demosthenes_1m.splat"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "license_open": true,
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+  "author": "ryanfb",
+  "attribution": "\u201cDemosthenes\u201d mesh by ryanfb, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/demosthenes)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      1.2992,
+      1.9991,
+      1.1393
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/demosthenes)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

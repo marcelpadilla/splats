@@ -1042,6 +1042,1913 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "author": "Marcel Padilla",
       "added": "2026-07-28"
+    },
+    {
+      "id": "boat",
+      "title": "Boat",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "boat",
+        "ship",
+        "vehicle",
+        "hull"
+      ],
+      "thumbnail": "boat/thumb.jpg",
+      "meta": "boat/meta.json",
+      "file": "boat/boat_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "1a756a1028f52d5a5c4d464d26b7648e5ca8fc1ff5d82e5001968f72fadb28f9",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "2e4dd82a79876071b066c46d8fa17e7514a27c4c8f19496119b51e04755f87fd",
+          "file": "boat/boat_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "52e9df0bee67f43a6e2adf7708bbbcf195e01fe60bca2532c83ae65ab0cdd0ec",
+          "file": "boat/boat_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "1a756a1028f52d5a5c4d464d26b7648e5ca8fc1ff5d82e5001968f72fadb28f9",
+          "file": "boat/boat_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "2911950d66c5ae9008a7cae4570b28e57fcd0025d32d7abcd78f7f76407cc4f5",
+          "file": "boat/boat_1m.splat"
+        }
+      ],
+      "extent": [
+        0.4395,
+        0.4745,
+        1.9995
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-4.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "Stein, Oded and Grinspun, Eitan and Crane, Keenan",
+      "attribution": "\u201cBoat\u201d mesh by Stein, Oded and Grinspun, Eitan and Crane, Keenan, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/boat)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "boot",
+      "title": "Boot",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "boot",
+        "shoe",
+        "footwear",
+        "leather"
+      ],
+      "thumbnail": "boot/thumb.jpg",
+      "meta": "boot/meta.json",
+      "file": "boot/boot_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "715fedeac39420826213a326ad52954cd359b93abcd38e34fbd485402a6583d8",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "f9df1f45277df25c399f908041d0aad02eadb610f3faf09b3ab6fa734cd15110",
+          "file": "boot/boot_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "fad12968905287a4f2d0f5d837e5b87031557ffa3997cfbb68d812d84667594b",
+          "file": "boot/boot_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "715fedeac39420826213a326ad52954cd359b93abcd38e34fbd485402a6583d8",
+          "file": "boot/boot_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "1bd5134cc316d3e77daca87539cedd1a6fe77d042e297746f049b5f31c441d49",
+          "file": "boot/boot_1m.splat"
+        }
+      ],
+      "extent": [
+        1.9996,
+        1.3179,
+        0.7185
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-4.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "inciprocal",
+      "attribution": "\u201cBoot\u201d mesh by inciprocal, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/boot), originally inciprocal via Sketchfab (https://sketchfab.com/3d-models/harrison-work-boot-d9506d9a318e4c56ac3d8ab273bd2540)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "cat",
+      "title": "Cat",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "cat",
+        "animal",
+        "pet",
+        "stretching"
+      ],
+      "thumbnail": "cat/thumb.jpg",
+      "meta": "cat/meta.json",
+      "file": "cat/cat_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "709d990a827af57a2695ce2bba36eb97a053d97e30756d0b06ee008c3cb8304b",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "9188bd794c38f5636b83998f447c53073d185d2e1eb743654d4461fdd51c55f6",
+          "file": "cat/cat_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "e2a63bb1393193a6387f3182332886fcafa8aa28ab6e1237c05ff232156cf9dd",
+          "file": "cat/cat_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "709d990a827af57a2695ce2bba36eb97a053d97e30756d0b06ee008c3cb8304b",
+          "file": "cat/cat_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "d6d0a8956271bb163a2c36fd0244eba940bb346fd979f4bdef6f08dec84999fd",
+          "file": "cat/cat_1m.splat"
+        }
+      ],
+      "extent": [
+        1.7864,
+        1.9999,
+        0.6668
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-4.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "billyd",
+      "attribution": "\u201cCat\u201d mesh by billyd, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/cat), originally billyd via Thingiverse (https://www.thingiverse.com/thing:1565405)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "cheese",
+      "title": "Cheese",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "cheese",
+        "food",
+        "wedge"
+      ],
+      "thumbnail": "cheese/thumb.jpg",
+      "meta": "cheese/meta.json",
+      "file": "cheese/cheese_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "41bc85332f8aee98a3ced02f1eef59392b885ef71565e871792b367e412d8846",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "8cdc2d68fab0c5f799bfab9cbecf226b539a501c018344ec8dc8cffa4136106b",
+          "file": "cheese/cheese_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "4f24af0c3e52a16f593cb13f0c6634cc95933c0f11e81423e04040cd8dcffa92",
+          "file": "cheese/cheese_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "41bc85332f8aee98a3ced02f1eef59392b885ef71565e871792b367e412d8846",
+          "file": "cheese/cheese_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "d750ff7a5d41b2f88f3971a3767100be298c8f18bb577e19b410c8583318d336",
+          "file": "cheese/cheese_1m.splat"
+        }
+      ],
+      "extent": [
+        1.1891,
+        0.8049,
+        1.9997
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-4.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "3dvs_ch",
+      "attribution": "\u201cCheese\u201d mesh by 3dvs_ch, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/cheese)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "cube",
+      "title": "Cube",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "cube",
+        "primitive",
+        "box"
+      ],
+      "thumbnail": "cube/thumb.jpg",
+      "meta": "cube/meta.json",
+      "file": "cube/cube_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "82ad78b7524f5f0a3c8fb4558e1d18179f065a0df91f47777fd97e8f4db16c8b",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "bb7f59d2aa5ea48f2cdb92a132bc01aa1cad29ec1267f303aa69afe0740a27ad",
+          "file": "cube/cube_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "432abcf9fe6f25a57db412addaa9ced092213ada5bdeb088e7ec867526a5735f",
+          "file": "cube/cube_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "82ad78b7524f5f0a3c8fb4558e1d18179f065a0df91f47777fd97e8f4db16c8b",
+          "file": "cube/cube_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "566c2c4a447baaf8ba6ee73e7f87c296c8dcf34343851a5f872c11d55508b459",
+          "file": "cube/cube_1m.splat"
+        }
+      ],
+      "extent": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-4.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "Stein, Oded",
+      "attribution": "\u201cCube\u201d mesh by Stein, Oded, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/cube)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "demosthenes",
+      "title": "Demosthenes",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "bust",
+        "statue",
+        "sculpture",
+        "portrait",
+        "classical"
+      ],
+      "thumbnail": "demosthenes/thumb.jpg",
+      "meta": "demosthenes/meta.json",
+      "file": "demosthenes/demosthenes_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "e0f31f0e4863bb4512f0ab894b620eaf682700e278447647f7061197611d9e32",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "0dcfe5a20b73c6f145bd034551744531c99bd293f0d40f66b09621d200b349a9",
+          "file": "demosthenes/demosthenes_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "802a9a76f2049158ea3d8cd947338376bf22ba2c878e7eb4b06c38e77a75dc77",
+          "file": "demosthenes/demosthenes_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "e0f31f0e4863bb4512f0ab894b620eaf682700e278447647f7061197611d9e32",
+          "file": "demosthenes/demosthenes_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "758ad8fe242fc9e73dfab031766e47f55bf38f77a809aa7f6f276dbb5f2f9076",
+          "file": "demosthenes/demosthenes_1m.splat"
+        }
+      ],
+      "extent": [
+        1.2992,
+        1.9991,
+        1.1393
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-4.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "ryanfb",
+      "attribution": "\u201cDemosthenes\u201d mesh by ryanfb, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/demosthenes)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "goathead",
+      "title": "Goat head",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "goat",
+        "head",
+        "animal",
+        "horns"
+      ],
+      "thumbnail": "goathead/thumb.jpg",
+      "meta": "goathead/meta.json",
+      "file": "goathead/goathead_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "fb10872b3483c8ab7286ff71094208e4f730510232c28c13a9860839b80faa98",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "08a575ac9d7b00caa41fab1cd293c04c75f934c25e345803383cdcd9cb48436c",
+          "file": "goathead/goathead_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "9377f0abd9f55dbdd708e1c77fed271252d703966a03a77f0d546175eb619834",
+          "file": "goathead/goathead_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "fb10872b3483c8ab7286ff71094208e4f730510232c28c13a9860839b80faa98",
+          "file": "goathead/goathead_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "e33b54993d8c3742751ad05306f995d0512a83c76bd2eb46a542a12225e41fdd",
+          "file": "goathead/goathead_1m.splat"
+        }
+      ],
+      "extent": [
+        1.5267,
+        1.9971,
+        1.4594
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-3.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "license_note": "Derived from a CC-BY-3.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "hugoelec",
+      "attribution": "\u201cGoat head\u201d mesh by hugoelec, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/goathead)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "hammer",
+      "title": "Hammer",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "hammer",
+        "tool",
+        "hardware"
+      ],
+      "thumbnail": "hammer/thumb.jpg",
+      "meta": "hammer/meta.json",
+      "file": "hammer/hammer_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "1aa32aa29a5b8e2f8d21186ed65c80424b23e61a7c35c414af2e878098eeef42",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "b2c78ba156b6bed41c4c7b59cadb16c79712d1e7208a76309044e443b5c704eb",
+          "file": "hammer/hammer_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "4dbab85bbd999d753913d23d834eeafdcccbcfdc358fd3a9b3ab3bbb4e031a2f",
+          "file": "hammer/hammer_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "1aa32aa29a5b8e2f8d21186ed65c80424b23e61a7c35c414af2e878098eeef42",
+          "file": "hammer/hammer_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "e566c8777b4df980cc34540ab8eac08145d4eb1e237a8909e8de4d1df5bdedad",
+          "file": "hammer/hammer_1m.splat"
+        }
+      ],
+      "extent": [
+        0.7157,
+        0.1671,
+        1.9999
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-4.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "Spognetta, Andrea",
+      "attribution": "\u201cHammer\u201d mesh by Spognetta, Andrea, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/hammer), originally Andrea Spognetta (Spogna) via Sketchfab (https://sketchfab.com/3d-models/hammer-rawscan-01e5b5acad9843818529d15663df5b9e)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "koala",
+      "title": "Koala",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "koala",
+        "animal",
+        "bear"
+      ],
+      "thumbnail": "koala/thumb.jpg",
+      "meta": "koala/meta.json",
+      "file": "koala/koala_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "b1f9866e6ee6ca7ddf6c7a65794812ff31e03942dbcbabe68690bb91a2e80040",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "eb2f243db6830652d210438da5a7fef6722621ae2306d026f702b902da40bcb3",
+          "file": "koala/koala_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "f8d65203a6f97d3fff93a682fcdeccf7ee771e3c968217001fd6c319d06029ea",
+          "file": "koala/koala_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "b1f9866e6ee6ca7ddf6c7a65794812ff31e03942dbcbabe68690bb91a2e80040",
+          "file": "koala/koala_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "d43cb8f10cca61048e480c47484f735efcc991bff85172b67fb2bcdc1b5819cc",
+          "file": "koala/koala_1m.splat"
+        }
+      ],
+      "extent": [
+        0.8157,
+        1.1577,
+        1.9999
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-3.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "license_note": "Derived from a CC-BY-3.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "YahooJAPAN",
+      "attribution": "\u201cKoala\u201d mesh by YahooJAPAN, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/koala), originally YahooJAPAN via Thingiverse (https://www.thingiverse.com/thing:182225)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "mountain",
+      "title": "Mountain",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "mountain",
+        "terrain",
+        "landscape",
+        "peak"
+      ],
+      "thumbnail": "mountain/thumb.jpg",
+      "meta": "mountain/meta.json",
+      "file": "mountain/mountain_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "84a1d3d7b6f7491797f13e583ab64af18ea1a623d94e26edc27ccc625d0a2f72",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "8c52c3e564e4b7fcf88f9408377eb3d80f62364a63c980c96b376348c2f269df",
+          "file": "mountain/mountain_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "c70a282a2c669cf8cfc6ec57d031c63843d780375e0dcdc0e92fb2251807c966",
+          "file": "mountain/mountain_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "84a1d3d7b6f7491797f13e583ab64af18ea1a623d94e26edc27ccc625d0a2f72",
+          "file": "mountain/mountain_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "b75a493a479b4000fa0adf5c7a9b1c3810c61877bc2fade6d935e779132184b7",
+          "file": "mountain/mountain_1m.splat"
+        }
+      ],
+      "extent": [
+        1.9998,
+        1.0825,
+        1.9995
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-4.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "lastloginname",
+      "attribution": "\u201cMountain\u201d mesh by lastloginname, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/mountain), originally lastloginname via Thingiverse (https://www.thingiverse.com/thing:991578)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "parsnip",
+      "title": "Parsnip",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "parsnip",
+        "vegetable",
+        "food",
+        "root"
+      ],
+      "thumbnail": "parsnip/thumb.jpg",
+      "meta": "parsnip/meta.json",
+      "file": "parsnip/parsnip_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "14eb5035aeaf3a4967ce55ed72b7507b065f862142035fc8b12423b8646f3234",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "0b5d9f62c38abb2de0e72d83c12f875199cd517b3cfb175c67e8496c7ac78c65",
+          "file": "parsnip/parsnip_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "589e7ac46653e6de1d16514ce6c2048e9d0979ab54d4aeb2688de3e46a830858",
+          "file": "parsnip/parsnip_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "14eb5035aeaf3a4967ce55ed72b7507b065f862142035fc8b12423b8646f3234",
+          "file": "parsnip/parsnip_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "010c85409e4509c87e1dbdd0f61c691bb48393f0cab8903da240e42e8f49fac4",
+          "file": "parsnip/parsnip_1m.splat"
+        }
+      ],
+      "extent": [
+        1.999,
+        1.035,
+        1.0729
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-4.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "Bart",
+      "attribution": "\u201cParsnip\u201d mesh by Bart, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/parsnip), originally Bart via Sketchfab (https://sketchfab.com/3d-models/parsnip-9270b2c72df04b37bb6d3b6becec67ac)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "penguin",
+      "title": "Penguin",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "penguin",
+        "animal",
+        "bird",
+        "cartoon"
+      ],
+      "thumbnail": "penguin/thumb.jpg",
+      "meta": "penguin/meta.json",
+      "file": "penguin/penguin_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "a5d378d4259cc233fadb1f908b3ca62b7147fcd3c429990ad17332f9bee6ec4b",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "5b6b9aadad477a4b09210c346e1bb59ed7689eb17fd6973116c7ce60cc6955af",
+          "file": "penguin/penguin_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "2dad3b0e5cb7194519c66af6779f3bb8131cc039cd9a47d9886fd42a9e9cdee8",
+          "file": "penguin/penguin_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "a5d378d4259cc233fadb1f908b3ca62b7147fcd3c429990ad17332f9bee6ec4b",
+          "file": "penguin/penguin_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "6e07a2210b013334c5366e745f3a102a7c0a3b1f5161c8908c9493cb37365cb2",
+          "file": "penguin/penguin_1m.splat"
+        }
+      ],
+      "extent": [
+        1.1944,
+        1.9999,
+        0.982
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-4.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "Stein, Oded",
+      "attribution": "\u201cPenguin\u201d mesh by Stein, Oded, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/penguin)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "pizza",
+      "title": "Pizza",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "pizza",
+        "food",
+        "flat"
+      ],
+      "thumbnail": "pizza/thumb.jpg",
+      "meta": "pizza/meta.json",
+      "file": "pizza/pizza_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "5682b57704cd8289b7e7efadd431f2fb86aadc64dff461512e78bf94f354b7a7",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "4c7dfa3c410a8efd4c2f1a86514264e919918fd61735e9b7c7c4d1c48bc921b4",
+          "file": "pizza/pizza_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "3d6f8cb41e7ba17a3372b116e0e23a53e7379697ea156d67473f000b044c9900",
+          "file": "pizza/pizza_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "5682b57704cd8289b7e7efadd431f2fb86aadc64dff461512e78bf94f354b7a7",
+          "file": "pizza/pizza_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "74557f5691fc36ce83b72be699a528204335817c5752d6fc4a69257b399656ab",
+          "file": "pizza/pizza_1m.splat"
+        }
+      ],
+      "extent": [
+        1.9999,
+        0.1983,
+        1.9308
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-4.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "Rigsters",
+      "attribution": "\u201cPizza\u201d mesh by Rigsters, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/pizza)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "plane",
+      "title": "Plane",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "plane",
+        "aircraft",
+        "airplane",
+        "vehicle"
+      ],
+      "thumbnail": "plane/thumb.jpg",
+      "meta": "plane/meta.json",
+      "file": "plane/plane_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "808af698d0340528e2ca0e20bed5e41ba36c1d883cc79a54fb09b8b1f9edf440",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "6adf2ff5f93b986324865fa8f25f3167c923f80a59668b7c3606b6e8913551b7",
+          "file": "plane/plane_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "9ac4b25777f8a0f2e14848c3bbae0d807f8a1a8ff5f96f1737cd94818b8e0644",
+          "file": "plane/plane_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "808af698d0340528e2ca0e20bed5e41ba36c1d883cc79a54fb09b8b1f9edf440",
+          "file": "plane/plane_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "f227e48e67cf9fc1248f9f68e99e6ba5c9b00ded46d0cad61d0e6756e16e81ba",
+          "file": "plane/plane_1m.splat"
+        }
+      ],
+      "extent": [
+        1.9996,
+        1.809,
+        0.5946
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-3.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "license_note": "Derived from a CC-BY-3.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "YahooJAPAN",
+      "attribution": "\u201cPlane\u201d mesh by YahooJAPAN, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/plane), originally YahooJAPAN via Thingiverse (https://www.thingiverse.com/thing:182252)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "scorpion",
+      "title": "Scorpion",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "scorpion",
+        "animal",
+        "arachnid",
+        "detailed"
+      ],
+      "thumbnail": "scorpion/thumb.jpg",
+      "meta": "scorpion/meta.json",
+      "file": "scorpion/scorpion_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "2086d3ade5ce3b5dded7a83275be15da6b07321f61c6e10c188acbcc51f5be90",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "d39e9b77cdb6fe44e290c8cc7a307b55dbb6df3c9b3b3635ff30f91dfc28cd6e",
+          "file": "scorpion/scorpion_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "b2a22ee6b449e9b62ba32feb9a95386b25e54e41f5148428aa0824fb7fb2bf82",
+          "file": "scorpion/scorpion_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "2086d3ade5ce3b5dded7a83275be15da6b07321f61c6e10c188acbcc51f5be90",
+          "file": "scorpion/scorpion_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "e09584f7d84c5a5d0f43eb0b654f1eba94452cc68b5892f6b503e48f3309ed31",
+          "file": "scorpion/scorpion_1m.splat"
+        }
+      ],
+      "extent": [
+        1.6954,
+        1.2672,
+        1.9997
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-3.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "license_note": "Derived from a CC-BY-3.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "YahooJAPAN",
+      "attribution": "\u201cScorpion\u201d mesh by YahooJAPAN, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/scorpion), originally YahooJAPAN via Thingiverse (https://www.thingiverse.com/thing:182363)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "skull",
+      "title": "Skull",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "skull",
+        "anatomy",
+        "bone",
+        "head"
+      ],
+      "thumbnail": "skull/thumb.jpg",
+      "meta": "skull/meta.json",
+      "file": "skull/skull_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "5fade9501bcc9bf64a14fb0278853042758c6465ea25de4adf8d601d746e9a68",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "65f55d617285ca19a6c1b0f209609662a39711feb76985e4674fe5f5218accb8",
+          "file": "skull/skull_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "7eee6a6576eac821a92b275416d583337de57b949584ffa207122671bd08fa3f",
+          "file": "skull/skull_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "5fade9501bcc9bf64a14fb0278853042758c6465ea25de4adf8d601d746e9a68",
+          "file": "skull/skull_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "9e07fa9e4a95a73ee4032b51036c626d76eacdd73d5039d56136ab5e3d9d4850",
+          "file": "skull/skull_1m.splat"
+        }
+      ],
+      "extent": [
+        1.2497,
+        1.9999,
+        1.7418
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-3.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "license_note": "Derived from a CC-BY-3.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "YahooJAPAN",
+      "attribution": "\u201cSkull\u201d mesh by YahooJAPAN, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/skull), originally YahooJAPAN via Thingiverse (https://www.thingiverse.com/thing:182365)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "sword",
+      "title": "Sword",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "sword",
+        "weapon",
+        "blade",
+        "historical"
+      ],
+      "thumbnail": "sword/thumb.jpg",
+      "meta": "sword/meta.json",
+      "file": "sword/sword_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "1b235462c8149b03079e14bbd59ca2c82739fb82672137061c101bfc88945821",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "aa12b4954f5c6f2330a616c793c0ffbee02e48911f84af0c3aff2f998a58a5e1",
+          "file": "sword/sword_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "565f84d3008b4152cdba4f9b4a474d753fc087eb37a74ea29219f50582d70736",
+          "file": "sword/sword_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "1b235462c8149b03079e14bbd59ca2c82739fb82672137061c101bfc88945821",
+          "file": "sword/sword_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "088f98b5e0ee0aea4e365607714e251009052270cec6b3572d172e86247fb7bc",
+          "file": "sword/sword_1m.splat"
+        }
+      ],
+      "extent": [
+        0.0748,
+        0.5106,
+        1.9999
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-4.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "The Oakeshott Institute",
+      "attribution": "\u201cSword\u201d mesh by The Oakeshott Institute, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/sword), originally The Oakeshott Institute via Sketchfab (https://sketchfab.com/3d-models/moonbrand-early-14th-c-arming-sword-80fa91fc8c974fd0acd2a55cc513edec)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "tree",
+      "title": "Tree",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "tree",
+        "plant",
+        "nature",
+        "branches"
+      ],
+      "thumbnail": "tree/thumb.jpg",
+      "meta": "tree/meta.json",
+      "file": "tree/tree_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "a805260f7a8712124e906cf229f33aa61cf6e26e5edfb0d8d874e7ea5afd39b9",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "bf4f17fab0aab1799017d259d6d9fe2dc781f82d94d4c029efea7b2bca1868be",
+          "file": "tree/tree_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "9a7ffc3edd7535e28fa3601d7a831a75c500b5c8f603078bed2628e9dfee5a51",
+          "file": "tree/tree_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "a805260f7a8712124e906cf229f33aa61cf6e26e5edfb0d8d874e7ea5afd39b9",
+          "file": "tree/tree_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "83a2f19023a70d7eaa63e94bf014b92d4ed0f2e852b4c9032dbe4208dd791727",
+          "file": "tree/tree_1m.splat"
+        }
+      ],
+      "extent": [
+        1.5598,
+        2.0,
+        1.5506
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-4.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "warmarine759",
+      "attribution": "\u201cTree\u201d mesh by warmarine759, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/tree), originally warmarine759 via Thingiverse (https://www.thingiverse.com/thing:3839198)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "wingnut",
+      "title": "Wing nut",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "wingnut",
+        "hardware",
+        "cad",
+        "nut"
+      ],
+      "thumbnail": "wingnut/thumb.jpg",
+      "meta": "wingnut/meta.json",
+      "file": "wingnut/wingnut_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "a311a5537cb718d2405e40eb41dcffd946df602be1b5452199acc576fc85b46c",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "2f9b1754d65576cfedabf31fef2833c7666bd705738936098e94c7ae7f279749",
+          "file": "wingnut/wingnut_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "ae0b725a51eda98241bd6c9a105a3548a7e78f26b212aa89a9fca90706a95d8d",
+          "file": "wingnut/wingnut_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "a311a5537cb718d2405e40eb41dcffd946df602be1b5452199acc576fc85b46c",
+          "file": "wingnut/wingnut_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "f2f1aa109a6ca3fa497e519c5cd2b7b0e65c02e7456f56492df665feaa92c83f",
+          "file": "wingnut/wingnut_1m.splat"
+        }
+      ],
+      "extent": [
+        0.8405,
+        1.1878,
+        1.9997
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-4.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "Stein, Oded and Grinspun, Eitan and Crane, Keenan",
+      "attribution": "\u201cWing nut\u201d mesh by Stein, Oded and Grinspun, Eitan and Crane, Keenan, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/wingnut)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "fish",
+      "title": "Fish",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "fish",
+        "animal",
+        "sea"
+      ],
+      "thumbnail": "fish/thumb.jpg",
+      "meta": "fish/meta.json",
+      "file": "fish/fish_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "4053a374f96a6dc5a3fd6046b539866fdf1d82e453bc068e5c6e1f16db97351c",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "d6ca46e2290e68d6a68925fdd52311ff2af8c93bbea3285e1c4d34bfc08eb368",
+          "file": "fish/fish_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "61483857728d7b6e1fcf39026d0a593d8974f4c64cba0201b0b63ce8046bfa9f",
+          "file": "fish/fish_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "4053a374f96a6dc5a3fd6046b539866fdf1d82e453bc068e5c6e1f16db97351c",
+          "file": "fish/fish_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "1492f865eab63472a8e3d0e7aeae9bda52b1ff9b7958371067d8b857f8a5931c",
+          "file": "fish/fish_1m.splat"
+        }
+      ],
+      "extent": [
+        1.0497,
+        1.1946,
+        1.9999
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "Public Domain",
+      "license_open": true,
+      "license_note": "The source mesh was released into the public domain by its creator, via the odedstein-meshes collection. No permission is needed; a credit is a courtesy.",
+      "author": "Crane, Keenan",
+      "attribution": "\u201cFish\u201d mesh by Crane, Keenan, via odedstein-meshes (https://github.com/odedstein/meshes), licensed Public Domain.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/fish)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "violin",
+      "title": "Violin",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "violin",
+        "instrument",
+        "music",
+        "scan"
+      ],
+      "thumbnail": "violin/thumb.jpg",
+      "meta": "violin/meta.json",
+      "file": "violin/violin_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "c485d61b6c561bee762deb277605d907cfde5bfac3d34b242bec61db5028b2da",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "406083a439e61352325fe9ecde9dcd6c2b9608e87a52c2483ef73c2f5d658194",
+          "file": "violin/violin_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "0ab0ed0e70e90518374e77a9d70b750b0bc091b5ac46179bc531e527c2c1b984",
+          "file": "violin/violin_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "c485d61b6c561bee762deb277605d907cfde5bfac3d34b242bec61db5028b2da",
+          "file": "violin/violin_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "198b71fed8172bfdeadcea07588f9a2292bd0213d5373dcea563caef609acd5a",
+          "file": "violin/violin_1m.splat"
+        }
+      ],
+      "extent": [
+        1.9999,
+        0.3065,
+        0.6778
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC0-1.0",
+      "license_open": true,
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_note": "The source mesh is CC0 1.0 (public domain dedication), via the odedstein-meshes collection. No permission is needed; a credit is a courtesy.",
+      "author": "Virtual Museums of Malopolska",
+      "attribution": "\u201cViolin\u201d mesh by Virtual Museums of Malopolska, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC0-1.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/violin), originally Virtual Museums of Ma\u0142opolska via Sketchfab (https://sketchfab.com/3d-models/violin-a784af0713a643b19ffcf65194bc0fbf)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "brucewick",
+      "title": "Brucewick",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "bust",
+        "head",
+        "portrait",
+        "character"
+      ],
+      "thumbnail": "brucewick/thumb.jpg",
+      "meta": "brucewick/meta.json",
+      "file": "brucewick/brucewick_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "2de7e17f60a31a414f34f3302c20a36e957b4b6c15f2fca92b12e655042f5a7e",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "19f20feb585d8f89decb3da8b28c4118bc8b4fd1ecaf8f1327f9a1a8a8a27525",
+          "file": "brucewick/brucewick_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "465c6df17d7345a07f51daa98c2a60f25ed3332df52f73c934d8eb6a18eec7c4",
+          "file": "brucewick/brucewick_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "2de7e17f60a31a414f34f3302c20a36e957b4b6c15f2fca92b12e655042f5a7e",
+          "file": "brucewick/brucewick_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "9c9e18144df31ad1985181937073d1f8c0c2683427fa58d63513b2edd2377a95",
+          "file": "brucewick/brucewick_1m.splat"
+        }
+      ],
+      "extent": [
+        1.8093,
+        2.0,
+        1.8072
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-NC-4.0",
+      "license_open": false,
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "license_note": "Derived from a CC-BY-NC-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "Holinaty, Josh",
+      "attribution": "\u201cBrucewick\u201d mesh by Holinaty, Josh, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/brucewick)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "cow",
+      "title": "Cow",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "cow",
+        "animal",
+        "farm",
+        "cattle"
+      ],
+      "thumbnail": "cow/thumb.jpg",
+      "meta": "cow/meta.json",
+      "file": "cow/cow_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "1240a520c39cc9c43d5bdc479eb618c1ba2762efaf22fafc534ff7a0cb60da16",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "3b07e56fbef7822bde7d9d23a3db694ced1483f5caee1783131ab55fa23f19a6",
+          "file": "cow/cow_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "1241414f953936cf129e9e389af5916c8d7abb7e817a878537347034e4db051f",
+          "file": "cow/cow_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "1240a520c39cc9c43d5bdc479eb618c1ba2762efaf22fafc534ff7a0cb60da16",
+          "file": "cow/cow_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "56b21c1495f04c6bee1a48fe99813e773c53d96b2194c912a3de074df961eb5e",
+          "file": "cow/cow_1m.splat"
+        }
+      ],
+      "extent": [
+        1.9998,
+        1.0961,
+        0.6098
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-NC-4.0",
+      "license_open": false,
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "license_note": "Derived from a CC-BY-NC-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "3dcs_ch",
+      "attribution": "\u201cCow\u201d mesh by 3dcs_ch, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/cow), originally 3dcs_ch via Thingiverse (https://www.thingiverse.com/thing:2431906)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "falconstatue",
+      "title": "Falcon statue",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "falcon",
+        "bird",
+        "statue",
+        "sculpture"
+      ],
+      "thumbnail": "falconstatue/thumb.jpg",
+      "meta": "falconstatue/meta.json",
+      "file": "falconstatue/falconstatue_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "a494eed2afd85009b74d5a15695676b880f7f5f815b47b9dc7be1497d30572df",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "346cd0722b802a4f8b5be032b0d060a59b348289acbb168154440b171c21d7e3",
+          "file": "falconstatue/falconstatue_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "5e3728d06ee61a29976bc6e5ae5ec96a4db5a6e8de7be536b30872fddc2fae67",
+          "file": "falconstatue/falconstatue_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "a494eed2afd85009b74d5a15695676b880f7f5f815b47b9dc7be1497d30572df",
+          "file": "falconstatue/falconstatue_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "a47a1bc88761133c9cf4a0b1494b7402aa17b1fda4d570a74784e4385968e9a4",
+          "file": "falconstatue/falconstatue_1m.splat"
+        }
+      ],
+      "extent": [
+        0.8127,
+        1.9999,
+        0.9954
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-NC-SA-4.0",
+      "license_open": false,
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "license_note": "Derived from a CC-BY-NC-SA-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. ShareAlike: a derivative must be released under the same licence. Credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "colinfizgig",
+      "attribution": "\u201cFalcon statue\u201d mesh by colinfizgig, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-SA-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/falconstatue), originally colinfizgig via Thingiverse (https://www.thingiverse.com/thing:46631)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "house",
+      "title": "House",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "house",
+        "building",
+        "architecture",
+        "cottage"
+      ],
+      "thumbnail": "house/thumb.jpg",
+      "meta": "house/meta.json",
+      "file": "house/house_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "313345f172b2bd0268d9266289f66bddcea700e47c58f37d18fec49b2f99d2b2",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "bbf55ac342ebe6a6640623a4f310addc1422265f85c94442fa584f0a5e15b659",
+          "file": "house/house_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "6dce918678c4d84622a6e478133a67f5e924ad00cee099287163b6c6db8cdd17",
+          "file": "house/house_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "313345f172b2bd0268d9266289f66bddcea700e47c58f37d18fec49b2f99d2b2",
+          "file": "house/house_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "062c224805370cc36798c94adf56c81348902db6a629f9bc0e99d18b822a0b32",
+          "file": "house/house_1m.splat"
+        }
+      ],
+      "extent": [
+        1.3642,
+        1.7977,
+        1.9991
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-NC-4.0",
+      "license_open": false,
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "license_note": "Derived from a CC-BY-NC-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "BSGMiniatures",
+      "attribution": "\u201cHouse\u201d mesh by BSGMiniatures, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/house), originally BSGMiniatures via Thingiverse (https://www.thingiverse.com/thing:3621726)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "mushroom",
+      "title": "Mushroom",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "mushroom",
+        "fungus",
+        "nature",
+        "plant"
+      ],
+      "thumbnail": "mushroom/thumb.jpg",
+      "meta": "mushroom/meta.json",
+      "file": "mushroom/mushroom_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "382851318000b2eb0da48c13eaf09955d1c706481491f0b10d6f35fd7302ddee",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "00a2ae3df24f7992473c8ff1b2eb73a8b69c5ab433aec3a83695de1352a85795",
+          "file": "mushroom/mushroom_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "fd296b05078b005c0a887ee03b1e634e32d87c0759e5033ce7b819d15261fb09",
+          "file": "mushroom/mushroom_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "382851318000b2eb0da48c13eaf09955d1c706481491f0b10d6f35fd7302ddee",
+          "file": "mushroom/mushroom_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "4e5e397d01988691b48b5626e0a899829f4512224c4ee9cfffc8293d25cd6d1f",
+          "file": "mushroom/mushroom_1m.splat"
+        }
+      ],
+      "extent": [
+        0.9849,
+        1.9999,
+        0.9651
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-NC-4.0",
+      "license_open": false,
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "license_note": "Derived from a CC-BY-NC-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "Holinaty, Josh",
+      "attribution": "\u201cMushroom\u201d mesh by Holinaty, Josh, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/mushroom)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "strawberry",
+      "title": "Strawberry",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "strawberry",
+        "fruit",
+        "food"
+      ],
+      "thumbnail": "strawberry/thumb.jpg",
+      "meta": "strawberry/meta.json",
+      "file": "strawberry/strawberry_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "1ecf550735ea49039df1666a7bb8babc31532f2788201abf5a53c4d6f89c36c1",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "6076f28ca869d4bd3c70c1d3e0392cb88d5561d2bc64488ddecc9701eb124c7c",
+          "file": "strawberry/strawberry_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "87705b72721c573e02e0b4f6c08b091c9e2f22c8dc4093624ad92f4ef78b9c3a",
+          "file": "strawberry/strawberry_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "1ecf550735ea49039df1666a7bb8babc31532f2788201abf5a53c4d6f89c36c1",
+          "file": "strawberry/strawberry_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "5171c3e973246bfa31bbf80668c4fdb51ed219b82fce68defb81c566a8205ec5",
+          "file": "strawberry/strawberry_1m.splat"
+        }
+      ],
+      "extent": [
+        1.4755,
+        1.4128,
+        1.9999
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-NC-4.0",
+      "license_open": false,
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "license_note": "Derived from a CC-BY-NC-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "GSC_Nakamura",
+      "attribution": "\u201cStrawberry\u201d mesh by GSC_Nakamura, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/strawberry), originally GSC_Nakamura via Thingiverse (https://www.thingiverse.com/thing:153548)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "tower",
+      "title": "Tower",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "tower",
+        "building",
+        "architecture",
+        "lighthouse"
+      ],
+      "thumbnail": "tower/thumb.jpg",
+      "meta": "tower/meta.json",
+      "file": "tower/tower_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "72ac92f13d90fe1d3443073f9afcdd80a5d3bad41c4a855c30ab92f134474063",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "b3711d3a9105e308b8d8ed43c3724be06add2e56e38be7ea8e317ad420232980",
+          "file": "tower/tower_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "db8c799113366076430ebaa774643e571accee8f4b87efd5de8d53d565d81de0",
+          "file": "tower/tower_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "72ac92f13d90fe1d3443073f9afcdd80a5d3bad41c4a855c30ab92f134474063",
+          "file": "tower/tower_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "d6bcfdb4c8419f040eeecdd0124aad6da71d4fde7bda60738952bf5731802b00",
+          "file": "tower/tower_1m.splat"
+        }
+      ],
+      "extent": [
+        1.0477,
+        2.0,
+        1.1031
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-NC-3.0",
+      "license_open": false,
+      "license_url": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "license_note": "Derived from a CC-BY-NC-3.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "jansentee3d",
+      "attribution": "\u201cTower\u201d mesh by jansentee3d, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-3.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/tower), originally jansentee3d via Thingiverse (https://www.thingiverse.com/thing:3155868)",
+      "added": "2026-07-28"
+    },
+    {
+      "id": "well",
+      "title": "Well",
+      "category": "object",
+      "source_method": "mesh2splat",
+      "tags": [
+        "well",
+        "building",
+        "architecture",
+        "medieval"
+      ],
+      "thumbnail": "well/thumb.jpg",
+      "meta": "well/meta.json",
+      "file": "well/well_500k.splat",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "358f0be79718cc1b36dc2d6842a175479386d33671f3a221d9fc9f10fd6d812b",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "default_lod": "500k",
+      "lods": [
+        {
+          "lod": "10k",
+          "splats": 10000,
+          "bytes": 320000,
+          "sha256": "cc4a78363c39c81d3bd2e38f0e7b500fa06a656274c88af383ab30ffa085674e",
+          "file": "well/well_10k.splat"
+        },
+        {
+          "lod": "100k",
+          "splats": 100000,
+          "bytes": 3200000,
+          "sha256": "b9132f0898df130bd45f4bd08e7f7f4d2c84778fed7ced7bcc75f8a042a49a02",
+          "file": "well/well_100k.splat"
+        },
+        {
+          "lod": "500k",
+          "splats": 500000,
+          "bytes": 16000000,
+          "sha256": "358f0be79718cc1b36dc2d6842a175479386d33671f3a221d9fc9f10fd6d812b",
+          "file": "well/well_500k.splat"
+        },
+        {
+          "lod": "1m",
+          "splats": 1000000,
+          "bytes": 32000000,
+          "sha256": "4410e32d2d354c774e45929533d22b9f7870f8579a7f9ca3052ef22b34515ca2",
+          "file": "well/well_1m.splat"
+        }
+      ],
+      "extent": [
+        1.3412,
+        1.9999,
+        1.2932
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "CC-BY-NC-4.0",
+      "license_open": false,
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "license_note": "Derived from a CC-BY-NC-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
+      "author": "onmioji",
+      "attribution": "\u201cWell\u201d mesh by onmioji, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/well), originally onimoji via Thingiverse (https://www.thingiverse.com/thing:3587292)",
+      "added": "2026-07-28"
     }
   ]
 }

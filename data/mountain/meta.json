@@ -1,0 +1,82 @@
+{
+  "id": "mountain",
+  "title": "Mountain",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "mountain",
+    "terrain",
+    "landscape",
+    "peak"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "mountain_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "84a1d3d7b6f7491797f13e583ab64af18ea1a623d94e26edc27ccc625d0a2f72",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "8c52c3e564e4b7fcf88f9408377eb3d80f62364a63c980c96b376348c2f269df",
+      "file": "mountain_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "c70a282a2c669cf8cfc6ec57d031c63843d780375e0dcdc0e92fb2251807c966",
+      "file": "mountain_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "84a1d3d7b6f7491797f13e583ab64af18ea1a623d94e26edc27ccc625d0a2f72",
+      "file": "mountain_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "b75a493a479b4000fa0adf5c7a9b1c3810c61877bc2fade6d935e779132184b7",
+      "file": "mountain_1m.splat"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "license_open": true,
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+  "author": "lastloginname",
+  "attribution": "\u201cMountain\u201d mesh by lastloginname, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/mountain), originally lastloginname via Thingiverse (https://www.thingiverse.com/thing:991578)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      1.9998,
+      1.0825,
+      1.9995
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/mountain), originally lastloginname via Thingiverse (https://www.thingiverse.com/thing:991578)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}

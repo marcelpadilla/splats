@@ -1,0 +1,82 @@
+{
+  "id": "tree",
+  "title": "Tree",
+  "category": "object",
+  "source_method": "mesh2splat",
+  "tags": [
+    "tree",
+    "plant",
+    "nature",
+    "branches"
+  ],
+  "thumbnail": "thumb.jpg",
+  "file": "tree_500k.splat",
+  "splats": 500000,
+  "bytes": 16000000,
+  "sha256": "a805260f7a8712124e906cf229f33aa61cf6e26e5edfb0d8d874e7ea5afd39b9",
+  "format": "splat",
+  "spherical_harmonics": false,
+  "default_lod": "500k",
+  "lods": [
+    {
+      "lod": "10k",
+      "splats": 10000,
+      "bytes": 320000,
+      "sha256": "bf4f17fab0aab1799017d259d6d9fe2dc781f82d94d4c029efea7b2bca1868be",
+      "file": "tree_10k.splat"
+    },
+    {
+      "lod": "100k",
+      "splats": 100000,
+      "bytes": 3200000,
+      "sha256": "9a7ffc3edd7535e28fa3601d7a831a75c500b5c8f603078bed2628e9dfee5a51",
+      "file": "tree_100k.splat"
+    },
+    {
+      "lod": "500k",
+      "splats": 500000,
+      "bytes": 16000000,
+      "sha256": "a805260f7a8712124e906cf229f33aa61cf6e26e5edfb0d8d874e7ea5afd39b9",
+      "file": "tree_500k.splat"
+    },
+    {
+      "lod": "1m",
+      "splats": 1000000,
+      "bytes": 32000000,
+      "sha256": "83a2f19023a70d7eaa63e94bf014b92d4ed0f2e852b4c9032dbe4208dd791727",
+      "file": "tree_1m.splat"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "license_open": true,
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
+  "author": "warmarine759",
+  "attribution": "\u201cTree\u201d mesh by warmarine759, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+  "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/tree), originally warmarine759 via Thingiverse (https://www.thingiverse.com/thing:3839198)",
+  "added": "2026-07-28",
+  "geometry": {
+    "extent": [
+      1.5598,
+      2.0,
+      1.5506
+    ],
+    "up_axis": "-y",
+    "units": "mesh normalized so its longest axis = 2.0, not metric"
+  },
+  "mesh2splat": {
+    "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
+    "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/tree), originally warmarine759 via Thingiverse (https://www.thingiverse.com/thing:3839198)",
+    "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
+    "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
+  },
+  "quality": {
+    "psnr": null,
+    "ssim": null
+  },
+  "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."
+  ]
+}
