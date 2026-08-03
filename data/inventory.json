@@ -38,7 +38,7 @@
         "glossy"
       ],
       "file": "plant/plant.splat",
-      "thumbnail": "plant/thumb.jpg",
+      "thumbnail": "plant/thumb.png",
       "meta": "plant/meta.json",
       "splats": 113648,
       "bytes": 3636736,
@@ -70,7 +70,7 @@
         "boxy"
       ],
       "file": "academic_tarot_cards/academic_tarot_cards.splat",
-      "thumbnail": "academic_tarot_cards/thumb.jpg",
+      "thumbnail": "academic_tarot_cards/thumb.png",
       "meta": "academic_tarot_cards/meta.json",
       "splats": 114865,
       "bytes": 3675680,
@@ -102,7 +102,7 @@
         "bumpy"
       ],
       "file": "textile_ball/textile_ball.splat",
-      "thumbnail": "textile_ball/thumb.jpg",
+      "thumbnail": "textile_ball/thumb.png",
       "meta": "textile_ball/meta.json",
       "splats": 384589,
       "bytes": 12306848,
@@ -134,7 +134,7 @@
         "single-image"
       ],
       "file": "plant_generated/plant_generated.splat",
-      "thumbnail": "plant_generated/thumb.jpg",
+      "thumbnail": "plant_generated/thumb.png",
       "meta": "plant_generated/meta.json",
       "splats": 262144,
       "bytes": 8388608,
@@ -166,25 +166,26 @@
         "synthetic",
         "test-model"
       ],
-      "file": "bunny_render/bunny_render.splat",
-      "thumbnail": "bunny_render/thumb.jpg",
+      "thumbnail": "bunny_render/thumb.png",
       "meta": "bunny_render/meta.json",
-      "splats": 185964,
-      "bytes": 5950848,
-      "sha256": "aee426bf8f07d40e6a6cc8e1d850f1f94657034ff066568640615911c0d2aa32",
+      "file": "bunny_render/bunny_render.splat",
+      "splats": 188864,
+      "bytes": 6043648,
+      "sha256": "78e7ed6be3c87bc13ec1a573d863dbfc56cc3606867d6ea31f2ccfe2a4e2047c",
       "format": "splat",
       "spherical_harmonics": false,
       "extent": [
-        1.9924,
-        1.9959,
-        1.6234
+        1.9828,
+        1.9965,
+        1.6148
       ],
-      "psnr": 42.66,
+      "psnr": 43.23,
       "ssim": 0.9964,
       "license": "CC-BY-3.0",
+      "license_open": true,
       "license_url": "https://creativecommons.org/licenses/by/3.0/",
-      "attribution": "Derived from the Stanford Bunny STL by Makerbot (Wikimedia Commons), CC BY 3.0.",
       "author": "Marcel Padilla",
+      "attribution": "Derived from the Stanford Bunny STL by Makerbot (Wikimedia Commons), CC BY 3.0.",
       "added": "2026-07-24"
     },
     {
@@ -201,7 +202,7 @@
         "single-image"
       ],
       "file": "bunny_generated/bunny_generated.splat",
-      "thumbnail": "bunny_generated/thumb.jpg",
+      "thumbnail": "bunny_generated/thumb.png",
       "meta": "bunny_generated/meta.json",
       "splats": 262144,
       "bytes": 8388608,
@@ -234,7 +235,7 @@
         "test-model",
         "cute"
       ],
-      "thumbnail": "spot/thumb.jpg",
+      "thumbnail": "spot/thumb.png",
       "meta": "spot/meta.json",
       "file": "spot/spot_500k.splat",
       "splats": 500000,
@@ -298,7 +299,7 @@
         "classic",
         "test-model"
       ],
-      "thumbnail": "bob/thumb.jpg",
+      "thumbnail": "bob/thumb.png",
       "meta": "bob/meta.json",
       "file": "bob/bob_500k.splat",
       "splats": 500000,
@@ -362,7 +363,7 @@
         "classic",
         "newell"
       ],
-      "thumbnail": "teapot/thumb.jpg",
+      "thumbnail": "teapot/thumb.png",
       "meta": "teapot/meta.json",
       "file": "teapot/teapot_500k.splat",
       "splats": 500000,
@@ -425,7 +426,7 @@
         "primitive",
         "cylinder"
       ],
-      "thumbnail": "cylinder/thumb.jpg",
+      "thumbnail": "cylinder/thumb.png",
       "meta": "cylinder/meta.json",
       "file": "cylinder/cylinder_500k.splat",
       "splats": 500000,
@@ -488,7 +489,7 @@
         "torus",
         "donut"
       ],
-      "thumbnail": "torus/thumb.jpg",
+      "thumbnail": "torus/thumb.png",
       "meta": "torus/meta.json",
       "file": "torus/torus_500k.splat",
       "splats": 500000,
@@ -551,7 +552,7 @@
         "ring",
         "torus"
       ],
-      "thumbnail": "ring/thumb.jpg",
+      "thumbnail": "ring/thumb.png",
       "meta": "ring/meta.json",
       "file": "ring/ring_500k.splat",
       "splats": 500000,
@@ -615,7 +616,7 @@
         "classic",
         "test-model"
       ],
-      "thumbnail": "stanford_bunny/thumb.jpg",
+      "thumbnail": "stanford_bunny/thumb.png",
       "meta": "stanford_bunny/meta.json",
       "file": "stanford_bunny/stanford_bunny_500k.splat",
       "splats": 500000,
@@ -682,7 +683,7 @@
         "test-model",
         "organic"
       ],
-      "thumbnail": "armadillo/thumb.jpg",
+      "thumbnail": "armadillo/thumb.png",
       "meta": "armadillo/meta.json",
       "file": "armadillo/armadillo_500k.splat",
       "splats": 500000,
@@ -749,7 +750,7 @@
         "test-model",
         "detailed"
       ],
-      "thumbnail": "dragon/thumb.jpg",
+      "thumbnail": "dragon/thumb.png",
       "meta": "dragon/meta.json",
       "file": "dragon/dragon_500k.splat",
       "splats": 500000,
@@ -817,7 +818,7 @@
         "test-model",
         "detailed"
       ],
-      "thumbnail": "happy/thumb.jpg",
+      "thumbnail": "happy/thumb.png",
       "meta": "happy/meta.json",
       "file": "happy/happy_500k.splat",
       "splats": 500000,
@@ -885,7 +886,7 @@
         "classic",
         "test-model"
       ],
-      "thumbnail": "lucy/thumb.jpg",
+      "thumbnail": "lucy/thumb.png",
       "meta": "lucy/meta.json",
       "file": "lucy/lucy_500k.splat",
       "splats": 500000,
@@ -953,7 +954,7 @@
         "detailed",
         "high-poly"
       ],
-      "thumbnail": "xyzrgb_dragon/thumb.jpg",
+      "thumbnail": "xyzrgb_dragon/thumb.png",
       "meta": "xyzrgb_dragon/meta.json",
       "file": "xyzrgb_dragon/xyzrgb_dragon_500k.splat",
       "splats": 500000,
@@ -1022,7 +1023,7 @@
         "organic",
         "natural"
       ],
-      "thumbnail": "shell/thumb.jpg",
+      "thumbnail": "shell/thumb.png",
       "meta": "shell/meta.json",
       "file": "shell/shell.splat",
       "splats": 187643,
@@ -1054,7 +1055,7 @@
         "vehicle",
         "hull"
       ],
-      "thumbnail": "boat/thumb.jpg",
+      "thumbnail": "boat/thumb.png",
       "meta": "boat/meta.json",
       "file": "boat/boat_500k.splat",
       "splats": 500000,
@@ -1120,7 +1121,7 @@
         "footwear",
         "leather"
       ],
-      "thumbnail": "boot/thumb.jpg",
+      "thumbnail": "boot/thumb.png",
       "meta": "boot/meta.json",
       "file": "boot/boot_500k.splat",
       "splats": 500000,
@@ -1186,7 +1187,7 @@
         "pet",
         "stretching"
       ],
-      "thumbnail": "cat/thumb.jpg",
+      "thumbnail": "cat/thumb.png",
       "meta": "cat/meta.json",
       "file": "cat/cat_500k.splat",
       "splats": 500000,
@@ -1251,7 +1252,7 @@
         "food",
         "wedge"
       ],
-      "thumbnail": "cheese/thumb.jpg",
+      "thumbnail": "cheese/thumb.png",
       "meta": "cheese/meta.json",
       "file": "cheese/cheese_500k.splat",
       "splats": 500000,
@@ -1316,7 +1317,7 @@
         "primitive",
         "box"
       ],
-      "thumbnail": "cube/thumb.jpg",
+      "thumbnail": "cube/thumb.png",
       "meta": "cube/meta.json",
       "file": "cube/cube_500k.splat",
       "splats": 500000,
@@ -1383,7 +1384,7 @@
         "portrait",
         "classical"
       ],
-      "thumbnail": "demosthenes/thumb.jpg",
+      "thumbnail": "demosthenes/thumb.png",
       "meta": "demosthenes/meta.json",
       "file": "demosthenes/demosthenes_500k.splat",
       "splats": 500000,
@@ -1449,7 +1450,7 @@
         "animal",
         "horns"
       ],
-      "thumbnail": "goathead/thumb.jpg",
+      "thumbnail": "goathead/thumb.png",
       "meta": "goathead/meta.json",
       "file": "goathead/goathead_500k.splat",
       "splats": 500000,
@@ -1514,7 +1515,7 @@
         "tool",
         "hardware"
       ],
-      "thumbnail": "hammer/thumb.jpg",
+      "thumbnail": "hammer/thumb.png",
       "meta": "hammer/meta.json",
       "file": "hammer/hammer_500k.splat",
       "splats": 500000,
@@ -1579,7 +1580,7 @@
         "animal",
         "bear"
       ],
-      "thumbnail": "koala/thumb.jpg",
+      "thumbnail": "koala/thumb.png",
       "meta": "koala/meta.json",
       "file": "koala/koala_500k.splat",
       "splats": 500000,
@@ -1645,7 +1646,7 @@
         "landscape",
         "peak"
       ],
-      "thumbnail": "mountain/thumb.jpg",
+      "thumbnail": "mountain/thumb.png",
       "meta": "mountain/meta.json",
       "file": "mountain/mountain_500k.splat",
       "splats": 500000,
@@ -1711,7 +1712,7 @@
         "food",
         "root"
       ],
-      "thumbnail": "parsnip/thumb.jpg",
+      "thumbnail": "parsnip/thumb.png",
       "meta": "parsnip/meta.json",
       "file": "parsnip/parsnip_500k.splat",
       "splats": 500000,
@@ -1777,7 +1778,7 @@
         "bird",
         "cartoon"
       ],
-      "thumbnail": "penguin/thumb.jpg",
+      "thumbnail": "penguin/thumb.png",
       "meta": "penguin/meta.json",
       "file": "penguin/penguin_500k.splat",
       "splats": 500000,
@@ -1842,7 +1843,7 @@
         "food",
         "flat"
       ],
-      "thumbnail": "pizza/thumb.jpg",
+      "thumbnail": "pizza/thumb.png",
       "meta": "pizza/meta.json",
       "file": "pizza/pizza_500k.splat",
       "splats": 500000,
@@ -1908,7 +1909,7 @@
         "airplane",
         "vehicle"
       ],
-      "thumbnail": "plane/thumb.jpg",
+      "thumbnail": "plane/thumb.png",
       "meta": "plane/meta.json",
       "file": "plane/plane_500k.splat",
       "splats": 500000,
@@ -1974,7 +1975,7 @@
         "arachnid",
         "detailed"
       ],
-      "thumbnail": "scorpion/thumb.jpg",
+      "thumbnail": "scorpion/thumb.png",
       "meta": "scorpion/meta.json",
       "file": "scorpion/scorpion_500k.splat",
       "splats": 500000,
@@ -2040,7 +2041,7 @@
         "bone",
         "head"
       ],
-      "thumbnail": "skull/thumb.jpg",
+      "thumbnail": "skull/thumb.png",
       "meta": "skull/meta.json",
       "file": "skull/skull_500k.splat",
       "splats": 500000,
@@ -2106,7 +2107,7 @@
         "blade",
         "historical"
       ],
-      "thumbnail": "sword/thumb.jpg",
+      "thumbnail": "sword/thumb.png",
       "meta": "sword/meta.json",
       "file": "sword/sword_500k.splat",
       "splats": 500000,
@@ -2172,7 +2173,7 @@
         "nature",
         "branches"
       ],
-      "thumbnail": "tree/thumb.jpg",
+      "thumbnail": "tree/thumb.png",
       "meta": "tree/meta.json",
       "file": "tree/tree_500k.splat",
       "splats": 500000,
@@ -2238,7 +2239,7 @@
         "cad",
         "nut"
       ],
-      "thumbnail": "wingnut/thumb.jpg",
+      "thumbnail": "wingnut/thumb.png",
       "meta": "wingnut/meta.json",
       "file": "wingnut/wingnut_500k.splat",
       "splats": 500000,
@@ -2303,7 +2304,7 @@
         "animal",
         "sea"
       ],
-      "thumbnail": "fish/thumb.jpg",
+      "thumbnail": "fish/thumb.png",
       "meta": "fish/meta.json",
       "file": "fish/fish_500k.splat",
       "splats": 500000,
@@ -2368,7 +2369,7 @@
         "music",
         "scan"
       ],
-      "thumbnail": "violin/thumb.jpg",
+      "thumbnail": "violin/thumb.png",
       "meta": "violin/meta.json",
       "file": "violin/violin_500k.splat",
       "splats": 500000,
@@ -2434,7 +2435,7 @@
         "portrait",
         "character"
       ],
-      "thumbnail": "brucewick/thumb.jpg",
+      "thumbnail": "brucewick/thumb.png",
       "meta": "brucewick/meta.json",
       "file": "brucewick/brucewick_500k.splat",
       "splats": 500000,
@@ -2500,7 +2501,7 @@
         "farm",
         "cattle"
       ],
-      "thumbnail": "cow/thumb.jpg",
+      "thumbnail": "cow/thumb.png",
       "meta": "cow/meta.json",
       "file": "cow/cow_500k.splat",
       "splats": 500000,
@@ -2566,7 +2567,7 @@
         "statue",
         "sculpture"
       ],
-      "thumbnail": "falconstatue/thumb.jpg",
+      "thumbnail": "falconstatue/thumb.png",
       "meta": "falconstatue/meta.json",
       "file": "falconstatue/falconstatue_500k.splat",
       "splats": 500000,
@@ -2632,7 +2633,7 @@
         "architecture",
         "cottage"
       ],
-      "thumbnail": "house/thumb.jpg",
+      "thumbnail": "house/thumb.png",
       "meta": "house/meta.json",
       "file": "house/house_500k.splat",
       "splats": 500000,
@@ -2698,7 +2699,7 @@
         "nature",
         "plant"
       ],
-      "thumbnail": "mushroom/thumb.jpg",
+      "thumbnail": "mushroom/thumb.png",
       "meta": "mushroom/meta.json",
       "file": "mushroom/mushroom_500k.splat",
       "splats": 500000,
@@ -2763,7 +2764,7 @@
         "fruit",
         "food"
       ],
-      "thumbnail": "strawberry/thumb.jpg",
+      "thumbnail": "strawberry/thumb.png",
       "meta": "strawberry/meta.json",
       "file": "strawberry/strawberry_500k.splat",
       "splats": 500000,
@@ -2829,7 +2830,7 @@
         "architecture",
         "lighthouse"
       ],
-      "thumbnail": "tower/thumb.jpg",
+      "thumbnail": "tower/thumb.png",
       "meta": "tower/meta.json",
       "file": "tower/tower_500k.splat",
       "splats": 500000,
@@ -2895,7 +2896,7 @@
         "architecture",
         "medieval"
       ],
-      "thumbnail": "well/thumb.jpg",
+      "thumbnail": "well/thumb.png",
       "meta": "well/meta.json",
       "file": "well/well_500k.splat",
       "splats": 500000,
@@ -2949,6 +2950,42 @@
       "attribution": "\u201cWell\u201d mesh by onmioji, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/well), originally onimoji via Thingiverse (https://www.thingiverse.com/thing:3587292)",
       "added": "2026-07-28"
+    },
+    {
+      "id": "eiffel_generated",
+      "title": "Eiffel Tower (generated)",
+      "category": "object",
+      "source_method": "image-to-3d-generation",
+      "tags": [
+        "eiffel-tower",
+        "tower",
+        "landmark",
+        "architecture",
+        "generated",
+        "ai",
+        "single-image"
+      ],
+      "thumbnail": "eiffel_generated/thumb.png",
+      "meta": "eiffel_generated/meta.json",
+      "file": "eiffel_generated/eiffel_generated.splat",
+      "splats": 262097,
+      "bytes": 8387104,
+      "sha256": "42825736c9c9464de1a06393f63b9ada281e35d9197cbf6856deaa1e60f34ef5",
+      "format": "splat",
+      "spherical_harmonics": false,
+      "extent": [
+        0.4193,
+        1.0012,
+        0.4377
+      ],
+      "psnr": null,
+      "ssim": null,
+      "license": "As-is (no warranty)",
+      "license_open": false,
+      "license_note": "Generated by an AI image-to-3D model (TripoSplat, MIT weights) from a single public-domain photograph. The model invents geometry from an undisclosed training corpus, so the output's copyright status cannot be warranted. Provided as-is, with no warranty of rights; you are responsible for clearing any rights for your use.",
+      "author": "Marcel Padilla",
+      "attribution": "Generated from 'Tour Eiffel Wikimedia Commons.jpg' by Benh LIEU SONG, released into the public domain. The Eiffel Tower structure is out of copyright; the input is a daylight photograph, since the tower's night illumination is separately copyrighted.",
+      "added": "2026-08-03"
     }
   ]
 }

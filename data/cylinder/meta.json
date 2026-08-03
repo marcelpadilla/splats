@@ -14,7 +14,7 @@
   "source_mesh": "primitive",
   "added": "2026-07-24",
   "file": "cylinder_500k.splat",
-  "thumbnail": "thumb.jpg",
+  "thumbnail": "thumb.png",
   "format": "splat",
   "splats": 500000,
   "bytes": 16000000,

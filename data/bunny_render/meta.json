@@ -10,39 +10,41 @@
     "synthetic",
     "test-model"
   ],
-  "author": "Marcel Padilla",
-  "license": "CC-BY-3.0",
-  "license_url": "https://creativecommons.org/licenses/by/3.0/",
-  "attribution": "Derived from the Stanford Bunny STL by Makerbot (via Wikimedia Commons, File:Stanford_Bunny.stl), CC BY 3.0.",
-  "added": "2026-07-24",
+  "thumbnail": "thumb.png",
   "file": "bunny_render.splat",
-  "thumbnail": "thumb.jpg",
+  "splats": 188864,
+  "bytes": 6043648,
+  "sha256": "78e7ed6be3c87bc13ec1a573d863dbfc56cc3606867d6ea31f2ccfe2a4e2047c",
   "format": "splat",
-  "splats": 185964,
-  "bytes": 5950848,
-  "sha256": "aee426bf8f07d40e6a6cc8e1d850f1f94657034ff066568640615911c0d2aa32",
   "spherical_harmonics": false,
+  "license": "CC-BY-3.0",
+  "license_open": true,
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "author": "Marcel Padilla",
+  "attribution": "Derived from the Stanford Bunny STL by Makerbot (Wikimedia Commons), CC BY 3.0.",
+  "added": "2026-07-24",
   "geometry": {
-    "extent": [1.9924, 1.9959, 1.6234],
+    "extent": [
+      1.9828,
+      1.9965,
+      1.6148
+    ],
     "up_axis": "-y",
-    "units": "render units (mesh normalized so its longest axis = 2.0), not metric"
+    "units": "render scene scale, not metric"
   },
-  "render": {
-    "tool": "Blender 5.1 (Cycles) -> Brush, no COLMAP",
-    "input_mesh": "Wikimedia Commons File:Stanford_Bunny.stl (CC BY 3.0, Makerbot)",
-    "views": 160,
-    "resolution": 800,
-    "poses": "known camera-to-world (NeRF transforms.json), so structure-from-motion is skipped",
-    "material": "matte, high-frequency procedural texture (a scanning target)",
-    "training": "Brush (from main), 30000 iters, 500k cap, alpha-mode transparent"
+  "pipeline": {
+    "render": "Blender 5.1 Cycles, 160 views at 800px, 128 samples, transparent film, exact known poses written as a NeRF transforms.json",
+    "training": "Brush from source, 30k iterations, 500k cap, --alpha-mode transparent, NO COLMAP (the poses are exact, so structure-from-motion is skipped)",
+    "surface": "matte off-white with a micro-bump normal, the renderer's default 'matte' style"
+  },
+  "revision": {
+    "date": "2026-08-03",
+    "change": "Re-rendered from the same CC BY 3.0 STL with the matte surface instead of the previous high-frequency multi-colour Voronoi texture. The rainbow was there to give the photometric trainer something to lock onto, and it worked, but it made the object read as an abstract test pattern rather than the Stanford bunny. The matte surface trains at least as well: PSNR 43.23 against 42.66 for the rainbow, SSIM unchanged at 0.9964.",
+    "superseded_file": "training/bunny_render_exports/bunny_render_RAINBOW_superseded.splat"
   },
   "quality": {
-    "psnr": 42.66,
+    "psnr": 43.23,
     "ssim": 0.9964
   },
-  "caveats": [
-    "SYNTHETIC, not a photographic capture: a known mesh rendered from known poses and reconstructed as a splat. Geometry and appearance are exact (not invented), but this is a render, not a real scene.",
-    "Licensed CC-BY-3.0 (not 4.0) because it is a derivative of a CC BY 3.0 mesh; credit Makerbot as above.",
-    "The colourful texture is a deliberate scanning target (matte, high-frequency), chosen so reconstruction is crisp, not for realism."
-  ]
+  "caveats": []
 }

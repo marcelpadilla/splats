@@ -16,14 +16,18 @@
   "license_open": false,
   "added": "2026-07-24",
   "file": "plant_generated.splat",
-  "thumbnail": "thumb.jpg",
+  "thumbnail": "thumb.png",
   "format": "splat",
   "splats": 262144,
   "bytes": 8388608,
   "sha256": "03bbe15131f87742c00574c766fab19324f8a133a52435ae50da674bec360c81",
   "spherical_harmonics": false,
   "geometry": {
-    "extent": [0.6251, 1.0009, 0.7572],
+    "extent": [
+      0.6251,
+      1.0009,
+      0.7572
+    ],
     "up_axis": "-y",
     "units": "model output units, not metric"
   },

@@ -9,7 +9,7 @@
     "architecture",
     "lighthouse"
   ],
-  "thumbnail": "thumb.jpg",
+  "thumbnail": "thumb.png",
   "file": "tower_500k.splat",
   "splats": 500000,
   "bytes": 16000000,

@@ -17,14 +17,18 @@
   "attribution": "Input derived from the Stanford Bunny STL by Makerbot (via Wikimedia Commons, File:Stanford_Bunny.stl), CC BY 3.0.",
   "added": "2026-07-24",
   "file": "bunny_generated.splat",
-  "thumbnail": "thumb.jpg",
+  "thumbnail": "thumb.png",
   "format": "splat",
   "splats": 262144,
   "bytes": 8388608,
   "sha256": "5b06c57f1d0b7437c15a06d3434593e9508ea02298d9aa74b3691046c0b3b2c8",
   "spherical_harmonics": false,
   "geometry": {
-    "extent": [0.8213, 1.0007, 0.9918],
+    "extent": [
+      0.8213,
+      1.0007,
+      0.9918
+    ],
     "up_axis": "-y",
     "units": "model output units, not metric"
   },
