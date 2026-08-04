@@ -284,7 +284,7 @@
       "license": "CC0-1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "author": "Keenan Crane",
-      "attribution": "“Spot” by Keenan Crane, CC0 (public domain).",
+      "attribution": "\u201cSpot\u201d by Keenan Crane, CC0 (public domain).",
       "source_mesh": "Keenan Crane 3D Model Repository (https://www.cs.cmu.edu/~kmcrane/Projects/ModelRepository/)",
       "added": "2026-07-24"
     },
@@ -348,7 +348,7 @@
       "license": "CC0-1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "author": "Keenan Crane",
-      "attribution": "“Bob” by Keenan Crane, CC0 (public domain).",
+      "attribution": "\u201cBob\u201d by Keenan Crane, CC0 (public domain).",
       "source_mesh": "Keenan Crane 3D Model Repository (https://www.cs.cmu.edu/~kmcrane/Projects/ModelRepository/)",
       "added": "2026-07-24"
     },
@@ -474,7 +474,7 @@
       "ssim": null,
       "license": "CC0-1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author": "—",
+      "author": "\u2014",
       "attribution": "Geometric primitive (CC0).",
       "source_mesh": "primitive",
       "added": "2026-07-24"
@@ -537,7 +537,7 @@
       "ssim": null,
       "license": "CC0-1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author": "—",
+      "author": "\u2014",
       "attribution": "Geometric primitive (CC0).",
       "source_mesh": "primitive",
       "added": "2026-07-24"
@@ -600,7 +600,7 @@
       "ssim": null,
       "license": "CC0-1.0",
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author": "—",
+      "author": "\u2014",
       "attribution": "Geometric primitive (CC0).",
       "source_mesh": "primitive",
       "added": "2026-07-24"
@@ -1106,7 +1106,7 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "Stein, Oded and Grinspun, Eitan and Crane, Keenan",
-      "attribution": "“Boat” mesh by Stein, Oded and Grinspun, Eitan and Crane, Keenan, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "attribution": "\u201cBoat\u201d mesh by Stein, Oded and Grinspun, Eitan and Crane, Keenan, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/boat)",
       "added": "2026-07-28"
     },
@@ -1172,7 +1172,7 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "inciprocal",
-      "attribution": "“Boot” mesh by inciprocal, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "attribution": "\u201cBoot\u201d mesh by inciprocal, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/boot), originally inciprocal via Sketchfab (https://sketchfab.com/3d-models/harrison-work-boot-d9506d9a318e4c56ac3d8ab273bd2540)",
       "added": "2026-07-28"
     },
@@ -1238,7 +1238,7 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "billyd",
-      "attribution": "“Cat” mesh by billyd, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "attribution": "\u201cCat\u201d mesh by billyd, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/cat), originally billyd via Thingiverse (https://www.thingiverse.com/thing:1565405)",
       "added": "2026-07-28"
     },
@@ -1303,7 +1303,7 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "3dvs_ch",
-      "attribution": "“Cheese” mesh by 3dvs_ch, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "attribution": "\u201cCheese\u201d mesh by 3dvs_ch, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/cheese)",
       "added": "2026-07-28"
     },
@@ -1368,7 +1368,7 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "Stein, Oded",
-      "attribution": "“Cube” mesh by Stein, Oded, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "attribution": "\u201cCube\u201d mesh by Stein, Oded, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/cube)",
       "added": "2026-07-28"
     },
@@ -1435,7 +1435,7 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "ryanfb",
-      "attribution": "“Demosthenes” mesh by ryanfb, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "attribution": "\u201cDemosthenes\u201d mesh by ryanfb, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/demosthenes)",
       "added": "2026-07-28"
     },
@@ -1501,7 +1501,7 @@
       "license_url": "https://creativecommons.org/licenses/by/3.0/",
       "license_note": "Derived from a CC-BY-3.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "hugoelec",
-      "attribution": "“Goat head” mesh by hugoelec, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
+      "attribution": "\u201cGoat head\u201d mesh by hugoelec, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/goathead)",
       "added": "2026-07-28"
     },
@@ -1566,7 +1566,7 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "Spognetta, Andrea",
-      "attribution": "“Hammer” mesh by Spognetta, Andrea, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "attribution": "\u201cHammer\u201d mesh by Spognetta, Andrea, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/hammer), originally Andrea Spognetta (Spogna) via Sketchfab (https://sketchfab.com/3d-models/hammer-rawscan-01e5b5acad9843818529d15663df5b9e)",
       "added": "2026-07-28"
     },
@@ -1631,7 +1631,7 @@
       "license_url": "https://creativecommons.org/licenses/by/3.0/",
       "license_note": "Derived from a CC-BY-3.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "YahooJAPAN",
-      "attribution": "“Koala” mesh by YahooJAPAN, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
+      "attribution": "\u201cKoala\u201d mesh by YahooJAPAN, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/koala), originally YahooJAPAN via Thingiverse (https://www.thingiverse.com/thing:182225)",
       "added": "2026-07-28"
     },
@@ -1697,7 +1697,7 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "lastloginname",
-      "attribution": "“Mountain” mesh by lastloginname, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "attribution": "\u201cMountain\u201d mesh by lastloginname, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/mountain), originally lastloginname via Thingiverse (https://www.thingiverse.com/thing:991578)",
       "added": "2026-07-28"
     },
@@ -1763,7 +1763,7 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "Bart",
-      "attribution": "“Parsnip” mesh by Bart, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "attribution": "\u201cParsnip\u201d mesh by Bart, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/parsnip), originally Bart via Sketchfab (https://sketchfab.com/3d-models/parsnip-9270b2c72df04b37bb6d3b6becec67ac)",
       "added": "2026-07-28"
     },
@@ -1829,7 +1829,7 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "Stein, Oded",
-      "attribution": "“Penguin” mesh by Stein, Oded, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "attribution": "\u201cPenguin\u201d mesh by Stein, Oded, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/penguin)",
       "added": "2026-07-28"
     },
@@ -1894,7 +1894,7 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "Rigsters",
-      "attribution": "“Pizza” mesh by Rigsters, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "attribution": "\u201cPizza\u201d mesh by Rigsters, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/pizza)",
       "added": "2026-07-28"
     },
@@ -1960,7 +1960,7 @@
       "license_url": "https://creativecommons.org/licenses/by/3.0/",
       "license_note": "Derived from a CC-BY-3.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "YahooJAPAN",
-      "attribution": "“Plane” mesh by YahooJAPAN, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
+      "attribution": "\u201cPlane\u201d mesh by YahooJAPAN, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/plane), originally YahooJAPAN via Thingiverse (https://www.thingiverse.com/thing:182252)",
       "added": "2026-07-28"
     },
@@ -2026,7 +2026,7 @@
       "license_url": "https://creativecommons.org/licenses/by/3.0/",
       "license_note": "Derived from a CC-BY-3.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "YahooJAPAN",
-      "attribution": "“Scorpion” mesh by YahooJAPAN, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
+      "attribution": "\u201cScorpion\u201d mesh by YahooJAPAN, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/scorpion), originally YahooJAPAN via Thingiverse (https://www.thingiverse.com/thing:182363)",
       "added": "2026-07-28"
     },
@@ -2092,7 +2092,7 @@
       "license_url": "https://creativecommons.org/licenses/by/3.0/",
       "license_note": "Derived from a CC-BY-3.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "YahooJAPAN",
-      "attribution": "“Skull” mesh by YahooJAPAN, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
+      "attribution": "\u201cSkull\u201d mesh by YahooJAPAN, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/skull), originally YahooJAPAN via Thingiverse (https://www.thingiverse.com/thing:182365)",
       "added": "2026-07-28"
     },
@@ -2158,7 +2158,7 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "The Oakeshott Institute",
-      "attribution": "“Sword” mesh by The Oakeshott Institute, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "attribution": "\u201cSword\u201d mesh by The Oakeshott Institute, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/sword), originally The Oakeshott Institute via Sketchfab (https://sketchfab.com/3d-models/moonbrand-early-14th-c-arming-sword-80fa91fc8c974fd0acd2a55cc513edec)",
       "added": "2026-07-28"
     },
@@ -2224,7 +2224,7 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "warmarine759",
-      "attribution": "“Tree” mesh by warmarine759, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "attribution": "\u201cTree\u201d mesh by warmarine759, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/tree), originally warmarine759 via Thingiverse (https://www.thingiverse.com/thing:3839198)",
       "added": "2026-07-28"
     },
@@ -2290,7 +2290,7 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_note": "Derived from a CC-BY-4.0 mesh via the odedstein-meshes collection. Free to use, including commercially, as long as you credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "Stein, Oded and Grinspun, Eitan and Crane, Keenan",
-      "attribution": "“Wing nut” mesh by Stein, Oded and Grinspun, Eitan and Crane, Keenan, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
+      "attribution": "\u201cWing nut\u201d mesh by Stein, Oded and Grinspun, Eitan and Crane, Keenan, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/wingnut)",
       "added": "2026-07-28"
     },
@@ -2354,7 +2354,7 @@
       "license_open": true,
       "license_note": "The source mesh was released into the public domain by its creator, via the odedstein-meshes collection. No permission is needed; a credit is a courtesy.",
       "author": "Crane, Keenan",
-      "attribution": "“Fish” mesh by Crane, Keenan, via odedstein-meshes (https://github.com/odedstein/meshes), licensed Public Domain.",
+      "attribution": "\u201cFish\u201d mesh by Crane, Keenan, via odedstein-meshes (https://github.com/odedstein/meshes), licensed Public Domain.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/fish)",
       "added": "2026-07-28"
     },
@@ -2420,8 +2420,8 @@
       "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
       "license_note": "The source mesh is CC0 1.0 (public domain dedication), via the odedstein-meshes collection. No permission is needed; a credit is a courtesy.",
       "author": "Virtual Museums of Malopolska",
-      "attribution": "“Violin” mesh by Virtual Museums of Malopolska, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC0-1.0.",
-      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/violin), originally Virtual Museums of Małopolska via Sketchfab (https://sketchfab.com/3d-models/violin-a784af0713a643b19ffcf65194bc0fbf)",
+      "attribution": "\u201cViolin\u201d mesh by Virtual Museums of Malopolska, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC0-1.0.",
+      "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/violin), originally Virtual Museums of Ma\u0142opolska via Sketchfab (https://sketchfab.com/3d-models/violin-a784af0713a643b19ffcf65194bc0fbf)",
       "added": "2026-07-28"
     },
     {
@@ -2486,7 +2486,7 @@
       "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
       "license_note": "Derived from a CC-BY-NC-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "Holinaty, Josh",
-      "attribution": "“Brucewick” mesh by Holinaty, Josh, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
+      "attribution": "\u201cBrucewick\u201d mesh by Holinaty, Josh, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/brucewick)",
       "added": "2026-07-28"
     },
@@ -2552,7 +2552,7 @@
       "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
       "license_note": "Derived from a CC-BY-NC-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "3dcs_ch",
-      "attribution": "“Cow” mesh by 3dcs_ch, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
+      "attribution": "\u201cCow\u201d mesh by 3dcs_ch, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/cow), originally 3dcs_ch via Thingiverse (https://www.thingiverse.com/thing:2431906)",
       "added": "2026-07-28"
     },
@@ -2618,7 +2618,7 @@
       "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
       "license_note": "Derived from a CC-BY-NC-SA-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. ShareAlike: a derivative must be released under the same licence. Credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "colinfizgig",
-      "attribution": "“Falcon statue” mesh by colinfizgig, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-SA-4.0.",
+      "attribution": "\u201cFalcon statue\u201d mesh by colinfizgig, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-SA-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/falconstatue), originally colinfizgig via Thingiverse (https://www.thingiverse.com/thing:46631)",
       "added": "2026-07-28"
     },
@@ -2684,7 +2684,7 @@
       "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
       "license_note": "Derived from a CC-BY-NC-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "BSGMiniatures",
-      "attribution": "“House” mesh by BSGMiniatures, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
+      "attribution": "\u201cHouse\u201d mesh by BSGMiniatures, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/house), originally BSGMiniatures via Thingiverse (https://www.thingiverse.com/thing:3621726)",
       "added": "2026-07-28"
     },
@@ -2750,7 +2750,7 @@
       "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
       "license_note": "Derived from a CC-BY-NC-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "Holinaty, Josh",
-      "attribution": "“Mushroom” mesh by Holinaty, Josh, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
+      "attribution": "\u201cMushroom\u201d mesh by Holinaty, Josh, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/mushroom)",
       "added": "2026-07-28"
     },
@@ -2815,7 +2815,7 @@
       "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
       "license_note": "Derived from a CC-BY-NC-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "GSC_Nakamura",
-      "attribution": "“Strawberry” mesh by GSC_Nakamura, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
+      "attribution": "\u201cStrawberry\u201d mesh by GSC_Nakamura, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/strawberry), originally GSC_Nakamura via Thingiverse (https://www.thingiverse.com/thing:153548)",
       "added": "2026-07-28"
     },
@@ -2881,7 +2881,7 @@
       "license_url": "https://creativecommons.org/licenses/by-nc/3.0/",
       "license_note": "Derived from a CC-BY-NC-3.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "jansentee3d",
-      "attribution": "“Tower” mesh by jansentee3d, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-3.0.",
+      "attribution": "\u201cTower\u201d mesh by jansentee3d, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-3.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/tower), originally jansentee3d via Thingiverse (https://www.thingiverse.com/thing:3155868)",
       "added": "2026-07-28"
     },
@@ -2947,7 +2947,7 @@
       "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
       "license_note": "Derived from a CC-BY-NC-4.0 mesh via the odedstein-meshes collection. NonCommercial: you may NOT use this object for commercial purposes. Credit the original author. Converting a mesh to splats does not change its terms.",
       "author": "onmioji",
-      "attribution": "“Well” mesh by onmioji, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
+      "attribution": "\u201cWell\u201d mesh by onmioji, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
       "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/well), originally onimoji via Thingiverse (https://www.thingiverse.com/thing:3587292)",
       "added": "2026-07-28"
     },
@@ -3005,15 +3005,15 @@
       "thumbnail": "berlin_tv_tower_generated/thumb.png",
       "meta": "berlin_tv_tower_generated/meta.json",
       "file": "berlin_tv_tower_generated/berlin_tv_tower_generated.splat",
-      "splats": 262144,
-      "bytes": 8388608,
-      "sha256": "af61b3c5219a7328beb696792ad5e0466212341c9479402038d9f2ce7a3dc194",
+      "splats": 262111,
+      "bytes": 8387552,
+      "sha256": "2027a4b57dd19bfa27d7c8c0b53490dd7d3738ab554b45cf100046f770f66c11",
       "format": "splat",
       "spherical_harmonics": false,
       "extent": [
-        0.2448,
-        1.0037,
-        0.1947
+        0.2106,
+        1.0011,
+        0.2059
       ],
       "psnr": null,
       "ssim": null,
@@ -3021,7 +3021,7 @@
       "license_open": false,
       "license_note": "Generated by an AI image-to-3D model (TripoSplat, MIT weights) from a single freely-licensed photograph. The model invents geometry from an undisclosed training corpus, so the output's copyright status cannot be warranted. Provided as-is, with no warranty of rights; you are responsible for clearing any rights for your use.",
       "author": "Marcel Padilla",
-      "attribution": "Generated from 'Fernsehturm Berlin 202309 (1).jpg' by Rəcəb Yaxşı, CC BY 4.0, via Wikimedia Commons. Germany has freedom of panorama (UrhG s.59) for works permanently in public places, photographed from public ground.",
+      "attribution": "Generated from 'Berliner Fernsehturm in September 2022 (2).jpg' by Beno\u00eet Prieur, CC0, via Wikimedia Commons. Germany has freedom of panorama (UrhG s.59) for works permanently in public places, photographed from public ground.",
       "added": "2026-08-03"
     },
     {
@@ -3231,13 +3231,13 @@
       "file": "cactus_generated/cactus_generated.splat",
       "splats": 262144,
       "bytes": 8388608,
-      "sha256": "5b023610d6e25eca3647110ee96ce38d2f3e913b44eb0c13eca526f47f802705",
+      "sha256": "1543a7d9150496841efaadb2a9d3db7f05a02b7dd76237c3329f22b8d1f57ecd",
       "format": "splat",
       "spherical_harmonics": false,
       "extent": [
-        0.7447,
-        0.9939,
-        0.6083
+        0.6052,
+        0.9951,
+        0.5926
       ],
       "psnr": null,
       "ssim": null,
@@ -3265,15 +3265,15 @@
       "thumbnail": "toy_accordion_generated/thumb.png",
       "meta": "toy_accordion_generated/meta.json",
       "file": "toy_accordion_generated/toy_accordion_generated.splat",
-      "splats": 262143,
-      "bytes": 8388576,
-      "sha256": "17db1140ea53b2141e53d265a69f48fea868cb082c24ed8631f3bd6ce17fb1e6",
+      "splats": 262144,
+      "bytes": 8388608,
+      "sha256": "2334ea74b19623167631e21da73cfbd451bad80e9db33f1ad78dfc28d7491351",
       "format": "splat",
       "spherical_harmonics": false,
       "extent": [
-        0.7549,
-        0.9163,
-        0.9974
+        0.8342,
+        0.9473,
+        0.9939
       ],
       "psnr": null,
       "ssim": null,
@@ -3339,13 +3339,13 @@
       "file": "rotary_telephone_generated/rotary_telephone_generated.splat",
       "splats": 262144,
       "bytes": 8388608,
-      "sha256": "50c59d3955184a07f13d0166c5f500020029fb02482c55eb92d24f4417d2227a",
+      "sha256": "46f0cc38c75948825e73decf0024e7d39be1587b438b0a59228211591b067e49",
       "format": "splat",
       "spherical_harmonics": false,
       "extent": [
-        0.7679,
-        0.6833,
-        0.9957
+        0.6308,
+        0.9805,
+        0.9953
       ],
       "psnr": null,
       "ssim": null,
@@ -3353,7 +3353,7 @@
       "license_open": false,
       "license_note": "Generated by an AI image-to-3D model (TripoSplat, MIT weights) from a single freely-licensed photograph. The model invents geometry from an undisclosed training corpus, so the output's copyright status cannot be warranted. Provided as-is, with no warranty of rights; you are responsible for clearing any rights for your use.",
       "author": "Marcel Padilla",
-      "attribution": "Generated from 'Antique Rotary Phone.jpg' by Amitbalani, CC0, via Wikimedia Commons. An antique bakelite rotary telephone. The subject is a useful article, which carries no copyright as a sculptural work, and any registered design right on a design this old has long expired.",
+      "attribution": "Generated from 'A classic rotary telephone sits on a wooden table beside an old typewriter.jpg' by Shixart1985, CC BY 2.0, via Wikimedia Commons. An antique bakelite rotary telephone. The subject is a useful article, which carries no copyright as a sculptural work, and any registered design right on a design this old has long expired.",
       "added": "2026-08-04"
     },
     {

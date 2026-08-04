@@ -14,9 +14,9 @@
   ],
   "thumbnail": "thumb.png",
   "file": "toy_accordion_generated.splat",
-  "splats": 262143,
-  "bytes": 8388576,
-  "sha256": "17db1140ea53b2141e53d265a69f48fea868cb082c24ed8631f3bd6ce17fb1e6",
+  "splats": 262144,
+  "bytes": 8388608,
+  "sha256": "2334ea74b19623167631e21da73cfbd451bad80e9db33f1ad78dfc28d7491351",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,16 +27,16 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.7549,
-      0.9163,
-      0.9974
+      0.8342,
+      0.9473,
+      0.9939
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"
   },
   "generator": {
     "model": "TripoSplat (VAST AI Research), MIT for code and weights",
-    "params": "steps=20, guidance=3.0, seed=42, num_gaussians=262144",
+    "params": "steps=20, guidance=3.0, seed=101, num_gaussians=262144",
     "time": "~15s inference on an RTX 4090",
     "input": "one freely-licensed photograph (CC0, Petey21, via Wikimedia Commons), background removed in-pipeline by BiRefNet"
   },
@@ -49,12 +49,13 @@
     "gate": "utilitarian",
     "reasoning": "A 1960s toy accordion. The subject is a useful article, which carries no copyright as a sculptural work, and any registered design right on a design this old has long expired."
   },
-  "cleanup": "1 blob gaussian removed (0.0004%). Recentred on its own bounding box.",
+  "cleanup": "No degenerate gaussians found. Already centred.",
   "quality": {
     "psnr": null,
     "ssim": null
   },
   "caveats": [
-    "Bellows are a folded surface rather than a solid, which is the hardest thing in this batch for a single-image model; they read correctly from the front and soften from behind."
+    "Bellows are a folded surface rather than a solid, which is the hardest thing in this batch for a single-image model. Regenerated 2026-08-04 at a different seed, which firmed up the back of the case and the button board; the bellows still read best from the front.",
+    "Only one photograph of this object exists on Commons, so the frame could not be improved and the seed was the only lever available."
   ]
 }

@@ -16,7 +16,7 @@
   "file": "cactus_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "5b023610d6e25eca3647110ee96ce38d2f3e913b44eb0c13eca526f47f802705",
+  "sha256": "1543a7d9150496841efaadb2a9d3db7f05a02b7dd76237c3329f22b8d1f57ecd",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,16 +27,16 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.7447,
-      0.9939,
-      0.6083
+      0.6052,
+      0.9951,
+      0.5926
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"
   },
   "generator": {
     "model": "TripoSplat (VAST AI Research), MIT for code and weights",
-    "params": "steps=20, guidance=3.0, seed=42, num_gaussians=262144",
+    "params": "steps=20, guidance=3.0, seed=7, num_gaussians=262144",
     "time": "~15s inference on an RTX 4090",
     "input": "one freely-licensed photograph (CC BY 3.0, PEAK99, via Wikimedia Commons), background removed in-pipeline by BiRefNet"
   },
@@ -49,12 +49,13 @@
     "gate": "natural",
     "reasoning": "The subject is a living thing, so there is no copyright in the object itself and the photograph's licence is the only gate that applies."
   },
-  "cleanup": "No degenerate gaussians found. Recentred on its own bounding box.",
+  "cleanup": "No degenerate gaussians found. Already centred.",
   "quality": {
     "psnr": null,
     "ssim": null
   },
   "caveats": [
-    "The input frame contains a second succulent behind the pot and the generator absorbed part of it, so a green pad sits against the cactus that is not part of the same plant."
+    "Regenerated 2026-08-04 at a different sampling seed. The first version absorbed a second succulent from behind the pot and left the pot a torn hollow bowl; this one is a single columnar cactus and the pot closes.",
+    "The very bottom of the pot is inferred: it is not visible in any photograph of a pot standing on a surface."
   ]
 }
