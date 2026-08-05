@@ -82,13 +82,30 @@ def kind_word(o: dict) -> str:
     return (o.get("category", "") or "").capitalize()
 
 
+def newest_first(objects: list) -> list:
+    """Reading order for the gallery: most recently added object at the top.
+
+    Marcel, while the collection is still growing: "always sort them newest
+    first so that I can easily find them, and then later we do alphabetical
+    sorting." `added` is a DATE, not a timestamp, and a whole batch shares one,
+    so ties fall back on promotion order reversed, which within a batch is the
+    order the objects were staged in.
+
+    data/inventory.json itself keeps promotion order: that is a record of what
+    happened and reordering it would churn the file on every batch. Only the
+    views sort. The website page carries the same comparator.
+    """
+    return sorted(enumerate(objects),
+                  key=lambda t: (t[1].get("added", ""), t[0]), reverse=True)
+
+
 def gallery(doc: dict) -> str:
     # Two dedicated columns: Source (how it was made) and Kind (object/scene).
     rows = [
         "| | Object | Source | Kind | Size | Download |",
         "|---|---|---|---|--:|:--:|",
     ]
-    for o in doc["objects"]:
+    for _, o in newest_first(doc["objects"]):
         name = (
             f"**{o['title']}**<br><sub>`{o['id']}`</sub>"
             f"<br><sub>{', '.join(o.get('tags', []))}</sub>"
