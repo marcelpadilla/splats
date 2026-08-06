@@ -8,62 +8,61 @@
     "torus",
     "donut"
   ],
-  "license": "CC0-1.0",
-  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "author": "\u2014",
-  "attribution": "Geometric primitive (CC0).",
-  "source_mesh": "primitive",
-  "added": "2026-07-24",
-  "file": "torus_500k.splat",
   "thumbnail": "thumb.png",
+  "file": "torus_1m.splat",
+  "splats": 1000000,
+  "bytes": 32000000,
+  "sha256": "5f775747a8cea27888b4efb0e28d19169c87aadd07f76929422ada408bdcbb5b",
   "format": "splat",
-  "splats": 500000,
-  "bytes": 16000000,
-  "sha256": "efe2d2376484cf54162e5d57048fc134c4d31ac619a2708627bd8c494b55dc74",
   "spherical_harmonics": false,
-  "default_lod": "500k",
+  "default_lod": "1m",
   "lods": [
     {
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "61648e596eb0aea12de7624f029d1f06ea439ac977c9f316792687d55b40a0a5",
+      "sha256": "d94868f1caf69d09ee3ba734fc187a79de2612e7a79a1752588df1333f8a7f43",
       "file": "torus_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "bfa449b531b08d67ad0f68118bf0e175611444fa7fc9bfcffb5e2240f0ba3485",
+      "sha256": "45ffa5190de6e0217efabbbad4a3cede6788bfa965266b892653a35aa93c4f84",
       "file": "torus_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "efe2d2376484cf54162e5d57048fc134c4d31ac619a2708627bd8c494b55dc74",
+      "sha256": "d7662a0093e312a69984ba4234a3c5db181b0a0687190c4438e92d5cd04bee56",
       "file": "torus_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "52e9f0246746beac53969da5087605554267e206e376b07b37432d7ea54ff518",
+      "sha256": "5f775747a8cea27888b4efb0e28d19169c87aadd07f76929422ada408bdcbb5b",
       "file": "torus_1m.splat"
     }
   ],
+  "license": "CC0-1.0",
+  "license_open": true,
+  "author": "\u2014",
+  "attribution": "Geometric primitive (CC0).",
+  "added": "2026-07-24",
   "geometry": {
     "extent": [
-      1.9994,
-      0.6653,
-      1.9999
+      0.9998,
+      0.3327,
+      1.0
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"
   },
   "mesh2splat": {
     "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
-    "source_mesh": "primitive",
+    "source_mesh": "",
     "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
     "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
   },
@@ -72,6 +71,9 @@
     "ssim": null
   },
   "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading.",
     "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
     "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
     "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."

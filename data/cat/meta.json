@@ -13,7 +13,7 @@
   "file": "cat_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "709d990a827af57a2695ce2bba36eb97a053d97e30756d0b06ee008c3cb8304b",
+  "sha256": "1d33ec39610c1db4a34251e7fb4b99a4923be0050c1eb316703478fecd3d2c9a",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -22,28 +22,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "9188bd794c38f5636b83998f447c53073d185d2e1eb743654d4461fdd51c55f6",
+      "sha256": "ab72aa0b9d74fe22509272af85efb595e21a2789bd8511acd868f58d91e811cc",
       "file": "cat_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "e2a63bb1393193a6387f3182332886fcafa8aa28ab6e1237c05ff232156cf9dd",
+      "sha256": "f6bcc97411cb8afd94ad2b6f29dae100d9846e6effc3a7266fc3404ffe573607",
       "file": "cat_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "709d990a827af57a2695ce2bba36eb97a053d97e30756d0b06ee008c3cb8304b",
+      "sha256": "1d33ec39610c1db4a34251e7fb4b99a4923be0050c1eb316703478fecd3d2c9a",
       "file": "cat_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "d6d0a8956271bb163a2c36fd0244eba940bb346fd979f4bdef6f08dec84999fd",
+      "sha256": "062ee7d02a434d4e2f881626ca1c489575a1ea1eaa6eb9236fd5c956bc021118",
       "file": "cat_1m.splat"
     }
   ],
@@ -54,12 +54,12 @@
   "author": "billyd",
   "attribution": "\u201cCat\u201d mesh by billyd, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/cat), originally billyd via Thingiverse (https://www.thingiverse.com/thing:1565405)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      1.7864,
-      1.9999,
-      0.6668
+      0.8932,
+      1.0,
+      0.3334
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

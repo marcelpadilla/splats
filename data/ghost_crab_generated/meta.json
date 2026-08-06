@@ -16,7 +16,7 @@
   "file": "ghost_crab_generated.splat",
   "splats": 262098,
   "bytes": 8387136,
-  "sha256": "750566cc68b196141e53d478d8c4347c2864afb2bd6a9a2d30237b781fbeffbf",
+  "sha256": "f9cb1d53d37f1a16ba44a3cedde97c01ee68cc6f9c31faf3265ffea9301b89e6",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.5415,
-      0.3095,
-      0.9962
+      0.5436,
+      0.3107,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

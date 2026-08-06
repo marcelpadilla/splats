@@ -13,7 +13,7 @@
   "file": "boot_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "715fedeac39420826213a326ad52954cd359b93abcd38e34fbd485402a6583d8",
+  "sha256": "76b04f186ef915863a3afe2e5c84e76a28eca1fabc9b6d9c8179f063a4819f49",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -22,28 +22,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "f9df1f45277df25c399f908041d0aad02eadb610f3faf09b3ab6fa734cd15110",
+      "sha256": "44a8d3486bf270254a81d70d7f6331e96e63930f3c3bbcba4790b185e7adb864",
       "file": "boot_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "fad12968905287a4f2d0f5d837e5b87031557ffa3997cfbb68d812d84667594b",
+      "sha256": "968ff42e2682c13a76dea97d1420c79b85de7cf23d40b08bfff17b27a3000691",
       "file": "boot_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "715fedeac39420826213a326ad52954cd359b93abcd38e34fbd485402a6583d8",
+      "sha256": "76b04f186ef915863a3afe2e5c84e76a28eca1fabc9b6d9c8179f063a4819f49",
       "file": "boot_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "1bd5134cc316d3e77daca87539cedd1a6fe77d042e297746f049b5f31c441d49",
+      "sha256": "c76bd75de393aa24c8d55b18b29f4c3c9fe4c5c6c83048135daa3cebf491c6bd",
       "file": "boot_1m.splat"
     }
   ],
@@ -54,12 +54,12 @@
   "author": "inciprocal",
   "attribution": "\u201cBoot\u201d mesh by inciprocal, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/boot), originally inciprocal via Sketchfab (https://sketchfab.com/3d-models/harrison-work-boot-d9506d9a318e4c56ac3d8ab273bd2540)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      1.9996,
-      1.3179,
-      0.7185
+      0.9999,
+      0.659,
+      0.3593
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

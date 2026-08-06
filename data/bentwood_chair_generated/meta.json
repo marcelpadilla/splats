@@ -16,7 +16,7 @@
   "file": "bentwood_chair_generated.splat",
   "splats": 262143,
   "bytes": 8388576,
-  "sha256": "5a7a67e3975930c395b99abef3c77c417e5ec0c25b170b94470ab1e6b9dc8c57",
+  "sha256": "2ad545f948911de916402e28abf4f3b660121d606b475392e2559aea07c24b59",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.6065,
-      1.0262,
-      0.642
+      0.591,
+      1.0,
+      0.6256
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

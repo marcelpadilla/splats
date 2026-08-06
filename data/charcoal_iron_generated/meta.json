@@ -17,7 +17,7 @@
   "file": "charcoal_iron_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "9a527caf9e028815c90a0450d5d512131f738cdb3ec8250ab86289d9031755c8",
+  "sha256": "8d6c231b6f761ed9d28ecd7145439bcbe5f717748119185d7ddfee0193430a6b",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.5722,
-      0.9656,
-      0.9955
+      0.5748,
+      0.9699,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

@@ -14,7 +14,7 @@
   "file": "armadillo_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "83f522a458b0c3d1624c41b1c2a586de85996401a6c1cf0c6e30718617a072e6",
+  "sha256": "15cc9da20538c3b02207eba54f7aebdda408a8a5ebb247fb55691be677b3edbc",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -23,28 +23,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "b95bf1fed4b037c378cfda49015bfe51405d50b6593af6f415331c2d00e9c437",
+      "sha256": "514e759319235f2dc0c04885a39121f984276f5ee61b6f62aa347ffe205ccf8f",
       "file": "armadillo_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "3b21e7e1b7f93a36d97b6f5576e628fa93c7251fc4e04ad8bd8ffa1cb0d16ef5",
+      "sha256": "a83fb75a5ce48ad6a8776cd9d266787cf7384f42f3d3141de746b1a9ac5df819",
       "file": "armadillo_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "83f522a458b0c3d1624c41b1c2a586de85996401a6c1cf0c6e30718617a072e6",
+      "sha256": "15cc9da20538c3b02207eba54f7aebdda408a8a5ebb247fb55691be677b3edbc",
       "file": "armadillo_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "9ceb13ee0d00aaaae28320d11b455a34ec08de431d3c1e6505ee0fd6187a614c",
+      "sha256": "d0ab2b43006301774520055bdbfba71a7208b79baf4e95cb2792a94e9a62c687",
       "file": "armadillo_1m.splat"
     }
   ],
@@ -55,12 +55,12 @@
   "author": "Stanford University Computer Graphics Laboratory",
   "attribution": "Source: Stanford University Computer Graphics Laboratory (Stanford 3D Scanning Repository).",
   "source_mesh": "Stanford 3D Scanning Repository (http://graphics.stanford.edu/data/3Dscanrep/)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      1.6784,
-      1.9995,
-      1.5249
+      0.8394,
+      1.0001,
+      0.7627
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

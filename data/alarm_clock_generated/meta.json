@@ -16,7 +16,7 @@
   "file": "alarm_clock_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "ad8bce99ad20f404a20a848f2faea5cd80f5aa91e9a65d4bdeda1d8ed8caf76e",
+  "sha256": "bbdca141f986f470dd8ac6d8a0451c20a795e522562225be341b25455ce23c28",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.7242,
-      0.8287,
-      0.7505
+      0.8739,
+      1.0,
+      0.9056
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

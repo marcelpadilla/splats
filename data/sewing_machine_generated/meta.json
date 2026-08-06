@@ -17,7 +17,7 @@
   "file": "sewing_machine_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "b04c1fad182d30f803c9d090789af538b104ec8cce9e5358c04d0569500b0caf",
+  "sha256": "7f6510dc54809dc276e3ca8cdf2f1ece85a5af61a0dcb206fe44cd63a8519db6",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.4128,
-      0.7989,
-      0.9953
+      0.4148,
+      0.8027,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

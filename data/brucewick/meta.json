@@ -13,7 +13,7 @@
   "file": "brucewick_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "2de7e17f60a31a414f34f3302c20a36e957b4b6c15f2fca92b12e655042f5a7e",
+  "sha256": "efb98b546c14b418e72cb743bbddc0c6fea972a32c054154ef8d3097acbbd60f",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -22,28 +22,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "19f20feb585d8f89decb3da8b28c4118bc8b4fd1ecaf8f1327f9a1a8a8a27525",
+      "sha256": "70a038b4c5542f84dcf16917ffbc96c0d04e5287ae876f54876b8ad187ab6d5a",
       "file": "brucewick_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "465c6df17d7345a07f51daa98c2a60f25ed3332df52f73c934d8eb6a18eec7c4",
+      "sha256": "b5c160a9ccd0b3ef871daa5054eb295b501da05958730a60af428e1cf42e1525",
       "file": "brucewick_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "2de7e17f60a31a414f34f3302c20a36e957b4b6c15f2fca92b12e655042f5a7e",
+      "sha256": "efb98b546c14b418e72cb743bbddc0c6fea972a32c054154ef8d3097acbbd60f",
       "file": "brucewick_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "9c9e18144df31ad1985181937073d1f8c0c2683427fa58d63513b2edd2377a95",
+      "sha256": "187c1eb68099ddb1292e8676386838dc66cb60844f138f7bb75752b61e083b53",
       "file": "brucewick_1m.splat"
     }
   ],
@@ -54,12 +54,12 @@
   "author": "Holinaty, Josh",
   "attribution": "\u201cBrucewick\u201d mesh by Holinaty, Josh, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/brucewick)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      1.8093,
-      2.0,
-      1.8072
+      0.9046,
+      1.0,
+      0.9036
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

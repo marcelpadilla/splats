@@ -17,7 +17,7 @@
   "file": "ceramic_pitcher_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "a2493a4a8793f4b49c86a694bdb77779aa3c5e43db67d1b1fa1e48a9759cfd1e",
+  "sha256": "f8e151c14ce1d2eb43fcdf94b1f16e254fb480a98a60a795bac7602f38c5ac73",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.7102,
-      0.9777,
-      0.9932
+      0.7151,
+      0.9844,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

@@ -17,7 +17,7 @@
   "file": "gramophone_generated.splat",
   "splats": 262143,
   "bytes": 8388576,
-  "sha256": "def2d24a8355a9d2c8a4a659bf5a255b5a9388601655b298d343a6014124ac02",
+  "sha256": "f10b5aebcd5656d05bbaad03c421245fdb7a0ce151f9525188baf9e463d73187",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.6696,
-      1.0104,
-      0.8078
+      0.6627,
+      1.0,
+      0.7994
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

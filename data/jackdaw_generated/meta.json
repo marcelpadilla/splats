@@ -16,7 +16,7 @@
   "file": "jackdaw_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "d886264967525d911b5e9c97956ca3744ff72fe9ead9874ffc38992235cf729b",
+  "sha256": "8df47520a355292d2c1bb250c084cece85b9ed4d19f4a4b6563aa3fe8d5480ca",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.285,
-      0.6222,
-      0.9534
+      0.2989,
+      0.6526,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

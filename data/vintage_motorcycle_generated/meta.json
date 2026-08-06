@@ -17,7 +17,7 @@
   "file": "vintage_motorcycle_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "87e9047777fab3cab6a630aa1f96542d548fa2c3cf4f2f41957c4d9a10541094",
+  "sha256": "a245701e04d24bae21020ec3b7131e417287af624276e9aa96d39e75f8e897cc",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.9967,
-      0.8517,
-      0.9945
+      1.0,
+      0.8545,
+      0.9978
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

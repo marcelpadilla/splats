@@ -17,7 +17,7 @@
   "file": "kiwi_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "0f4aaf06725b21deb4247803626b7bd66fe9caf868d9c108d7c76b96229d7c0b",
+  "sha256": "373006f8595707088414cd8d839d8c60363b67437aa7d0ddf0633c107c80f41c",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.9645,
-      0.7455,
-      0.9027
+      1.0,
+      0.773,
+      0.9359
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

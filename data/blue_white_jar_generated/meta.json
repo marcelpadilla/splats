@@ -17,7 +17,7 @@
   "file": "blue_white_jar_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "593a589440cc7ee83b7fc75f8d37707fde4d5bf19d62f6ccbb3736d35ec23145",
+  "sha256": "033f7a904db5cb46fc997bb7b1471fb5c7a06fd31e8ba2b6351afd79471fdb8c",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.8416,
-      0.9964,
-      0.8168
+      0.8446,
+      1.0,
+      0.8198
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

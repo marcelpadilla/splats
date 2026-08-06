@@ -16,7 +16,7 @@
   "file": "horse_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "fddf0f3a20576e1e7f7e7972268791c0b4b001df3f62cfe93a8646de51c37dc7",
+  "sha256": "6aace023b1348a36b6b982b1aaa02d80ceefee76bfd9df8e1c62698c24483cd9",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.3756,
-      0.8966,
-      0.9962
+      0.3771,
+      0.9,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

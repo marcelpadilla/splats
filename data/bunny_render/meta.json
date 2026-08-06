@@ -14,7 +14,7 @@
   "file": "bunny_render.splat",
   "splats": 188864,
   "bytes": 6043648,
-  "sha256": "78e7ed6be3c87bc13ec1a573d863dbfc56cc3606867d6ea31f2ccfe2a4e2047c",
+  "sha256": "93b382fcc40a0941172d73d130348c9608a6b537318a199b59f038ebc50ce57f",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "CC-BY-3.0",
@@ -25,9 +25,9 @@
   "added": "2026-07-24",
   "geometry": {
     "extent": [
-      1.9828,
-      1.9965,
-      1.6148
+      0.9932,
+      1.0,
+      0.8088
     ],
     "up_axis": "-y",
     "units": "render scene scale, not metric"

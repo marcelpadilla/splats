@@ -17,7 +17,7 @@
   "file": "red_squash_generated.splat",
   "splats": 262139,
   "bytes": 8388448,
-  "sha256": "30efdd8d9562eaf5f785c81d8e434f34288e6418bf32660367a65fc674b80c5a",
+  "sha256": "84b89575948b4cdeb9ba46f766f98e9f291fc15a1f294ed29cd3e3c4fa706e0a",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.8711,
-      0.8222,
-      0.8083
+      1.0,
+      0.9439,
+      0.9279
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

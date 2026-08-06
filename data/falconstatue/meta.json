@@ -13,7 +13,7 @@
   "file": "falconstatue_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "a494eed2afd85009b74d5a15695676b880f7f5f815b47b9dc7be1497d30572df",
+  "sha256": "f30b56b35f75ffdcbfb73c21410b70050a5f1a5edb581aa24dc2737275519e1f",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -22,28 +22,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "346cd0722b802a4f8b5be032b0d060a59b348289acbb168154440b171c21d7e3",
+      "sha256": "0a76a13017abd0648ac3d0d0c1988f9ffcceed5731f66e3ba8669552f7237ed6",
       "file": "falconstatue_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "5e3728d06ee61a29976bc6e5ae5ec96a4db5a6e8de7be536b30872fddc2fae67",
+      "sha256": "0046c29c070c1565b8e95ea67735d9697b89e9ed9096762f4f8fc498afff0ce4",
       "file": "falconstatue_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "a494eed2afd85009b74d5a15695676b880f7f5f815b47b9dc7be1497d30572df",
+      "sha256": "f30b56b35f75ffdcbfb73c21410b70050a5f1a5edb581aa24dc2737275519e1f",
       "file": "falconstatue_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "a47a1bc88761133c9cf4a0b1494b7402aa17b1fda4d570a74784e4385968e9a4",
+      "sha256": "7087696d5ee8d289d6afe59ca6365986ce3b86c820d8f3f6ca1ff71d902e92f3",
       "file": "falconstatue_1m.splat"
     }
   ],
@@ -54,12 +54,12 @@
   "author": "colinfizgig",
   "attribution": "\u201cFalcon statue\u201d mesh by colinfizgig, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-SA-4.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/falconstatue), originally colinfizgig via Thingiverse (https://www.thingiverse.com/thing:46631)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      0.8127,
-      1.9999,
-      0.9954
+      0.4064,
+      1.0,
+      0.4977
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

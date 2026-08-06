@@ -12,7 +12,7 @@
   "file": "cheese_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "41bc85332f8aee98a3ced02f1eef59392b885ef71565e871792b367e412d8846",
+  "sha256": "25ef7b8f79f1f7d8fedad3344d8e99f163bd25891a7663c7cc2b0ac2a15a30e1",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -21,28 +21,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "8cdc2d68fab0c5f799bfab9cbecf226b539a501c018344ec8dc8cffa4136106b",
+      "sha256": "3a347badf7a90d1f41579bfd510b963a810704069d1a814aaf735ab3eed6d2a0",
       "file": "cheese_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "4f24af0c3e52a16f593cb13f0c6634cc95933c0f11e81423e04040cd8dcffa92",
+      "sha256": "d1b8c56ce5bbe9c1e5e7b8fdf3d16a09692a9445e2b3644e01698b6afe1e7769",
       "file": "cheese_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "41bc85332f8aee98a3ced02f1eef59392b885ef71565e871792b367e412d8846",
+      "sha256": "25ef7b8f79f1f7d8fedad3344d8e99f163bd25891a7663c7cc2b0ac2a15a30e1",
       "file": "cheese_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "d750ff7a5d41b2f88f3971a3767100be298c8f18bb577e19b410c8583318d336",
+      "sha256": "334108fdadb63294ec308e62f7a51a088574c80c722c917d5b64e91d862040bb",
       "file": "cheese_1m.splat"
     }
   ],
@@ -53,12 +53,12 @@
   "author": "3dvs_ch",
   "attribution": "\u201cCheese\u201d mesh by 3dvs_ch, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/cheese)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      1.1891,
-      0.8049,
-      1.9997
+      0.5946,
+      0.4025,
+      0.9999
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

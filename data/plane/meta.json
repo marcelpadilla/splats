@@ -13,7 +13,7 @@
   "file": "plane_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "808af698d0340528e2ca0e20bed5e41ba36c1d883cc79a54fb09b8b1f9edf440",
+  "sha256": "957c2e3178b489319214530e0efb6dfa7190fca743d552fe676c6548b91ce469",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -22,28 +22,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "6adf2ff5f93b986324865fa8f25f3167c923f80a59668b7c3606b6e8913551b7",
+      "sha256": "163716468281bf45f267bc0b2cd33d718e96e128f1db571f06332796203d70fd",
       "file": "plane_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "9ac4b25777f8a0f2e14848c3bbae0d807f8a1a8ff5f96f1737cd94818b8e0644",
+      "sha256": "4860993ed33de80314fd8d5dd7bb19423c5571c594fd4945b11d36446a81f98e",
       "file": "plane_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "808af698d0340528e2ca0e20bed5e41ba36c1d883cc79a54fb09b8b1f9edf440",
+      "sha256": "957c2e3178b489319214530e0efb6dfa7190fca743d552fe676c6548b91ce469",
       "file": "plane_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "f227e48e67cf9fc1248f9f68e99e6ba5c9b00ded46d0cad61d0e6756e16e81ba",
+      "sha256": "cd744a84049d766490a8ea8b58b7b0048353db1a139707e08e6de79eb68fb502",
       "file": "plane_1m.splat"
     }
   ],
@@ -54,12 +54,12 @@
   "author": "YahooJAPAN",
   "attribution": "\u201cPlane\u201d mesh by YahooJAPAN, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/plane), originally YahooJAPAN via Thingiverse (https://www.thingiverse.com/thing:182252)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      1.9996,
-      1.809,
-      0.5946
+      1.0,
+      0.9047,
+      0.2974
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

@@ -17,7 +17,7 @@
   "file": "snail_generated.splat",
   "splats": 262143,
   "bytes": 8388576,
-  "sha256": "71bf394bc539f3dbb24d810c947514d8224624921a811873555793c82f854630",
+  "sha256": "4bcc9fb65b69199683c786cb95af63a3a7ebac5a5088375250895c88c69bcead",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.9947,
-      0.4603,
-      0.6372
+      1.0,
+      0.4628,
+      0.6406
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

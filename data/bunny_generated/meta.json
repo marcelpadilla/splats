@@ -11,32 +11,26 @@
     "test-model",
     "single-image"
   ],
-  "author": "Marcel Padilla",
-  "license": "As-is (no warranty)",
-  "license_open": false,
-  "attribution": "Input derived from the Stanford Bunny STL by Makerbot (via Wikimedia Commons, File:Stanford_Bunny.stl), CC BY 3.0.",
-  "added": "2026-07-24",
-  "file": "bunny_generated.splat",
   "thumbnail": "thumb.png",
-  "format": "splat",
+  "file": "bunny_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "5b06c57f1d0b7437c15a06d3434593e9508ea02298d9aa74b3691046c0b3b2c8",
+  "sha256": "a58421b2ad7bea61f853e11950a8788642b1a3bb25aaa9bb165934a6dc19fcb9",
+  "format": "splat",
   "spherical_harmonics": false,
+  "license": "As-is (no warranty)",
+  "license_open": false,
+  "author": "Marcel Padilla",
+  "attribution": "Input derived from the Stanford Bunny STL by Makerbot (via Wikimedia Commons, File:Stanford_Bunny.stl), CC BY 3.0.",
+  "added": "2026-07-24",
   "geometry": {
     "extent": [
-      0.8213,
-      1.0007,
-      0.9918
+      0.8207,
+      1.0,
+      0.9911
     ],
     "up_axis": "-y",
-    "units": "model output units, not metric"
-  },
-  "generation": {
-    "model": "TripoSplat (VAST-AI-Research), MIT weights",
-    "input": "one rendered view of the bunny_render object (a matte, textured Blender frame)",
-    "params": "steps 20, guidance 3.0, seed 42, 262144 gaussians",
-    "note": "companion to bunny_render: same object, made by image-to-3d generation instead of render+train. A better-lit textured input than a plain grey render, so the colour survives."
+    "units": "generator output units, not metric"
   },
   "quality": {
     "psnr": null,

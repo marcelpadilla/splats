@@ -12,7 +12,7 @@
   "file": "fish_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "4053a374f96a6dc5a3fd6046b539866fdf1d82e453bc068e5c6e1f16db97351c",
+  "sha256": "18ab3e26b3037e1872cabf4b0b204446a58ff8e3518123e5065d0a5e88f4f668",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -21,28 +21,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "d6ca46e2290e68d6a68925fdd52311ff2af8c93bbea3285e1c4d34bfc08eb368",
+      "sha256": "17f5970b2287aec648d07b22df0becdc82cc41252abb0c40713ecd9321f12e42",
       "file": "fish_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "61483857728d7b6e1fcf39026d0a593d8974f4c64cba0201b0b63ce8046bfa9f",
+      "sha256": "7e926efcf050e8e8862c5d36429b89b7ca73a8df69ab65804b6cc778fe172b6a",
       "file": "fish_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "4053a374f96a6dc5a3fd6046b539866fdf1d82e453bc068e5c6e1f16db97351c",
+      "sha256": "18ab3e26b3037e1872cabf4b0b204446a58ff8e3518123e5065d0a5e88f4f668",
       "file": "fish_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "1492f865eab63472a8e3d0e7aeae9bda52b1ff9b7958371067d8b857f8a5931c",
+      "sha256": "4604e5ffd97bd98965654490213c2d82aff868ed3664f77b693a68fa802f3f7e",
       "file": "fish_1m.splat"
     }
   ],
@@ -52,12 +52,12 @@
   "author": "Crane, Keenan",
   "attribution": "\u201cFish\u201d mesh by Crane, Keenan, via odedstein-meshes (https://github.com/odedstein/meshes), licensed Public Domain.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/fish)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      1.0497,
-      1.1946,
-      1.9999
+      0.5249,
+      0.5973,
+      1.0
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

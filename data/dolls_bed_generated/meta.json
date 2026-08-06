@@ -17,7 +17,7 @@
   "file": "dolls_bed_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "7c416d957c4e9c6c25c806299aae468648094eafc3e2453c27488930944f5d20",
+  "sha256": "191dc52bae7b70aaf389e33a5e30b702ab25ff47e4b5a7864fe73c60fde09f12",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.6697,
-      0.6633,
-      0.9956
+      0.6727,
+      0.6662,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

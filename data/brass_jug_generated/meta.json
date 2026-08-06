@@ -16,7 +16,7 @@
   "file": "brass_jug_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "4b6296045c4203c20c209223c275c1b89c6f6ca7ccdccc00ce9c3a47e4fc3e22",
+  "sha256": "d2bb8773181594c6dad043f4a7d83c23a5a383645f1bd196e0ba5e1fea685c5f",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.5057,
-      1.0015,
-      0.6045
+      0.505,
+      1.0,
+      0.6036
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

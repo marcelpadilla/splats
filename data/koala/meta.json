@@ -12,7 +12,7 @@
   "file": "koala_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "b1f9866e6ee6ca7ddf6c7a65794812ff31e03942dbcbabe68690bb91a2e80040",
+  "sha256": "79ae3f6d68ef4d7df8129aa03d70dfb21488d6a39d31fcdc6bc90127d5e93648",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -21,28 +21,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "eb2f243db6830652d210438da5a7fef6722621ae2306d026f702b902da40bcb3",
+      "sha256": "61bd42c414e509b0f888f341a558a833945933ed874b66385707afd771756a83",
       "file": "koala_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "f8d65203a6f97d3fff93a682fcdeccf7ee771e3c968217001fd6c319d06029ea",
+      "sha256": "6bde717e2741e0a76265935775f860f253ed2b65ccfbd236c048582616027567",
       "file": "koala_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "b1f9866e6ee6ca7ddf6c7a65794812ff31e03942dbcbabe68690bb91a2e80040",
+      "sha256": "79ae3f6d68ef4d7df8129aa03d70dfb21488d6a39d31fcdc6bc90127d5e93648",
       "file": "koala_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "d43cb8f10cca61048e480c47484f735efcc991bff85172b67fb2bcdc1b5819cc",
+      "sha256": "264ea8761fa2ef5105a8888336d3128bc1c3355b8d44cac7c08bd4b50b64b946",
       "file": "koala_1m.splat"
     }
   ],
@@ -53,12 +53,12 @@
   "author": "YahooJAPAN",
   "attribution": "\u201cKoala\u201d mesh by YahooJAPAN, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/koala), originally YahooJAPAN via Thingiverse (https://www.thingiverse.com/thing:182225)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      0.8157,
-      1.1577,
-      1.9999
+      0.4079,
+      0.5789,
+      1.0
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

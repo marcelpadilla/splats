@@ -17,7 +17,7 @@
   "file": "spinning_wheel_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "34f98688e3bbb67885f62b60ab56d39431fd499fc82343e7d4c5618e4ff4789e",
+  "sha256": "cf1db97b926cbd718200baf4901193ec33eaad0d86ba88fe82de79d7d6025d27",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.5965,
-      0.9977,
-      0.4826
+      0.5978,
+      1.0,
+      0.4837
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

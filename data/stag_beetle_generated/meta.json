@@ -16,7 +16,7 @@
   "file": "stag_beetle_generated.splat",
   "splats": 262100,
   "bytes": 8387200,
-  "sha256": "3efbd13e1d5b481b082242308294ef139aa8e4b1e21e9929e55366816e693a2d",
+  "sha256": "a716842b45905e643bb7e2eb7a4bce5d5b1cf541656ee3f14aaac2bfedc10c44",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.8852,
-      0.5516,
-      0.9976
+      0.8873,
+      0.553,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

@@ -13,7 +13,7 @@
   "file": "sword_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "1b235462c8149b03079e14bbd59ca2c82739fb82672137061c101bfc88945821",
+  "sha256": "c318d7b9a78a7300c37c276a232c2d1250fdb9bc01d85d6157e277d5cb19a968",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -22,28 +22,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "aa12b4954f5c6f2330a616c793c0ffbee02e48911f84af0c3aff2f998a58a5e1",
+      "sha256": "d74d6d8468b1a9663e98d422ac843efa1e581ce76ba833883dab8d010e30999e",
       "file": "sword_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "565f84d3008b4152cdba4f9b4a474d753fc087eb37a74ea29219f50582d70736",
+      "sha256": "92745dff45b88913db0e30d0d6fc493a593ef71f57568461ee2ac14601dc01f6",
       "file": "sword_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "1b235462c8149b03079e14bbd59ca2c82739fb82672137061c101bfc88945821",
+      "sha256": "c318d7b9a78a7300c37c276a232c2d1250fdb9bc01d85d6157e277d5cb19a968",
       "file": "sword_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "088f98b5e0ee0aea4e365607714e251009052270cec6b3572d172e86247fb7bc",
+      "sha256": "35a129f642833e90409a0ac79d96fbbb5ef422e31e278cdfc5ad26871cbba62e",
       "file": "sword_1m.splat"
     }
   ],
@@ -54,12 +54,12 @@
   "author": "The Oakeshott Institute",
   "attribution": "\u201cSword\u201d mesh by The Oakeshott Institute, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/sword), originally The Oakeshott Institute via Sketchfab (https://sketchfab.com/3d-models/moonbrand-early-14th-c-arming-sword-80fa91fc8c974fd0acd2a55cc513edec)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      0.0748,
-      0.5106,
-      1.9999
+      0.0374,
+      0.2553,
+      1.0
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

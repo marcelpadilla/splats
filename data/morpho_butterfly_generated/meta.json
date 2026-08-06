@@ -17,7 +17,7 @@
   "file": "morpho_butterfly_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "cfe87b264b91945d142697d7a3429a369243a3f6aec423d7219924e9630e2062",
+  "sha256": "d9f8aec98aa75c7745478e6c06bf333987ad8a852794b75099f5b2f5df7f2374",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.7079,
-      0.6943,
-      1.0052
+      0.7042,
+      0.6907,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

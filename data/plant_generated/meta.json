@@ -11,31 +11,25 @@
     "ai",
     "single-image"
   ],
-  "author": "Marcel Padilla",
-  "license": "As-is (no warranty)",
-  "license_open": false,
-  "added": "2026-07-24",
-  "file": "plant_generated.splat",
   "thumbnail": "thumb.png",
-  "format": "splat",
+  "file": "plant_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "03bbe15131f87742c00574c766fab19324f8a133a52435ae50da674bec360c81",
+  "sha256": "3f2532c9209b92e2ff80c3c4955de90dc724fde03bcc91715bbbaa3290a1a641",
+  "format": "splat",
   "spherical_harmonics": false,
+  "license": "As-is (no warranty)",
+  "license_open": false,
+  "author": "Marcel Padilla",
+  "added": "2026-07-24",
   "geometry": {
     "extent": [
-      0.6251,
-      1.0009,
-      0.7572
+      0.6246,
+      1.0,
+      0.7565
     ],
     "up_axis": "-y",
-    "units": "model output units, not metric"
-  },
-  "generation": {
-    "model": "TripoSplat (VAST-AI-Research), MIT weights",
-    "input": "a single photo the author took (first frame of the plant4 capture)",
-    "params": "steps 20, guidance 3.0, seed 42, 262144 gaussians",
-    "renamed_from": "plant_triposplat"
+    "units": "generator output units, not metric"
   },
   "quality": {
     "psnr": null,

@@ -17,7 +17,7 @@
   "file": "bonsai_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "16b59ad3bf141c74e4c6db88f241b3fb2a48dbb68281bbac7a89e89dd0048f6d",
+  "sha256": "2f390e34cf52cdcde6c499fb13c2134413ad20c565e6a15ce6ef497422d3f2c7",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.9027,
-      0.9627,
-      0.9922
+      0.9098,
+      0.9703,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

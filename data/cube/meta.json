@@ -12,7 +12,7 @@
   "file": "cube_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "82ad78b7524f5f0a3c8fb4558e1d18179f065a0df91f47777fd97e8f4db16c8b",
+  "sha256": "72604ecc907ce6ad15847449c23fd0d5db6abf6ce37d192ca1ed635ccf95bbbf",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -21,28 +21,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "bb7f59d2aa5ea48f2cdb92a132bc01aa1cad29ec1267f303aa69afe0740a27ad",
+      "sha256": "8d5787aa028c9502bfda3874c57c194b564cd59c12b70b626e47a4f90b1293d4",
       "file": "cube_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "432abcf9fe6f25a57db412addaa9ced092213ada5bdeb088e7ec867526a5735f",
+      "sha256": "387773fbbde4bbe017cf3188db73fc4c160c64dfdda6e50bc925538fe03c5a21",
       "file": "cube_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "82ad78b7524f5f0a3c8fb4558e1d18179f065a0df91f47777fd97e8f4db16c8b",
+      "sha256": "72604ecc907ce6ad15847449c23fd0d5db6abf6ce37d192ca1ed635ccf95bbbf",
       "file": "cube_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "566c2c4a447baaf8ba6ee73e7f87c296c8dcf34343851a5f872c11d55508b459",
+      "sha256": "120e10e1ce5ba4aaf705ba96e270d21923c981b4b8628d612b18edf55a752e8f",
       "file": "cube_1m.splat"
     }
   ],
@@ -53,12 +53,12 @@
   "author": "Stein, Oded",
   "attribution": "\u201cCube\u201d mesh by Stein, Oded, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/cube)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      2.0,
-      2.0,
-      2.0
+      1.0,
+      1.0,
+      1.0
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

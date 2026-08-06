@@ -17,7 +17,7 @@
   "file": "pineapple_generated.splat",
   "splats": 262112,
   "bytes": 8387584,
-  "sha256": "c37caac4c854457a0f6647600867197427af0d4a81765ef96d490c1e5b2b4647",
+  "sha256": "99310cc8a21c5472db55c1d9d080305d6fe84115219f3b0e89144eaa4435ab97",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.4291,
-      0.9971,
-      0.4118
+      0.4303,
+      1.0,
+      0.413
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

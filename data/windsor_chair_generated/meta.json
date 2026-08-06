@@ -16,7 +16,7 @@
   "file": "windsor_chair_generated.splat",
   "splats": 262143,
   "bytes": 8388576,
-  "sha256": "9fcbd704b77391a2e9855882552e8a24248517fef80d6eeb55ab2e6f431018f2",
+  "sha256": "7538a47d8cf4adb4cd46fa17bf8a89970494b34e2d90156adcf80b39d48a1691",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.8528,
-      1.0159,
-      0.7184
+      0.8395,
+      1.0,
+      0.7071
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

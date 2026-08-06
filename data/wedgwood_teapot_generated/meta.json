@@ -18,7 +18,7 @@
   "file": "wedgwood_teapot_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "34515d2c4f782308d30ad13ec0f1d99d3dde26f60158accf52a135aadf473c81",
+  "sha256": "dd467669d54d619800d9edc65291a844dbc89566dbb3787b5f2988d05c806dae",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -29,9 +29,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.7188,
-      0.6652,
-      0.8951
+      0.803,
+      0.7431,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

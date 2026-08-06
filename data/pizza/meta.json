@@ -12,7 +12,7 @@
   "file": "pizza_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "5682b57704cd8289b7e7efadd431f2fb86aadc64dff461512e78bf94f354b7a7",
+  "sha256": "abd9f8eb79b58aad1e56053b757242e8532ba3614bab2e9811585eca530fd6c0",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -21,28 +21,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "4c7dfa3c410a8efd4c2f1a86514264e919918fd61735e9b7c7c4d1c48bc921b4",
+      "sha256": "d1bdb1980d6b293e762b1c430e62f33cc0f0c926ee4385d32aede869c699e271",
       "file": "pizza_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "3d6f8cb41e7ba17a3372b116e0e23a53e7379697ea156d67473f000b044c9900",
+      "sha256": "52de85db1d3be6a372da67f4915e0516fdc9a54147848294b380c4e2533cbd45",
       "file": "pizza_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "5682b57704cd8289b7e7efadd431f2fb86aadc64dff461512e78bf94f354b7a7",
+      "sha256": "abd9f8eb79b58aad1e56053b757242e8532ba3614bab2e9811585eca530fd6c0",
       "file": "pizza_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "74557f5691fc36ce83b72be699a528204335817c5752d6fc4a69257b399656ab",
+      "sha256": "a67e250cd4e766f77e097d2342435d10525a17548ebe66f38e591eb0c11073ff",
       "file": "pizza_1m.splat"
     }
   ],
@@ -53,12 +53,12 @@
   "author": "Rigsters",
   "attribution": "\u201cPizza\u201d mesh by Rigsters, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/pizza)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      1.9999,
-      0.1983,
-      1.9308
+      1.0001,
+      0.0991,
+      0.9656
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

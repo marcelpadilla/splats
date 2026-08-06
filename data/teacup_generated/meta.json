@@ -17,7 +17,7 @@
   "file": "teacup_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "de3912a9ae4f68b2ae92ce79de1ecf7e4c9bec61a26e8e2cfc0435e94a98020c",
+  "sha256": "1b6bd54dada70bb2fc5c514a14a5a68a61e212e68d4265938595035af1a9f261",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.9017,
-      0.5606,
-      0.8481
+      1.0,
+      0.6217,
+      0.9405
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

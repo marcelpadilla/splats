@@ -18,7 +18,7 @@
   "file": "pisa_tower_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "899975cf05a0941708741c32dc95c90fbf1124e6349a0f41d63ff233a90e0071",
+  "sha256": "1c2679d5bfec73e35bccc507489d7d8aaf21a613a83fb204e473f90e4fb3ef54",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -29,9 +29,9 @@
   "added": "2026-08-03",
   "geometry": {
     "extent": [
-      0.3846,
-      1.0006,
-      0.3316
+      0.3844,
+      1.0,
+      0.3314
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

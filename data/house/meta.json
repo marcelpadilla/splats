@@ -13,7 +13,7 @@
   "file": "house_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "313345f172b2bd0268d9266289f66bddcea700e47c58f37d18fec49b2f99d2b2",
+  "sha256": "81eeb454aff839c36e45e3049c97d4d59c315c61afcac3260ea00550b43a9373",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -22,28 +22,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "bbf55ac342ebe6a6640623a4f310addc1422265f85c94442fa584f0a5e15b659",
+      "sha256": "d7b7c483a0f6976bbb55b3ac2f3c46b4e64488bd52f9d542e62bfc9a7ce907e6",
       "file": "house_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "6dce918678c4d84622a6e478133a67f5e924ad00cee099287163b6c6db8cdd17",
+      "sha256": "c93c044851cfdc695ddd200271755634e1e8f26fb8bbe72c38f08f86b064d53b",
       "file": "house_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "313345f172b2bd0268d9266289f66bddcea700e47c58f37d18fec49b2f99d2b2",
+      "sha256": "81eeb454aff839c36e45e3049c97d4d59c315c61afcac3260ea00550b43a9373",
       "file": "house_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "062c224805370cc36798c94adf56c81348902db6a629f9bc0e99d18b822a0b32",
+      "sha256": "6179048778df5aac73379a326e088e95a85b92706a2a89edcf68a8cab3aa99ce",
       "file": "house_1m.splat"
     }
   ],
@@ -54,12 +54,12 @@
   "author": "BSGMiniatures",
   "attribution": "\u201cHouse\u201d mesh by BSGMiniatures, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/house), originally BSGMiniatures via Thingiverse (https://www.thingiverse.com/thing:3621726)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      1.3642,
-      1.7977,
-      1.9991
+      0.6825,
+      0.8994,
+      1.0001
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

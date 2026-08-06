@@ -18,7 +18,7 @@
   "file": "hand_bell_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "d6018bc5d6419ca66aee1de23b18d18275de3a5f912a839b881461f09e1bacc5",
+  "sha256": "097b343db4514a5a5114acbb2df9573c416712c68e8e36944a0a55143d44ee41",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -29,9 +29,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.5012,
-      0.9968,
-      0.4982
+      0.5028,
+      1.0,
+      0.4998
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

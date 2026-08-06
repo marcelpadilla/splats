@@ -18,7 +18,7 @@
   "file": "log_cabin_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "94670b92730a9add7db25a165dc2259cc950dba15c5718e9ec05e938e3945a9d",
+  "sha256": "f678304e8a5382f28416d689104200ba69f0ca69724240c8edc15ac41ae8e78f",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -29,9 +29,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.8655,
-      0.5958,
-      0.9971
+      0.868,
+      0.5975,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

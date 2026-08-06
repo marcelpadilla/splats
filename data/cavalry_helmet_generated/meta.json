@@ -17,7 +17,7 @@
   "file": "cavalry_helmet_generated.splat",
   "splats": 262141,
   "bytes": 8388512,
-  "sha256": "9b87c3edb2db1b9203ab146cf30dc41ef7537c63f3136552c3569e50345f01e4",
+  "sha256": "29595a90c2e5a95a40d11ba92990c7e932f31e4a517ae4c326f96f497b33970c",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.8415,
-      0.9858,
-      0.969
+      0.8536,
+      1.0,
+      0.983
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

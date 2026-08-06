@@ -17,7 +17,7 @@
   "file": "hedgehog_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "0c8631f0c9adc8901058aa9551f147e1518eed0c4a887fb2358cd0423841a6d5",
+  "sha256": "264f0460157b06ef7d1614c0fc51227bdd5e8cde3b9038b655098529089eab98",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-06",
   "geometry": {
     "extent": [
-      0.8072,
-      0.6264,
-      0.9959
+      0.8105,
+      0.6289,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

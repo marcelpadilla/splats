@@ -17,7 +17,7 @@
   "file": "painted_chest_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "14bc33332646c10a925af6b633a7daa5457d90bfed71a5120f022030925ccfbc",
+  "sha256": "a263048d246798752cfb037fafa0131bc0dea6234360cfdf26ddf3a08464fc7c",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.5974,
-      0.7032,
-      0.9956
+      0.6,
+      0.7062,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

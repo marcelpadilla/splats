@@ -16,7 +16,7 @@
   "file": "goldfinch_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "2d06b00e10d5e8f545e38f2876af21af83009c8f97b1fe68b0dfdb75e8521707",
+  "sha256": "d3c2d1ed8568ceeac13b5ba1bd432dd859119961ceae16d201e7711606440c8a",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.5003,
-      0.9082,
-      0.9066
+      0.5509,
+      1.0,
+      0.9983
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

@@ -16,7 +16,7 @@
   "file": "cat_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "7128aabf29816589cacce4fff9f953753b07bd573fd9cd8491a38bc8727f51b6",
+  "sha256": "ed0aebbe543940b77ea2dc7235c7288283ac94988f3a436d39f0700e2dd2b7fa",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.635,
-      0.9982,
-      0.707
+      0.6362,
+      1.0,
+      0.7083
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

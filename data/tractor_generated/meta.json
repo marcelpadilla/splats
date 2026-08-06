@@ -18,7 +18,7 @@
   "file": "tractor_generated.splat",
   "splats": 262140,
   "bytes": 8388480,
-  "sha256": "a47feda150ba16009ad6bec1fb2100cd0244203b622b0505eb51af1b495ecb28",
+  "sha256": "c07c447fc1722c9a9fd363911f431065b2674737b4b176fcd4f49e53643d3de1",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -29,9 +29,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.8444,
-      0.5514,
-      0.9974
+      0.8466,
+      0.5529,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

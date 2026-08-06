@@ -13,7 +13,7 @@
   "file": "mushroom_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "382851318000b2eb0da48c13eaf09955d1c706481491f0b10d6f35fd7302ddee",
+  "sha256": "6154878d9b818b0f23fa3185d055470a771ac0ca22003fa943f1c86a3f093bd3",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -22,28 +22,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "00a2ae3df24f7992473c8ff1b2eb73a8b69c5ab433aec3a83695de1352a85795",
+      "sha256": "d2cae4c9220b7184c56e0711f4d9c754e9e2bdc6ddb95de5a96ad9db077e2ef9",
       "file": "mushroom_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "fd296b05078b005c0a887ee03b1e634e32d87c0759e5033ce7b819d15261fb09",
+      "sha256": "31a598b9e4690a514e2c425c72814be3d9fb71ef36ab5a0ec3aca3add0ec2cce",
       "file": "mushroom_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "382851318000b2eb0da48c13eaf09955d1c706481491f0b10d6f35fd7302ddee",
+      "sha256": "6154878d9b818b0f23fa3185d055470a771ac0ca22003fa943f1c86a3f093bd3",
       "file": "mushroom_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "4e5e397d01988691b48b5626e0a899829f4512224c4ee9cfffc8293d25cd6d1f",
+      "sha256": "24c4883328aafe5787bbd9aa1436f3af86837cc6c9b0ca4ef23217efdd0eb0ca",
       "file": "mushroom_1m.splat"
     }
   ],
@@ -54,12 +54,12 @@
   "author": "Holinaty, Josh",
   "attribution": "\u201cMushroom\u201d mesh by Holinaty, Josh, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-4.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/mushroom)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      0.9849,
-      1.9999,
-      0.9651
+      0.4924,
+      1.0,
+      0.4826
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

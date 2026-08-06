@@ -13,7 +13,7 @@
   "file": "parsnip_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "14eb5035aeaf3a4967ce55ed72b7507b065f862142035fc8b12423b8646f3234",
+  "sha256": "cae4bd48512b72283af8b60b856eed3ff4492659690cb0d88f34553c751324a1",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -22,28 +22,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "0b5d9f62c38abb2de0e72d83c12f875199cd517b3cfb175c67e8496c7ac78c65",
+      "sha256": "b7ca7e780cf307080d2e8bd890bdaef1266d60c08b0ea6d6a42debe98b518e9f",
       "file": "parsnip_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "589e7ac46653e6de1d16514ce6c2048e9d0979ab54d4aeb2688de3e46a830858",
+      "sha256": "7cd156bd0a4ca31d787c9220cf91937bea590b3bf48673921cd2e43d318b95bb",
       "file": "parsnip_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "14eb5035aeaf3a4967ce55ed72b7507b065f862142035fc8b12423b8646f3234",
+      "sha256": "cae4bd48512b72283af8b60b856eed3ff4492659690cb0d88f34553c751324a1",
       "file": "parsnip_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "010c85409e4509c87e1dbdd0f61c691bb48393f0cab8903da240e42e8f49fac4",
+      "sha256": "b99fa9f14bf89ddd7bc04be96d4bc28a2ba250ca42631cde0597cf4040641854",
       "file": "parsnip_1m.splat"
     }
   ],
@@ -54,12 +54,12 @@
   "author": "Bart",
   "attribution": "\u201cParsnip\u201d mesh by Bart, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/parsnip), originally Bart via Sketchfab (https://sketchfab.com/3d-models/parsnip-9270b2c72df04b37bb6d3b6becec67ac)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      1.999,
-      1.035,
-      1.0729
+      0.9997,
+      0.5176,
+      0.5366
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

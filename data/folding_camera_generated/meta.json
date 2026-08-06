@@ -16,7 +16,7 @@
   "file": "folding_camera_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "52c6f6e89a92e21a44547e34d38669e75d6152314a2cde85ba9b91e8faff1085",
+  "sha256": "8fa6e3d63cec05701e7945d4b5d45c0655d0f882b5875bcd56c431599e20c30e",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.8605,
-      0.8162,
-      0.9979
+      0.8624,
+      0.8179,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

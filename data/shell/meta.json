@@ -16,7 +16,7 @@
   "file": "shell.splat",
   "splats": 187643,
   "bytes": 6004576,
-  "sha256": "886f386c0a1903bf360279d4def854c7356ffe41ad65ddd3b959c71db755e01c",
+  "sha256": "9cd337940bdec9d50e205ba6aff4cf9fc2bef66ed147a536c130702f46f4b7dd",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "CC-BY-4.0",
@@ -26,9 +26,9 @@
   "added": "2026-07-28",
   "geometry": {
     "extent": [
-      1.4615,
-      0.5698,
-      1.2365
+      1.0,
+      0.3899,
+      0.846
     ],
     "up_axis": "-y",
     "units": "COLMAP reconstruction scale of the parent capture, not metric"

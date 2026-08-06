@@ -7,62 +7,61 @@
     "primitive",
     "cylinder"
   ],
-  "license": "CC0-1.0",
-  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "author": "\u2014",
-  "attribution": "Geometric primitive (CC0).",
-  "source_mesh": "primitive",
-  "added": "2026-07-24",
-  "file": "cylinder_500k.splat",
   "thumbnail": "thumb.png",
+  "file": "cylinder_1m.splat",
+  "splats": 1000000,
+  "bytes": 32000000,
+  "sha256": "3b09706f0084635679228396cfba3f554a2df7a87aa986eff476d60f7563da36",
   "format": "splat",
-  "splats": 500000,
-  "bytes": 16000000,
-  "sha256": "81069b46c40cad75cfb30ca68718cb4bcc80286d623007023fba4731ce349543",
   "spherical_harmonics": false,
-  "default_lod": "500k",
+  "default_lod": "1m",
   "lods": [
     {
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "c4c335efafd2e081aadd4cdc62ff103417b1e5305d3f65e625a0b838f981363b",
+      "sha256": "9b372a03c51f66a18f741b02290e22b68d5187bad16b2dfef17805842f0b0d41",
       "file": "cylinder_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "f7d9411601048e1ceac9ba30045f226796661efd1eb4bc6fba3c9f145ac449f7",
+      "sha256": "b2c81a39b5986d7f0ac805c2421f2f6fd72dab96259dadd37db4eefb804f31af",
       "file": "cylinder_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "81069b46c40cad75cfb30ca68718cb4bcc80286d623007023fba4731ce349543",
+      "sha256": "d41acd423054a63746df2b6b0bd7a31bd539fd4a799423617931a34947e22a51",
       "file": "cylinder_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "8beec05b2de3b9866a63e010df6bd16a2aed51e0ca021b3fcfaa6f33042ba926",
+      "sha256": "3b09706f0084635679228396cfba3f554a2df7a87aa986eff476d60f7563da36",
       "file": "cylinder_1m.splat"
     }
   ],
+  "license": "CC0-1.0",
+  "license_open": true,
+  "author": "\u2014",
+  "attribution": "Geometric primitive (CC0).",
+  "added": "2026-07-24",
   "geometry": {
     "extent": [
-      2.0,
-      0.2,
-      0.2
+      1.0,
+      0.1,
+      0.1
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"
   },
   "mesh2splat": {
     "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
-    "source_mesh": "primitive",
+    "source_mesh": "",
     "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
     "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
   },
@@ -71,6 +70,9 @@
     "ssim": null
   },
   "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading.",
     "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
     "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
     "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."

@@ -14,7 +14,7 @@
   "file": "dragon_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "8850c8f311ca007f9ec4654c5db433a9d9430f90efde53d4311b557182beaac6",
+  "sha256": "4763e85801d9535d92cd8d29d12bc7109a5f42ffbb86194dcaae3250d93be105",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -23,28 +23,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "644b643e05c0eca974c08bfb6efc796011fee35b0a5db49f42944330a33a6ed8",
+      "sha256": "fbc607b5274ff892f63ec932182a0b145d1b93303e9397b0700bbaf0c59cbabd",
       "file": "dragon_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "94bf889983fba51bd145ca896aed99e20b8445c19cf0f5e0f199a73ea7d79291",
+      "sha256": "7179a5123ebfff522f840bff494897dad483c2d94eafd3da4daf99138b27234a",
       "file": "dragon_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "8850c8f311ca007f9ec4654c5db433a9d9430f90efde53d4311b557182beaac6",
+      "sha256": "4763e85801d9535d92cd8d29d12bc7109a5f42ffbb86194dcaae3250d93be105",
       "file": "dragon_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "3a85296a5a8f6e492479c88ac59f6b2306d8ef9a9a3c9208e468d8244356efc9",
+      "sha256": "596df61892d646216892364c70709c67d67188b110602900594545c866f46012",
       "file": "dragon_1m.splat"
     }
   ],
@@ -55,12 +55,12 @@
   "author": "Stanford University Computer Graphics Laboratory",
   "attribution": "Source: Stanford University Computer Graphics Laboratory (Stanford 3D Scanning Repository).",
   "source_mesh": "Stanford 3D Scanning Repository (http://graphics.stanford.edu/data/3Dscanrep/)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      0.8942,
-      1.4096,
-      1.9986
+      0.4472,
+      0.7049,
+      0.9995
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

@@ -13,7 +13,7 @@
   "file": "goathead_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "fb10872b3483c8ab7286ff71094208e4f730510232c28c13a9860839b80faa98",
+  "sha256": "3185cf119e474ea6c99f77abdd6070ca151bd293beb1e65c88f026c8302da9b1",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -22,28 +22,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "08a575ac9d7b00caa41fab1cd293c04c75f934c25e345803383cdcd9cb48436c",
+      "sha256": "6fea09b91a5ed634405fb47cf55f6833a04033d248b1b1cd78d2940e31720435",
       "file": "goathead_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "9377f0abd9f55dbdd708e1c77fed271252d703966a03a77f0d546175eb619834",
+      "sha256": "3749d849c8f9d20c241f371cf46db703c9f666af52a5635706b6df4e63a3b990",
       "file": "goathead_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "fb10872b3483c8ab7286ff71094208e4f730510232c28c13a9860839b80faa98",
+      "sha256": "3185cf119e474ea6c99f77abdd6070ca151bd293beb1e65c88f026c8302da9b1",
       "file": "goathead_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "e33b54993d8c3742751ad05306f995d0512a83c76bd2eb46a542a12225e41fdd",
+      "sha256": "a3a4395e8e1f17e605d13ce89ee96d6c20b6b49ef8b69a7e33d8c11120564753",
       "file": "goathead_1m.splat"
     }
   ],
@@ -54,12 +54,12 @@
   "author": "hugoelec",
   "attribution": "\u201cGoat head\u201d mesh by hugoelec, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-3.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/goathead)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      1.5267,
-      1.9971,
-      1.4594
+      0.7638,
+      0.9991,
+      0.7301
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

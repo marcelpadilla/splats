@@ -2,6 +2,7 @@
   "id": "plant",
   "title": "Houseplant",
   "category": "object",
+  "source_method": "capture",
   "tags": [
     "plant",
     "houseplant",
@@ -10,43 +11,25 @@
     "indoor",
     "glossy"
   ],
-  "author": "Marcel Padilla",
-  "license": "CC-BY-4.0",
-  "license_url": "https://creativecommons.org/licenses/by/4.0/",
-  "added": "2026-07-23",
-  "file": "plant.splat",
   "thumbnail": "thumb.png",
-  "format": "splat",
+  "file": "plant.splat",
   "splats": 113648,
   "bytes": 3636736,
-  "sha256": "5abd7cbcf15393533d66a701aec6ef51d42bd4267b7c8b485538d6bdfac36c00",
+  "sha256": "ce9d490b18f16d6730d832227bf541431b8b1a5d167c5a3fe89af4f324c0d8fd",
+  "format": "splat",
   "spherical_harmonics": false,
+  "license": "CC-BY-4.0",
+  "license_open": true,
+  "author": "Marcel Padilla",
+  "added": "2026-07-23",
   "geometry": {
     "extent": [
-      1.312,
-      2.5367,
-      1.5468
+      0.5172,
+      1.0,
+      0.6098
     ],
     "up_axis": "-y",
-    "units": "COLMAP reconstruction scale, not metric"
-  },
-  "capture": {
-    "date": "2026-07",
-    "device": "Google Pixel 5",
-    "video": "4K 60fps, portrait, handheld orbit",
-    "surface": "speckle mat (texture for COLMAP feature matching)",
-    "object_pose": "standing upright"
-  },
-  "pipeline": {
-    "frames": null,
-    "poses": "COLMAP 4.1 (GPU)",
-    "training": "Brush (built from main), 30000 iters, 500k splat cap"
-  },
-  "editing": {
-    "tool": "SuperSplat (manual)",
-    "steps": [
-      "cropped from the 500k full-room scene to the object alone"
-    ]
+    "units": "COLMAP reconstruction scale of the parent capture, not metric"
   },
   "quality": {
     "psnr": null,
@@ -55,8 +38,5 @@
   "caveats": [
     "Spherical harmonics were dropped (SH degree 0), so there is no view-dependent shading.",
     "Scale is the COLMAP reconstruction scale and is not metric."
-  ],
-  "known_gaps": [
-    "The source capture is not recorded. Hand-cleaning in SuperSplat rewrites every 32-byte record, so the parent could not be matched back to a raw export. Quality metrics are therefore unset for this object."
   ]
 }

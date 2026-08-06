@@ -16,7 +16,7 @@
   "file": "eiffel_generated.splat",
   "splats": 262097,
   "bytes": 8387104,
-  "sha256": "42825736c9c9464de1a06393f63b9ada281e35d9197cbf6856deaa1e60f34ef5",
+  "sha256": "bdfa0ed53ac15b82797678410f90fb66af02f2c6b328b50dbe6d35603f9a14d1",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-03",
   "geometry": {
     "extent": [
-      0.4193,
-      1.0012,
-      0.4377
+      0.4188,
+      1.0,
+      0.4371
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

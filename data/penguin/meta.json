@@ -13,7 +13,7 @@
   "file": "penguin_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "a5d378d4259cc233fadb1f908b3ca62b7147fcd3c429990ad17332f9bee6ec4b",
+  "sha256": "ab81d0d1c8ad9fd9381f9d1ecdfd5e70f1c6ef0b523b8f32ff1d0882bcec0a54",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -22,28 +22,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "5b6b9aadad477a4b09210c346e1bb59ed7689eb17fd6973116c7ce60cc6955af",
+      "sha256": "c4c4613c529c10d2bfe08ef1722e5d66bf508d24993e5e39cd07f912172b697d",
       "file": "penguin_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "2dad3b0e5cb7194519c66af6779f3bb8131cc039cd9a47d9886fd42a9e9cdee8",
+      "sha256": "98f345aa5a9d3186e13d74b45672c5b6c6be836d3f3594de085deb6add07a25f",
       "file": "penguin_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "a5d378d4259cc233fadb1f908b3ca62b7147fcd3c429990ad17332f9bee6ec4b",
+      "sha256": "ab81d0d1c8ad9fd9381f9d1ecdfd5e70f1c6ef0b523b8f32ff1d0882bcec0a54",
       "file": "penguin_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "6e07a2210b013334c5366e745f3a102a7c0a3b1f5161c8908c9493cb37365cb2",
+      "sha256": "0c3e946f0bf9da8fd2929788f9f8582722731df1f4148aaa1899751dae5c6dce",
       "file": "penguin_1m.splat"
     }
   ],
@@ -54,12 +54,12 @@
   "author": "Stein, Oded",
   "attribution": "\u201cPenguin\u201d mesh by Stein, Oded, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/penguin)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      1.1944,
-      1.9999,
-      0.982
+      0.5972,
+      1.0,
+      0.491
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

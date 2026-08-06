@@ -15,7 +15,7 @@
   "file": "xyzrgb_dragon_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "0e1fe31def622298a8d85df61546190dc5c6816982c93be6bb3485199a0448f7",
+  "sha256": "fd41af8362676a1858602159122a32d074236fc43c83450e8c4fa4bdf898a9e2",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -24,28 +24,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "d61ca140d46505051a39f97d4ebafcfb611e6d12582437a19ba73912064b47d5",
+      "sha256": "a7ecc5a422ffde6b4df5f49a9d7a95a3e4084e98d54c77c629c91650a9f626bc",
       "file": "xyzrgb_dragon_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "a4c1a1315c4bb0d0ce2f12a547c746db8df61ddd65e9f91a142e3eac3bd9b065",
+      "sha256": "38afe64e7b8a9d87fa6979f540983219d63d1d254f2e237b50a7edb80489fafc",
       "file": "xyzrgb_dragon_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "0e1fe31def622298a8d85df61546190dc5c6816982c93be6bb3485199a0448f7",
+      "sha256": "fd41af8362676a1858602159122a32d074236fc43c83450e8c4fa4bdf898a9e2",
       "file": "xyzrgb_dragon_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "cb822770f020948c4b53cb291c4fde441427a0760f0c5bc415f25a1881b4c2db",
+      "sha256": "2463631586c56eb771bc08d968c6f271059fabd1596959bdcefb93c3f25a46b4",
       "file": "xyzrgb_dragon_1m.splat"
     }
   ],
@@ -56,12 +56,12 @@
   "author": "XYZ RGB Inc. / Stanford University Computer Graphics Laboratory",
   "attribution": "Source: XYZ RGB Inc., via the Stanford 3D Scanning Repository (Stanford University Computer Graphics Laboratory).",
   "source_mesh": "Stanford 3D Scanning Repository (http://graphics.stanford.edu/data/3Dscanrep/)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      1.9994,
-      0.8979,
-      1.3298
+      0.9999,
+      0.449,
+      0.665
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

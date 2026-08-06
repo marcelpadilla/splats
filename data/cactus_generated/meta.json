@@ -17,7 +17,7 @@
   "file": "cactus_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "48cadde6fa63329734c7270f04ce6202d7e62364ade8d4b07307e4eacf9f7b7d",
+  "sha256": "6090bb70d9f412eb03aedd02d5dc5dc4b4703b54cc549cc6950901b765903c15",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.9857,
-      0.9623,
-      0.885
+      1.0,
+      0.9763,
+      0.8978
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

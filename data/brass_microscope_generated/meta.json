@@ -17,7 +17,7 @@
   "file": "brass_microscope_generated.splat",
   "splats": 262112,
   "bytes": 8387584,
-  "sha256": "1da4e46b28657f00ce802e9a6a9df3fc8e4593d05839521514e703bcfdce7767",
+  "sha256": "54f18fbd2c9ff98f9009ae4707c21847b788141967725abf080623d8f350a727",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.3483,
-      1.0022,
-      0.5071
+      0.3476,
+      1.0,
+      0.506
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

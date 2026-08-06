@@ -10,62 +10,61 @@
     "test-model",
     "cute"
   ],
-  "license": "CC0-1.0",
-  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "author": "Keenan Crane",
-  "attribution": "\u201cSpot\u201d by Keenan Crane, CC0 (public domain).",
-  "source_mesh": "Keenan Crane 3D Model Repository (https://www.cs.cmu.edu/~kmcrane/Projects/ModelRepository/)",
-  "added": "2026-07-24",
-  "file": "spot_500k.splat",
   "thumbnail": "thumb.png",
+  "file": "spot_1m.splat",
+  "splats": 1000000,
+  "bytes": 32000000,
+  "sha256": "ca4d0efe255cdbb752b7a0b4d7da4310c89cc32566796ef95497e1353aa84bbb",
   "format": "splat",
-  "splats": 500000,
-  "bytes": 16000000,
-  "sha256": "7fe53991da29828e152de0b071dacdc7ced02cb3fc1ca7081176c2629ba47c9b",
   "spherical_harmonics": false,
-  "default_lod": "500k",
+  "default_lod": "1m",
   "lods": [
     {
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "de156f9c4c27c05ed0b03a6541afc140079e81239dac5caa486def1eed501d9e",
+      "sha256": "6eabe6708f0ca8734437340784d15b3da0a5c60640e711e74232babd0ae1c666",
       "file": "spot_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "cef4dcfff12ee0ebd1a943c9e1ab705822116d21fcd4e85efd3da0a371348b4a",
+      "sha256": "bb10c5081e297f0bef87d9c45914f50ee2e3b6623a973f929df4cc50db7415bb",
       "file": "spot_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "7fe53991da29828e152de0b071dacdc7ced02cb3fc1ca7081176c2629ba47c9b",
+      "sha256": "3a7ed2fe7890c855e7b1933ad50e121a0208878fd284e021bd7a5293cbd55ec7",
       "file": "spot_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "410eaa59225a850a4080974fbcbf04ec7efcc215932d3669494095476f51ef96",
+      "sha256": "ca4d0efe255cdbb752b7a0b4d7da4310c89cc32566796ef95497e1353aa84bbb",
       "file": "spot_1m.splat"
     }
   ],
+  "license": "CC0-1.0",
+  "license_open": true,
+  "author": "Keenan Crane",
+  "attribution": "\u201cSpot\u201d by Keenan Crane, CC0 (public domain).",
+  "added": "2026-07-24",
   "geometry": {
     "extent": [
-      1.0957,
-      1.9674,
-      1.9996
+      0.548,
+      0.9839,
+      1.0
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"
   },
   "mesh2splat": {
     "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
-    "source_mesh": "Keenan Crane 3D Model Repository (https://www.cs.cmu.edu/~kmcrane/Projects/ModelRepository/)",
+    "source_mesh": "",
     "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
     "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
   },
@@ -74,6 +73,9 @@
     "ssim": null
   },
   "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading.",
     "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
     "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
     "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."

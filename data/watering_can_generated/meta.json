@@ -16,7 +16,7 @@
   "file": "watering_can_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "a5e27266e0ec7f4d3d55b6b58ae71e94620128f59daa89c83031e711bcc4efd9",
+  "sha256": "5b250851a62be004c78a3dd832c4d97ac9432dd2afc027f0f818e0c1a21346bb",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.51,
-      0.7457,
-      0.8616
+      0.5919,
+      0.8655,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

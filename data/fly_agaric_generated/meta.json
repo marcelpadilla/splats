@@ -17,7 +17,7 @@
   "file": "fly_agaric_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "95230cb051297688c1ff443487ec7634e5cc3fff00b7ba5cbf3189345346fd8e",
+  "sha256": "b2d3fe9b7e1ed09615f1a361c3a3f7bb1bf17d03b24854932541ca99b66b1a6d",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.5286,
-      0.9955,
-      0.5023
+      0.531,
+      1.0,
+      0.5046
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

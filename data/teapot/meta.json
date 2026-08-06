@@ -9,63 +9,61 @@
     "classic",
     "newell"
   ],
-  "license": "Public Domain",
-  "license_url": null,
-  "author": "Martin Newell (University of Utah)",
-  "attribution": "Utah teapot, Martin Newell, University of Utah, 1975 (public domain).",
-  "license_open": true,
-  "source_mesh": "Utah teapot (Newell, 1975)",
-  "added": "2026-07-24",
-  "file": "teapot_500k.splat",
   "thumbnail": "thumb.png",
+  "file": "teapot_1m.splat",
+  "splats": 1000000,
+  "bytes": 32000000,
+  "sha256": "7735acde9cb60f18dea0abb350a8e0f07777ee67ad5b2d99fa96109d9b74eb33",
   "format": "splat",
-  "splats": 500000,
-  "bytes": 16000000,
-  "sha256": "c67778bd2d74f7d6630f625fd0d748dd89908aaa3d5abf1007f98ea9c9bd98b6",
   "spherical_harmonics": false,
-  "default_lod": "500k",
+  "default_lod": "1m",
   "lods": [
     {
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "082b8253cc625425ab68cae60a54383c910e0ad782fa04d257ec3f02e3885074",
+      "sha256": "bcd0ad7a8ceecc385747f40a90c107fcc69da4bc43a19c380c8c43afa6465c8b",
       "file": "teapot_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "d1ada48148b8e4e5d25b287a8a66a862278f03cd75420101631cb6a486afe92f",
+      "sha256": "ef3885089be6ab1c67590480a989771986ed8300629ea46f83a41db9d54aeabc",
       "file": "teapot_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "c67778bd2d74f7d6630f625fd0d748dd89908aaa3d5abf1007f98ea9c9bd98b6",
+      "sha256": "d877e4d23d75a1b8210109e04b9640382e3c958777796e72ec1b276bf5f188c7",
       "file": "teapot_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "7d365087b83fdd3166e41cac6ae878fd9c461af79d6a092d12f78bdbcacb6f34",
+      "sha256": "7735acde9cb60f18dea0abb350a8e0f07777ee67ad5b2d99fa96109d9b74eb33",
       "file": "teapot_1m.splat"
     }
   ],
+  "license": "Public Domain",
+  "license_open": true,
+  "author": "Martin Newell (University of Utah)",
+  "attribution": "Utah teapot, Martin Newell, University of Utah, 1975 (public domain).",
+  "added": "2026-07-24",
   "geometry": {
     "extent": [
-      1.9991,
-      0.9791,
-      1.2432
+      1.0,
+      0.4898,
+      0.6219
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"
   },
   "mesh2splat": {
     "tool": "scripts/mesh_to_splat.py (direct surface splatting)",
-    "source_mesh": "Utah teapot (Newell, 1975)",
+    "source_mesh": "",
     "pipeline": "area-uniform surface sampling -> one thin disk-Gaussian per sample (oriented to the local normal) -> smooth (Phong) normals -> baked lambert shading",
     "levels": "10k / 100k / 500k / 1M gaussians; colour encodes the level (red/yellow/green/blue)"
   },
@@ -74,6 +72,9 @@
     "ssim": null
   },
   "caveats": [
+    "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
+    "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
+    "Spherical harmonics are absent (flat colour), so there is no view-dependent shading.",
     "Direct mesh->splat conversion (no photography, no COLMAP, no training): the geometry is exact, the appearance is a baked matte shading, not real captured lighting.",
     "Ships in four levels of detail (10k/100k/500k/1M gaussians); colour encodes the level (red/yellow/green/blue).",
     "Spherical harmonics are absent (flat colour), so there is no view-dependent shading."

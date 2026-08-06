@@ -18,7 +18,7 @@
   "file": "gilded_helmet_generated.splat",
   "splats": 262142,
   "bytes": 8388544,
-  "sha256": "011bee1494146f542ca84f2657c9404edf84b491435c309f08ef45a90c8007a7",
+  "sha256": "3d1b4eeab637c6fe99a7fbfa45cc18ccc0d61a0a422293e355fce88338407a6c",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -29,9 +29,9 @@
   "added": "2026-08-06",
   "geometry": {
     "extent": [
-      0.9968,
-      0.936,
-      0.9947
+      1.0,
+      0.939,
+      0.9978
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

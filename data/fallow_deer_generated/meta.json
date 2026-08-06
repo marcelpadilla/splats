@@ -18,7 +18,7 @@
   "file": "fallow_deer_generated.splat",
   "splats": 262080,
   "bytes": 8386560,
-  "sha256": "afcf753f48b582a79b368c5a5b9f7ae70e244bca6e2a413d435d1eb3bd2baf8f",
+  "sha256": "a6318f1f5c99c57c93ca685c6943c1e64457641ce5d3660c5a2dce890c62ee95",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -29,9 +29,9 @@
   "added": "2026-08-06",
   "geometry": {
     "extent": [
-      0.1845,
-      0.8317,
-      0.8986
+      0.2053,
+      0.9255,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

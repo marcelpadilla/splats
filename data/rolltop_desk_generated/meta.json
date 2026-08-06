@@ -17,7 +17,7 @@
   "file": "rolltop_desk_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "42416ecd62400b4a6716a25b501984d77d774e05d493c64d2fbaf6f5e1b9173c",
+  "sha256": "391a4fbaffac983784973bf68db4999177b9850c5d66a44e3d432e1d2018efbe",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.648,
-      0.9982,
-      1.0004
+      0.6477,
+      0.9978,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

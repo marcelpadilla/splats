@@ -18,7 +18,7 @@
   "file": "tiffany_lamp_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "9be77f8679e5252bf006b2975d3274823274f3b78494c4efdc7e557fbae2118a",
+  "sha256": "00c2dbb28029b1e7284abf4a09c8aa54648b701edcb5ddae5a5157ae999ead8f",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -29,9 +29,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.7465,
-      0.9967,
-      0.7437
+      0.749,
+      1.0,
+      0.7461
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

@@ -16,7 +16,7 @@
   "file": "bottle_vase_generated.splat",
   "splats": 262143,
   "bytes": 8388576,
-  "sha256": "7c3d06e2fb0652854e7c93c162bfbbd554d3e01987face8eb62b91f54097c7ec",
+  "sha256": "9ded05bcc38411a2c967e55b7d43abaae817f00cda939df0de118aac43d637ab",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.5472,
-      1.0258,
-      0.5334
+      0.5335,
+      1.0,
+      0.52
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

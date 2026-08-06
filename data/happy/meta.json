@@ -15,7 +15,7 @@
   "file": "happy_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "34c909b0955c158d2f7a968cd26fdee56998f838633b8ead8edc416d167a2502",
+  "sha256": "196e6a0611124ee0d5e0cb89d781bd057c9ad03cfcb92dad9a8bb50b64227979",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -24,28 +24,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "029527f7fc32026278c474daf22cda62ec83d8aca490685921cbfeffaa729a02",
+      "sha256": "cff093db909a6c7ac76adbbfa5e7d435a19b4b60ab3fb2a109cbd6bc3f2f88a4",
       "file": "happy_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "92f7012322c56364e7951d80e6c04415728dde59d3d3ed9b852edd02b5194301",
+      "sha256": "ee85fea94f5cd66929ff099a92299599624c5cd6a2ca95e18d5a6cdbc252bcc9",
       "file": "happy_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "34c909b0955c158d2f7a968cd26fdee56998f838633b8ead8edc416d167a2502",
+      "sha256": "196e6a0611124ee0d5e0cb89d781bd057c9ad03cfcb92dad9a8bb50b64227979",
       "file": "happy_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "728ce89165f78a222133afc83d2c548193d5eee66901d95e239973c899bb6412",
+      "sha256": "2322e307ec2f2c1b13dcdc073c5b946dd27daa2b7d18160a9ae33ade004de9be",
       "file": "happy_1m.splat"
     }
   ],
@@ -56,12 +56,12 @@
   "author": "Stanford University Computer Graphics Laboratory",
   "attribution": "Source: Stanford University Computer Graphics Laboratory (Stanford 3D Scanning Repository).",
   "source_mesh": "Stanford 3D Scanning Repository (http://graphics.stanford.edu/data/3Dscanrep/)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      0.8212,
-      1.9998,
-      0.822
+      0.4106,
+      1.0,
+      0.411
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

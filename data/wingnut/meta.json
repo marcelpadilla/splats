@@ -13,7 +13,7 @@
   "file": "wingnut_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "a311a5537cb718d2405e40eb41dcffd946df602be1b5452199acc576fc85b46c",
+  "sha256": "98d0801803d8227127ad1659bc7c5ec0fbe9f8047f17bfc9033b534b4e060611",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -22,28 +22,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "2f9b1754d65576cfedabf31fef2833c7666bd705738936098e94c7ae7f279749",
+      "sha256": "5efd3c81687f51a13463803ae2fa2497b67eaf1275857a9e9c32b45ae96bfcc2",
       "file": "wingnut_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "ae0b725a51eda98241bd6c9a105a3548a7e78f26b212aa89a9fca90706a95d8d",
+      "sha256": "bc109eb5af38ca8c52634f72dc00941401e1aef3518cfc1697bd503e9b18a728",
       "file": "wingnut_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "a311a5537cb718d2405e40eb41dcffd946df602be1b5452199acc576fc85b46c",
+      "sha256": "98d0801803d8227127ad1659bc7c5ec0fbe9f8047f17bfc9033b534b4e060611",
       "file": "wingnut_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "f2f1aa109a6ca3fa497e519c5cd2b7b0e65c02e7456f56492df665feaa92c83f",
+      "sha256": "5534df4c846bbfc4c597434d9fdb6119a2a9a0da025db867fe981d33dd7fb419",
       "file": "wingnut_1m.splat"
     }
   ],
@@ -54,12 +54,12 @@
   "author": "Stein, Oded and Grinspun, Eitan and Crane, Keenan",
   "attribution": "\u201cWing nut\u201d mesh by Stein, Oded and Grinspun, Eitan and Crane, Keenan, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/wingnut)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      0.8405,
-      1.1878,
-      1.9997
+      0.4203,
+      0.5939,
+      0.9999
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

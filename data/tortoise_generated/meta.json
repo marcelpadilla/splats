@@ -16,7 +16,7 @@
   "file": "tortoise_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "1bf161c0f769f73f55ee6b8a56c5717fdc6bee730ec02c7f26cbe813aa88f97d",
+  "sha256": "ade3739ac0e47f82ed88203bf72e88ba66f4cb6f34c25e5fd03be574fbc4215a",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.9954,
-      0.5786,
-      0.935
+      1.0,
+      0.5813,
+      0.9394
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

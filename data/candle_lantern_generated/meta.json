@@ -17,7 +17,7 @@
   "file": "candle_lantern_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "aa905f77eeb5669c6f77cf8ad648a2bfb4d2ae6c8672f3f4f41205296c86d3d3",
+  "sha256": "9a4294e3242dfe011f44e5111de8d7da9796e5b9ab22e0d525beecf0d058aa69",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.5749,
-      1.0017,
-      0.5761
+      0.5739,
+      1.0,
+      0.5751
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

@@ -17,7 +17,7 @@
   "file": "dog_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "0cea157e55b96e2f7174cd4e42488f964e377b38dfecf7d4827fb23c1d302c77",
+  "sha256": "430a2868a6e513abc5db1140ede5b9ca4cfacd85100041e809c57f13dd03d3b0",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.9514,
-      0.9982,
-      0.7402
+      0.953,
+      1.0,
+      0.7415
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

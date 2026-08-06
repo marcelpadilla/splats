@@ -16,7 +16,7 @@
   "file": "typewriter_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "32c9a59a85c4e5fcc7233065ec3399f16a4bf009d0ba1ff7104b3b48f3102a21",
+  "sha256": "e1ee6046428b4e17a9bd7f8a1fc2a658bd69cc668c80251ebea2b1121aa34350",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.96,
-      0.7827,
-      0.9945
+      0.9653,
+      0.787,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

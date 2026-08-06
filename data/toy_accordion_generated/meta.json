@@ -16,7 +16,7 @@
   "file": "toy_accordion_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "2334ea74b19623167631e21da73cfbd451bad80e9db33f1ad78dfc28d7491351",
+  "sha256": "17fd340bcea940c518a10ee4d9ecd7ad81f8fc99592b1afde221fbd12cb2b65f",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.8342,
-      0.9473,
-      0.9939
+      0.8394,
+      0.9531,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

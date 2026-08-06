@@ -16,7 +16,7 @@
   "file": "striped_gourd_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "fa321678c631972b9c314dad80903999187a2ba0f83a75d19c4c79ad59390e3a",
+  "sha256": "ff2ec20cfb5d9b4acaa03bf9c1372219c95248f69f9a94e654c27f1bd04c512a",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.9413,
-      0.9958,
-      0.6626
+      0.9453,
+      1.0,
+      0.6653
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

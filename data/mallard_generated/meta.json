@@ -16,7 +16,7 @@
   "file": "mallard_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "46996e920cd2df5abfc4217eb4558a7080ebe1a776d18e8cfea1e5f9c292f22e",
+  "sha256": "c3ca1057f8e93b5ede9ff76d511220d44bcbd15538642f6a7791596a48c34b6b",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.4006,
-      0.9426,
-      0.9958
+      0.4023,
+      0.9465,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

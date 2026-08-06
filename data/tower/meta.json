@@ -13,7 +13,7 @@
   "file": "tower_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "72ac92f13d90fe1d3443073f9afcdd80a5d3bad41c4a855c30ab92f134474063",
+  "sha256": "79313736b62c0c3a503282085638b02a4814f16c3405dcdbc690f6f2ec9220d1",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -22,28 +22,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "b3711d3a9105e308b8d8ed43c3724be06add2e56e38be7ea8e317ad420232980",
+      "sha256": "181c3b591d3f89888ae8c2ead8dc177db637da48a3434d823d8981e230f0aa9a",
       "file": "tower_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "db8c799113366076430ebaa774643e571accee8f4b87efd5de8d53d565d81de0",
+      "sha256": "b33d247d0e374e05f9ed6461532cbf3a65b0bd726cb1d3de53bc6559b78323b6",
       "file": "tower_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "72ac92f13d90fe1d3443073f9afcdd80a5d3bad41c4a855c30ab92f134474063",
+      "sha256": "79313736b62c0c3a503282085638b02a4814f16c3405dcdbc690f6f2ec9220d1",
       "file": "tower_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "d6bcfdb4c8419f040eeecdd0124aad6da71d4fde7bda60738952bf5731802b00",
+      "sha256": "58ee0d8ee46bc901dea60ec31dc0c88fc381aeb53804301a52993ee80c889604",
       "file": "tower_1m.splat"
     }
   ],
@@ -54,12 +54,12 @@
   "author": "jansentee3d",
   "attribution": "\u201cTower\u201d mesh by jansentee3d, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-NC-3.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/tower), originally jansentee3d via Thingiverse (https://www.thingiverse.com/thing:3155868)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      1.0477,
-      2.0,
-      1.1031
+      0.5238,
+      1.0,
+      0.5515
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

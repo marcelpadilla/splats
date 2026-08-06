@@ -14,7 +14,7 @@
   "file": "demosthenes_500k.splat",
   "splats": 500000,
   "bytes": 16000000,
-  "sha256": "e0f31f0e4863bb4512f0ab894b620eaf682700e278447647f7061197611d9e32",
+  "sha256": "1663337888a8f72fe02dda3000500708c32520b1a0f6ebfdb6ad6ff00a7e45e1",
   "format": "splat",
   "spherical_harmonics": false,
   "default_lod": "500k",
@@ -23,28 +23,28 @@
       "lod": "10k",
       "splats": 10000,
       "bytes": 320000,
-      "sha256": "0dcfe5a20b73c6f145bd034551744531c99bd293f0d40f66b09621d200b349a9",
+      "sha256": "5ea8b1f7c32e87888ae05610a991851fab093a98ab7c871a199ee10e13483a81",
       "file": "demosthenes_10k.splat"
     },
     {
       "lod": "100k",
       "splats": 100000,
       "bytes": 3200000,
-      "sha256": "802a9a76f2049158ea3d8cd947338376bf22ba2c878e7eb4b06c38e77a75dc77",
+      "sha256": "6cdde4f7255ef1fa3f3074e262c392cf088caecaa2baacb0265c455d60d1a408",
       "file": "demosthenes_100k.splat"
     },
     {
       "lod": "500k",
       "splats": 500000,
       "bytes": 16000000,
-      "sha256": "e0f31f0e4863bb4512f0ab894b620eaf682700e278447647f7061197611d9e32",
+      "sha256": "1663337888a8f72fe02dda3000500708c32520b1a0f6ebfdb6ad6ff00a7e45e1",
       "file": "demosthenes_500k.splat"
     },
     {
       "lod": "1m",
       "splats": 1000000,
       "bytes": 32000000,
-      "sha256": "758ad8fe242fc9e73dfab031766e47f55bf38f77a809aa7f6f276dbb5f2f9076",
+      "sha256": "48036ccea592ac0a72bb8667007e000dd16aa57cc12134ddbacdce99c014ecd4",
       "file": "demosthenes_1m.splat"
     }
   ],
@@ -55,12 +55,12 @@
   "author": "ryanfb",
   "attribution": "\u201cDemosthenes\u201d mesh by ryanfb, via odedstein-meshes (https://github.com/odedstein/meshes), licensed CC-BY-4.0.",
   "source_mesh": "odedstein-meshes (https://github.com/odedstein/meshes/tree/master/objects/demosthenes)",
-  "added": "2026-07-28",
+  "added": "2026-08-06",
   "geometry": {
     "extent": [
-      1.2992,
-      1.9991,
-      1.1393
+      0.6497,
+      0.9997,
+      0.5697
     ],
     "up_axis": "-y",
     "units": "mesh normalized so its longest axis = 2.0, not metric"

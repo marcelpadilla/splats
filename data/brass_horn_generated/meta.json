@@ -17,7 +17,7 @@
   "file": "brass_horn_generated.splat",
   "splats": 262138,
   "bytes": 8388416,
-  "sha256": "45de7d1c6527ceda2057fa5db07bbc8501aa073644ddf645fb10032b939e5dcd",
+  "sha256": "030cf5c625cae2be66f3a6d86404dd5155ecbcb284fcf68ff48b9b24c187e7f6",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.9988,
-      0.9618,
-      0.681
+      1.0,
+      0.963,
+      0.6819
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

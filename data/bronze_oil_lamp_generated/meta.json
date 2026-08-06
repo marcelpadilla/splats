@@ -17,7 +17,7 @@
   "file": "bronze_oil_lamp_generated.splat",
   "splats": 262142,
   "bytes": 8388544,
-  "sha256": "5209a3688e17a56a4a961ea584581036fc97259f31644022f8a024a55a7758f9",
+  "sha256": "c7ea22ad64d683e98790192f1e68192c726afacd86c88bc88505b39e9d4aa640",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.477,
-      0.7963,
-      0.9944
+      0.4797,
+      0.8008,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

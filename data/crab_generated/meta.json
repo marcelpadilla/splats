@@ -16,7 +16,7 @@
   "file": "crab_generated.splat",
   "splats": 262112,
   "bytes": 8387584,
-  "sha256": "b5a5cd692e99a621e5dbbc024b72e9f1dad10335785029379e2887ef7da43cdd",
+  "sha256": "f33d54c3d26937da14cfa800040c8bbcff0d3033572e04605e9b1ee8df006bca",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-05",
   "geometry": {
     "extent": [
-      0.4969,
-      0.669,
-      0.9945
+      0.4997,
+      0.6727,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

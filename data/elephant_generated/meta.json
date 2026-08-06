@@ -16,7 +16,7 @@
   "file": "elephant_generated.splat",
   "splats": 262144,
   "bytes": 8388608,
-  "sha256": "2f12e4c506bd45504abe95466b722476a63dc5509bcb07d81a646a400e2f7419",
+  "sha256": "53256954039aaede820578148c48ca1a27e64b54fcf861abe23e6f2f5d18dc6e",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -27,9 +27,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.9965,
-      0.8223,
-      0.59
+      1.0,
+      0.8252,
+      0.5921
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"

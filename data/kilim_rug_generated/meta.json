@@ -17,7 +17,7 @@
   "file": "kilim_rug_generated.splat",
   "splats": 261952,
   "bytes": 8382464,
-  "sha256": "c755b300e6ce357bad63b161fca9bc84cba7631736f42bcdd16860e913936265",
+  "sha256": "5a5015cf425f0bc0d7d93a95ab4e445ab4447195e2ff5a1c19b2835c3cbbb1dc",
   "format": "splat",
   "spherical_harmonics": false,
   "license": "As-is (no warranty)",
@@ -28,9 +28,9 @@
   "added": "2026-08-04",
   "geometry": {
     "extent": [
-      0.9268,
-      0.0335,
-      0.9993
+      0.9275,
+      0.0336,
+      1.0
     ],
     "up_axis": "-y",
     "units": "generator output units, not metric"
