@@ -324,7 +324,7 @@ def summary() -> str:
     """A short plain-text overview of the collection: what is here, and its terms.
 
     Exists so that the first thing anyone types after installing can be
-    ``print(ps.summary())`` and get the shape of the dataset -- how many objects,
+    ``print(splatset.summary())`` and get the shape of the dataset -- how many objects,
     made which ways, under which licenses -- rather than a wall of JSON.
     """
     objs = objects()

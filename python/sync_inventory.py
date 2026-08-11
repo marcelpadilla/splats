@@ -4,7 +4,7 @@
 data/inventory.json is the single source of truth. Three places repeat it and
 all are generated from it here, so none can drift:
 
-  1. src/padillasplats/inventory.json, the copy shipped in the wheel, which is
+  1. src/splatset/inventory.json, the copy shipped in the wheel, which is
      what makes ids() and find() work offline.
   2. the gallery table in the root README, between the inventory markers.
   3. the BibTeX block in the root README, between the citation markers.
@@ -13,7 +13,7 @@ Run after adding or changing an object:
 
     python python/sync_inventory.py
 
-tests/test_padillasplats.py fails if the packaged copy is stale, so step 1 can
+tests/test_splatset.py fails if the packaged copy is stale, so step 1 can
 never be forgotten silently.
 """
 from __future__ import annotations
@@ -26,7 +26,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
 SRC = REPO / "data" / "inventory.json"
-PKG_COPY = HERE / "src" / "padillasplats" / "inventory.json"
+PKG_COPY = HERE / "src" / "splatset" / "inventory.json"
 README = REPO / "README.md"
 
 INV_START = "<!-- inventory:start -->"
@@ -156,11 +156,30 @@ def splice(text: str, start: str, end: str, body: str, what: str) -> str:
     return f"{head}{start}\n{body}\n{end}{tail}"
 
 
+def stamp_updated(doc: dict) -> bool:
+    """Set the collection's `updated` date from the objects themselves.
+
+    It was hand-written, so it rotted: it still said 2026-07-28 after two batches
+    and a normalization pass, which is exactly the kind of wrong that a reader
+    trusts. Deriving it from the newest `added` cannot drift, and unlike stamping
+    today's date it does not churn the file on every unrelated run.
+    """
+    newest = max((o.get("added") or "" for o in doc["objects"]), default="")
+    if not newest or doc.get("updated") == newest:
+        return False
+    doc["updated"] = newest
+    return True
+
+
 def main() -> int:
     if not SRC.is_file():
         print(f"source inventory not found: {SRC}", file=sys.stderr)
         return 1
     doc = json.loads(SRC.read_text(encoding="utf-8"))
+
+    if stamp_updated(doc):
+        SRC.write_text(json.dumps(doc, indent=2) + "\n", encoding="utf-8")
+        print(f"updated    {SRC}  (updated -> {doc['updated']})")
 
     was = PKG_COPY.read_bytes() if PKG_COPY.is_file() else None
     PKG_COPY.parent.mkdir(parents=True, exist_ok=True)

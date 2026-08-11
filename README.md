@@ -1,13 +1,15 @@
 # splats
 
-A small, hand-made collection of objects as 3D Gaussian splats, free to use.
+A free collection of objects as 3D Gaussian splats, each labelled with how it
+was made.
 
-Three ways of making one, in one place: everyday things **scanned** from a phone
-video, classic meshes converted straight **from geometry** at four resolutions,
-and a couple **generated** by an AI model from a single image. Everything here
-was made, cleaned and labelled by one person, so expect a handful of objects
-rather than thousands. Each ships with how it was made, its pipeline settings,
-its license and its known caveats written down next to it.
+Three ways of making one, in one place: most of them **generated** by an AI model
+from a single freely-licensed photograph, a large set of classic meshes converted
+straight **from geometry** at four resolutions each, and a few everyday things
+**scanned** from phone video. Everything here was made and labelled by one
+person, so expect a hundred objects rather than a hundred thousand. Each ships
+with how it was made, its pipeline settings, its license and its known caveats
+written down next to it.
 
 [Browse in your browser](https://marcelpadilla.github.io/Projects/Gaussian_Splat_Object_Dataset/)
 &nbsp;·&nbsp;
@@ -18,17 +20,17 @@ its license and its known caveats written down next to it.
 ## Use it from Python
 
 ```bash
-pip install padillasplats
+pip install splatset
 ```
 
 ```python
-import padillasplats as ps
+import splatset
 
-s = ps.load("plant")     # downloads once, caches, verifies the checksum, decodes
-s.positions              # (113648, 3) float32
-s.colors                 # (113648, 4) uint8 RGBA
+s = splatset.load("plant")  # downloads once, caches, verifies the checksum, decodes
+s.positions                 # (113648, 3) float32
+s.colors                    # (113648, 4) uint8 RGBA
 
-for s in ps.load_all(category="object"):   # loop over the whole collection
+for s in splatset.load_all(category="object"):   # loop over the whole collection
     print(s.id, len(s))
 ```
 
@@ -36,33 +38,33 @@ Filtering runs against a bundled inventory, so it is offline and instant, and
 nothing downloads until you load:
 
 ```python
-ps.find(category="object", min_splats=100_000)
-ps.find(source_method="capture")     # real scans only, not generated
-ps.find(open_license=True)           # only the freely-licensed objects
-ps.find(tags=["plant"])
-ps.download("./scans", open_license=True)   # local copies, safe licenses only
+splatset.find(category="object", min_splats=100_000)
+splatset.find(source_method="capture")     # real scans only, not generated
+splatset.find(open_license=True)           # only the freely-licensed objects
+splatset.find(tags=["plant"])
+splatset.download("./scans", open_license=True)   # local copies, safe licenses only
 ```
 
 The mesh-derived objects ship at **10k / 100k / 500k / 1M** gaussians, and every
 download path takes the tier you want, so you never assemble a URL:
 
 ```python
-ps.load("lucy", lod="10k")                        # one object, small tier
-ps.find(source_method="mesh2splat", lod="10k")    # everything that has a 10k tier
-ps.download("./small", lod="min")                 # the smallest of each object
-ps.load_random(source_method="capture")           # or just give me one
+splatset.load("lucy", lod="10k")                        # one object, small tier
+splatset.find(source_method="mesh2splat", lod="10k")    # everything that has a 10k tier
+splatset.download("./small", lod="min")                 # the smallest of each object
+splatset.load_random(source_method="capture")           # or just give me one
 ```
 
 Every object also carries its license, so you can stay on the safe side of the
 rights in one line: `open_license=True` keeps only what has no condition
-attached, and `ps.is_open_license("<id>")` checks a single one.
-`print(ps.summary())` prints the whole picture.
+attached, and `splatset.is_open_license("<id>")` checks a single one.
+`print(splatset.summary())` prints the whole picture.
 
 There is a command line too:
 
 ```bash
-python -m padillasplats list --source mesh2splat --lod 10k
-python -m padillasplats get lucy --lod 1m
+python -m splatset list --source mesh2splat --lod 10k
+python -m splatset get lucy --lod 1m
 ```
 
 Full package docs: [python/README.md](python/README.md).
@@ -73,8 +75,8 @@ Full package docs: [python/README.md](python/README.md).
   (the whole repository, `data/` included).
 - **One object at a time:** the download links in the table below, or
   `data/<id>/<id>.splat` in the tree.
-- **From Python:** `ps.download("./splats")`, or `ps.load("<id>")` to get it
-  straight into numpy.
+- **From Python:** `splatset.download("./splats")`, or `splatset.load("<id>")`
+  to get one straight into numpy.
 
 ## The collection
 
@@ -245,7 +247,7 @@ There is nowhere inside a `.splat` to put metadata without breaking the
 ## Citing
 
 If you use these in your work, a citation is appreciated (and required by the
-data license). The BibTeX is also available from Python as `ps.citation()`.
+data license). The BibTeX is also available from Python as `splatset.citation()`.
 
 <!-- citation:start -->
 ```bibtex
@@ -282,7 +284,7 @@ in the table above, and in each object's `meta.json`):
   copyright status cannot be warranted and they are **not under CC-BY**. You are
   responsible for clearing any rights for your use.
 
-`ps.find(open_license=True)` keeps only what has no condition attached: the
+`splatset.find(open_license=True)` keeps only what has no condition attached: the
 CC-licensed and public-domain objects, dropping the Stanford subset and the
 generated ones.
 
@@ -305,7 +307,7 @@ data/
     <id>_<lod>.splat      or one file per level of detail (10k/100k/500k/1m)
     meta.json             provenance, pipeline, quality, caveats, every tier
     thumb.jpg             the gallery image above
-python/                   the padillasplats package
+python/                   the splatset package
 LICENSE                   CC-BY-4.0, the license of the scanned objects
 ```
 
@@ -323,5 +325,5 @@ LICENSE                   CC-BY-4.0, the license of the scanned objects
    for every tier.
 
 The website reads `data/inventory.json` straight from this repository, and
-existing package installs pick up new objects with `ps.refresh_inventory()`, so
+existing package installs pick up new objects with `splatset.refresh_inventory()`, so
 neither needs a separate update.

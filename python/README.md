@@ -1,31 +1,31 @@
-# padillasplats
+# splatset
 
-Load a small, hand-made collection of objects as 3D Gaussian splats, in one line.
+Load a free collection of objects as 3D Gaussian splats, in one line.
 
 ```bash
-pip install padillasplats
+pip install splatset
 ```
 
 ```python
-import padillasplats as ps
+import splatset
 
-print(ps.summary())           # what is in the collection, and under what terms
-s = ps.load("plant")          # downloads once, caches, verifies, decodes
-s.positions                   # (113648, 3) float32
-s.colors                      # (113648, 4) uint8 RGBA
+print(splatset.summary())   # what is in the collection, and under what terms
+s = splatset.load("plant")  # downloads once, caches, verifies, decodes
+s.positions                 # (113648, 3) float32
+s.colors                    # (113648, 4) uint8 RGBA
 ```
 
 You never need a URL. Describe what you want and it is fetched, checksum-verified
 and decoded:
 
 ```python
-ps.load_random(source_method="capture")            # any real scan
-ps.load("lucy", lod="10k")                         # one object, small tier
-ps.find(source_method="mesh2splat", lod="10k")     # every 10k-gaussian mesh object
+splatset.load_random(source_method="capture")            # any real scan
+splatset.load("lucy", lod="10k")                         # one object, small tier
+splatset.find(source_method="mesh2splat", lod="10k")     # every 10k-gaussian mesh object
 ```
 
-Everything here was made, cleaned and labelled by one person, so expect a handful
-of objects rather than thousands, each with its quirks and its provenance written
+Everything here was made and labelled by one person, so expect a hundred objects
+rather than a hundred thousand, each with its quirks and its provenance written
 down next to it.
 
 ## Selecting objects
@@ -34,18 +34,19 @@ Filtering runs against an inventory bundled in the package, so it is offline and
 instant. Nothing downloads until you load.
 
 ```python
-ps.find(category="object", min_splats=100_000)
-ps.find(source_method="capture")   # real scans only, not generated
-ps.find(open_license=True)         # only the freely-licensed objects
-ps.find(license="CC-BY-4.0")
-ps.find(source_method=["capture", "synthetic-render"])
-ps.find(tags=["plant"])
-ps.find(has_quality=True)          # only objects carrying PSNR and SSIM
-ps.tags(); ps.categories(); ps.source_methods(); ps.licenses(); ps.lods()
+splatset.find(category="object", min_splats=100_000)
+splatset.find(source_method="capture")   # real scans only, not generated
+splatset.find(open_license=True)         # only the freely-licensed objects
+splatset.find(license="CC-BY-4.0")
+splatset.find(source_method=["capture", "synthetic-render"])
+splatset.find(tags=["plant"])
+splatset.find(has_quality=True)          # only objects carrying PSNR and SSIM
+splatset.tags(); splatset.categories(); splatset.source_methods()
+splatset.licenses(); splatset.lods()
 ```
 
 Every object carries a `category` (`object` or `scene`, what it is) and a
-`source_method` (how it was made). `ps.source_methods()` lists them:
+`source_method` (how it was made). `splatset.source_methods()` lists them:
 
 | `source_method` | meaning | license |
 |---|---|---|
@@ -55,33 +56,33 @@ Every object carries a `category` (`object` or `scene`, what it is) and a
 | `image-to-3d-generation` | a generative model invented it from a single image | as-is, no warranty |
 
 `category`, `source_method` and `license` each take one value or a list of
-allowed values. `ps.find(open_license=True)` (or `s.open_license` on a loaded
+allowed values. `splatset.find(open_license=True)` (or `s.open_license` on a loaded
 object) keeps only the objects with no strings attached; the ones it drops are
 still usable, they just carry a condition, spelled out in `license_note`.
-`ps.is_open_license(id)` checks a single object.
+`splatset.is_open_license(id)` checks a single object.
 
 ## Levels of detail
 
 The mesh-derived objects ship at four resolutions: **10k, 100k, 500k and 1M**
-gaussians. `ps.lods()` lists them, `ps.lods_of(id)` says which an object has
+gaussians. `splatset.lods()` lists them, `splatset.lods_of(id)` says which an object has
 (empty for a capture, which is a single file), and every download path takes a
 `lod=`:
 
 ```python
-ps.load("lucy", lod="1m")            # the finest tier
-ps.load("lucy", lod="min")           # whichever is smallest, for any object
-ps.path("armadillo", lod="100k")     # just the local file path
-ps.download("./small", lod="10k")    # every 10k tier, ~320 kB each
+splatset.load("lucy", lod="1m")            # the finest tier
+splatset.load("lucy", lod="min")           # whichever is smallest, for any object
+splatset.path("armadillo", lod="100k")     # just the local file path
+splatset.download("./small", lod="10k")    # every 10k tier, ~320 kB each
 ```
 
-`ps.find(lod=...)` keeps only objects that ship that tier, and returns each one
+`splatset.find(lod=...)` keeps only objects that ship that tier, and returns each one
 already resolved to it, so `file`, `splats`, `bytes` and `sha256` describe the
 tier you asked for:
 
 ```python
-ps.find(lod="10k")                                # everything that has a 10k tier
-ps.find(source_method="mesh2splat", lod="100k")   # the mesh objects at 100k
-ps.find(lod="min", max_bytes=1_000_000)           # anything under a megabyte
+splatset.find(lod="10k")                                # everything that has a 10k tier
+splatset.find(source_method="mesh2splat", lod="100k")   # the mesh objects at 100k
+splatset.find(lod="min", max_bytes=1_000_000)           # anything under a megabyte
 ```
 
 `"min"` and `"max"` mean the smallest and largest each object has, so they work
@@ -91,10 +92,10 @@ than quietly handing back a different resolution.
 ## Picking objects at random
 
 ```python
-ps.random()                                    # one record, no download
-ps.random(source_method="capture", seed=0)     # reproducible
-ps.sample(3, category="object")                # three distinct records
-s = ps.load_random(source_method="mesh2splat", lod="10k")   # picked and loaded
+splatset.random()                                                # one record, no download
+splatset.random(source_method="capture", seed=0)                 # reproducible
+splatset.sample(3, category="object")                            # three distinct records
+s = splatset.load_random(source_method="mesh2splat", lod="10k")  # picked and loaded
 ```
 
 Filters are the same ones `find()` takes. An impossible filter raises
@@ -103,10 +104,10 @@ Filters are the same ones `find()` takes. An impossible filter raises
 ## Loading in bulk
 
 ```python
-for s in ps.load_all(category="object"):       # one at a time, never all in RAM
+for s in splatset.load_all(category="object"):       # one at a time, never all in RAM
     print(s.id, len(s), s.meta["license"])
 
-for s in ps.load_all(source_method="mesh2splat", lod="10k"):
+for s in splatset.load_all(source_method="mesh2splat", lod="10k"):
     print(s.id, len(s))                        # ~3 MB for the whole set
 ```
 
@@ -114,28 +115,28 @@ Or take local copies. With a `lod=`, files are named `<id>_<lod>.splat`, so two
 resolutions can share a folder:
 
 ```python
-ps.download("./splats")                        # everything
-ps.download("./big", min_splats=100_000)       # a subset
-ps.download("./safe", open_license=True)       # no licence conditions
+splatset.download("./splats")                        # everything
+splatset.download("./big", min_splats=100_000)       # a subset
+splatset.download("./safe", open_license=True)       # no licence conditions
 ```
 
-Objects added after this release show up with `ps.refresh_inventory()`, which
+Objects added after this release show up with `splatset.refresh_inventory()`, which
 pulls the live inventory without upgrading the package.
 
 ## From the command line
 
 ```bash
-python -m padillasplats                                  # what is in here
-python -m padillasplats list --source mesh2splat --lod 10k
-python -m padillasplats info lucy
-python -m padillasplats get lucy --lod 1m                # prints the local path
-python -m padillasplats get --source capture --out ./scans
-python -m padillasplats random --open-license --get
+python -m splatset                                  # what is in here
+python -m splatset list --source mesh2splat --lod 10k
+python -m splatset info lucy
+python -m splatset get lucy --lod 1m                # prints the local path
+python -m splatset get --source capture --out ./scans
+python -m splatset random --open-license --get
 ```
 
 ## What you get back
 
-`ps.load()` returns a `Splat`:
+`splatset.load()` returns a `Splat`:
 
 | Attribute | Shape | Meaning |
 |---|---|---|
@@ -154,16 +155,16 @@ Spherical harmonics are dropped, so there is no view-dependent shading.
 ## Citing
 
 ```python
-print(ps.citation())          # BibTeX
-print(ps.citation("text"))    # one-line plain text
+print(splatset.citation())          # BibTeX
+print(splatset.citation("text"))    # one-line plain text
 ```
 
 ## Caching and safety
 
 Downloads land in a per-user cache: `%LOCALAPPDATA%` on Windows,
 `~/Library/Caches` on macOS, `$XDG_CACHE_HOME` or `~/.cache` on Linux. Override
-with the `PADILLASPLATS_CACHE` environment variable, or wipe it with
-`ps.clear_cache()`. Each level of detail is cached as its own file.
+with the `SPLATSET_CACHE` environment variable, or wipe it with
+`splatset.clear_cache()`. Each level of detail is cached as its own file.
 
 Every download is checked against the SHA-256 recorded in the inventory and
 rejected on mismatch, so a compromise of the hosting side cannot hand you
@@ -190,7 +191,7 @@ boolean:
   not under CC-BY; you clear any rights for your use.
 - **This package's code is 0BSD.** No attribution required for the code itself.
 
-`ps.find(open_license=True)` keeps only the first group plus the CC0 and
+`splatset.find(open_license=True)` keeps only the first group plus the CC0 and
 public-domain meshes, i.e. everything with no condition attached.
 
 ## Links

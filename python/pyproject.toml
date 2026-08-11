@@ -3,9 +3,9 @@ requires = ["hatchling>=1.21"]
 build-backend = "hatchling.build"
 
 [project]
-name = "padillasplats"
-version = "0.3.0"
-description = "Load Marcel Padilla's hand-made Gaussian splat collection in one line."
+name = "splatset"
+version = "0.4.0"
+description = "A free collection of 3D Gaussian splat objects, loaded in one line, each labelled with how it was made."
 readme = "README.md"
 requires-python = ">=3.9"
 license = "0BSD"
@@ -26,11 +26,12 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/marcelpadilla/splats"
+Gallery = "https://marcelpadilla.com/Projects/Gaussian_Splat_Object_Dataset/"
 Source = "https://github.com/marcelpadilla/splats"
 Issues = "https://github.com/marcelpadilla/splats/issues"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/padillasplats"]
+packages = ["src/splatset"]
 
 [tool.hatch.build.targets.sdist]
 include = ["src", "tests", "README.md", "LICENSE", "pyproject.toml"]

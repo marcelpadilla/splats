@@ -1,11 +1,11 @@
 """A small command line, so the collection is usable without writing Python.
 
-    python -m padillasplats                              # what is in here
-    python -m padillasplats list --source mesh2splat --lod 10k
-    python -m padillasplats info lucy
-    python -m padillasplats get lucy --lod 1m            # prints the cached path
-    python -m padillasplats get --source capture --out ./scans
-    python -m padillasplats random --open-license
+    python -m splatset                              # what is in here
+    python -m splatset list --source mesh2splat --lod 10k
+    python -m splatset info lucy
+    python -m splatset get lucy --lod 1m            # prints the cached path
+    python -m splatset get --source capture --out ./scans
+    python -m splatset random --open-license
 
 The point is the same as the Python API's: never make anyone look up a URL. Say
 which objects you want and they are fetched, checksum-verified and put on disk.
@@ -72,7 +72,7 @@ def table(records: List[Dict[str, Any]]) -> str:
 
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(
-        prog="padillasplats", description=__doc__,
+        prog="splatset", description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd")
 
@@ -103,7 +103,7 @@ def main(argv=None) -> int:
         print(summary())
         if a.cmd is None:
             print(f"\n{len(ids())} ids: {', '.join(ids())}")
-            print("\nTry: python -m padillasplats list --source mesh2splat --lod 10k")
+            print("\nTry: python -m splatset list --source mesh2splat --lod 10k")
         return 0
 
     if a.cmd == "cite":

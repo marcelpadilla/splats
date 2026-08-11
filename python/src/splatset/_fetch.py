@@ -16,7 +16,7 @@ from typing import Any, Dict, Optional
 
 from ._paths import cache_dir, check_id, check_relpath
 
-_USER_AGENT = "padillasplats (+https://github.com/marcelpadilla/splats)"
+_USER_AGENT = "splatset (+https://github.com/marcelpadilla/splats)"
 _CHUNK = 1 << 20
 
 

@@ -19,7 +19,7 @@ from pathlib import Path
 #: crafted id such as ``../../.bashrc`` would escape the cache directory.
 _SAFE_ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*$")
 
-ENV_CACHE = "PADILLASPLATS_CACHE"
+ENV_CACHE = "SPLATSET_CACHE"
 
 
 def check_id(obj_id: str) -> str:
@@ -51,11 +51,11 @@ def cache_dir() -> Path:
         return Path(override).expanduser()
     if sys.platform == "win32":
         base = os.environ.get("LOCALAPPDATA") or (Path.home() / "AppData" / "Local")
-        return Path(base) / "padillasplats" / "Cache"
+        return Path(base) / "splatset" / "Cache"
     if sys.platform == "darwin":
-        return Path.home() / "Library" / "Caches" / "padillasplats"
+        return Path.home() / "Library" / "Caches" / "splatset"
     base = os.environ.get("XDG_CACHE_HOME") or (Path.home() / ".cache")
-    return Path(base) / "padillasplats"
+    return Path(base) / "splatset"
 
 
 def clear_cache() -> None:

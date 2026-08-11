@@ -1,11 +1,11 @@
 name: release
 
-# Publishes padillasplats to PyPI using a Trusted Publisher, so there is no API
+# Publishes splatset to PyPI using a Trusted Publisher, so there is no API
 # token stored anywhere: GitHub's OIDC identity proves to PyPI that this exact
 # workflow, in this exact repository, is the one allowed to upload.
 #
 # The matching PyPI configuration (Your account -> Publishing) is:
-#   PyPI Project Name  padillasplats
+#   PyPI Project Name  splatset
 #   Owner              marcelpadilla
 #   Repository name    splats
 #   Workflow name      release.yml
