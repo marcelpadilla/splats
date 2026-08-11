@@ -108,7 +108,7 @@ for s in splatset.load_all(category="object"):       # one at a time, never all 
     print(s.id, len(s), s.meta["license"])
 
 for s in splatset.load_all(source_method="mesh2splat", lod="10k"):
-    print(s.id, len(s))                        # ~3 MB for the whole set
+    print(s.id, len(s))                        # 320 kB each, 13 MB for all 41
 ```
 
 Or take local copies. With a `lod=`, files are named `<id>_<lod>.splat`, so two
@@ -149,8 +149,17 @@ python -m splatset random --open-license --get
 Plus `len(s)`, `s.rgb`, `s.opacity`, `s.bounds()`, and the provenance shortcuts
 `s.license`, `s.source_method`, `s.category`, `s.lod`, and `s.open_license`.
 
-Up is `-y`, following the Inria and Brush convention. Scale is not metric.
+Up is `-y`, following the Inria and Brush convention.
 Spherical harmonics are dropped, so there is no view-dependent shading.
+
+**Every object is the same size.** Its bounding box is centred on the origin and
+its longest side is `1`, so any two objects load at the same scale and each fills
+the unit cube. This is *relative*, not metric: a mouse and a building are the
+same size on purpose. Exactly 1 on the densest tier of an object; the coarser
+tiers inherit that object's single scale factor rather than being renormalized to
+their own box, so switching `lod=` never makes the object jump, and their longest
+side lands within about 1% of 1. `splatset.get(id)["extent"]` gives the box
+without downloading anything, and `s.bounds()` measures it from the loaded array.
 
 ## Citing
 
@@ -181,18 +190,27 @@ boolean:
 - **Scanned objects are CC-BY-4.0.** Use them anywhere, including commercially,
   but credit Marcel Padilla.
 - **Mesh-derived and rendered objects inherit the license of the mesh they came
-  from.** Most are CC0 or public domain and need nothing. The Stanford 3D
-  Scanning Repository objects (`stanford_bunny`, `armadillo`, `dragon`, `happy`,
-  `lucy`, `xyzrgb_dragon`) are free to use, including commercially, but are
-  **not** Creative Commons: acknowledge Stanford and do not misrepresent the
-  data. The rendered bunny is CC-BY-3.0; credit Makerbot.
+  from.** Of the 41: 8 are CC0 or public domain and need nothing, 19 are CC-BY
+  and want **their own author** credited rather than Marcel Padilla, 6 are the
+  Stanford subset, and 8 are NonCommercial. The Stanford 3D Scanning Repository
+  objects (`stanford_bunny`, `armadillo`, `dragon`, `happy`, `lucy`,
+  `xyzrgb_dragon`) are free to use, including commercially, but are **not**
+  Creative Commons: acknowledge Stanford and do not misrepresent the data. The
+  rendered bunny is CC-BY-3.0; credit Makerbot.
+- **Eight objects forbid commercial use.** `brucewick`, `cow`, `falconstatue`,
+  `house`, `mushroom`, `strawberry`, `tower`, `well` are CC BY-NC, and
+  `falconstatue` is also ShareAlike. `find(open_license=True)` drops them.
 - **Generated objects are as-is, with no warranty of rights.** An AI model
   invented them from an image and its training data is undisclosed, so they are
   not under CC-BY; you clear any rights for your use.
 - **This package's code is 0BSD.** No attribution required for the code itself.
 
-`splatset.find(open_license=True)` keeps only the first group plus the CC0 and
-public-domain meshes, i.e. everything with no condition attached.
+`splatset.find(open_license=True)` keeps the 32 objects under a Creative Commons
+or public-domain license. That is **not** the same as "no conditions": 24 of
+them are CC-BY and still require attribution, which each record's `attribution`
+field spells out. It drops the NonCommercial eight, the Stanford subset and the
+generated ones. For objects that ask nothing at all, filter
+`license=["CC0-1.0", "Public Domain"]`.
 
 ## Links
 

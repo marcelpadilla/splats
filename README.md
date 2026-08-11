@@ -228,8 +228,12 @@ One `.splat` per object, the antimatter15 packing: a header-less array of
 Up is `-y`, following the Inria and Brush convention.
 
 **Every object is normalized to the same size.** Its bounding box is centred on
-the origin and its longest side is exactly `1`, so any two objects load at the
-same scale and none of them leaves the unit cube. This is a *relative* scale, not
+the origin and its longest side is `1`, so any two objects load at the same
+scale and each one fills the unit cube. Exactly 1 on the densest tier of each
+object; the coarser tiers inherit that object's single scale factor rather than
+being renormalized to their own box, so a viewer switching level of detail does
+not see the object jump, and their longest side lands within about 1% of 1
+(worst case `dragon_10k` at 0.989). This is a *relative* scale, not
 a metric one: nothing here is in metres, and a mouse and a building are the same
 size on purpose. If you need the real proportions of one object they are its own
 business, not the dataset's. The normalization is a uniform scale, which
@@ -255,6 +259,7 @@ data license). The BibTeX is also available from Python as `splatset.citation()`
   author       = {Marcel Padilla},
   title        = {splats: a small collection of Gaussian splat objects},
   year         = {2026},
+  note         = {Snapshot data-2026-08-11, 109 objects},
   howpublished = {\url{https://github.com/marcelpadilla/splats}}
 }
 ```
@@ -268,10 +273,17 @@ in the table above, and in each object's `meta.json`):
 - **Scanned objects are [CC-BY-4.0](LICENSE).** Use them for anything, including
   commercially. You must credit the author.
 - **Geometry and rendered objects inherit the license of the mesh they came
-  from.** Converting a mesh to splats does not launder its license. Most are CC0
-  or public domain and ask for nothing (Spot and Bob by Keenan Crane, the Utah
-  teapot, the primitives). The rendered bunny is CC-BY-3.0 (Stanford Bunny STL by
+  from.** Converting a mesh to splats does not launder its license. Of the 41,
+  8 are CC0 or public domain and ask for nothing (Spot and Bob by Keenan Crane,
+  the Utah teapot, the primitives), 19 are CC-BY and want their own author
+  credited (not Marcel Padilla), 6 are the Stanford subset below, and 8 are
+  **NonCommercial**. The rendered bunny is CC-BY-3.0 (Stanford Bunny STL by
   Makerbot, via Wikimedia Commons); credit that author as well.
+- **Eight objects forbid commercial use.** `brucewick`, `cow`, `falconstatue`,
+  `house`, `mushroom`, `strawberry`, `tower` and `well` are CC BY-NC, and
+  `falconstatue` is also ShareAlike. They are in the collection because they are
+  good geometry, but do not put them in a product. `find(open_license=True)`
+  drops all eight.
 - **The Stanford subset is free to use but is not Creative Commons.**
   `stanford_bunny`, `armadillo`, `dragon`, `happy`, `lucy` and `xyzrgb_dragon`
   come from the [Stanford 3D Scanning
@@ -284,15 +296,27 @@ in the table above, and in each object's `meta.json`):
   copyright status cannot be warranted and they are **not under CC-BY**. You are
   responsible for clearing any rights for your use.
 
-`splatset.find(open_license=True)` keeps only what has no condition attached: the
-CC-licensed and public-domain objects, dropping the Stanford subset and the
-generated ones.
+`splatset.find(open_license=True)` keeps the 32 objects under a Creative Commons
+or public-domain license: CC0 and public domain, which ask nothing, plus CC-BY,
+which still **requires attribution**. It drops the NonCommercial eight, the
+Stanford subset and the generated ones. It is a rights filter, not an
+"attribution not required" filter; for that, take the CC0 and public-domain
+objects only.
 
 - **The code in `python/` is [0BSD](python/LICENSE).** No attribution required.
 
-Credit line you can paste for a CC-BY object:
+Credit line you can paste for one of the four **scanned** objects:
 
 > Gaussian splat by Marcel Padilla, from https://github.com/marcelpadilla/splats, licensed CC-BY-4.0.
+
+For every other object the author is someone else and the license may be a
+different version, so build the line from that record instead: its `attribution`
+field is already written for exactly this, and `license` gives the version.
+
+```python
+r = splatset.get("spot")
+print(r["attribution"], "|", r["license"])
+```
 
 The license covers the capture, render or generation and the reconstruction, not
 the industrial design of any object depicted.

@@ -36,6 +36,16 @@ jobs:
           python python/sync_inventory.py
           git diff --exit-code
 
+      # tests.yml runs on push and pull_request, never on `release: published`,
+      # and nothing linked the two. A release cut from a red commit would have
+      # published anyway, which is exactly how the plant_generated licensing
+      # regression would have shipped.
+      - name: Run the suite
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install ./python pytest
+          python -m pytest python/tests -q
+
       - name: Build wheel and sdist
         run: |
           python -m pip install --upgrade pip build

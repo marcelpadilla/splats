@@ -47,7 +47,11 @@ def refresh(url: Optional[str] = None, timeout: float = 30.0) -> Dict[str, Any]:
     from ._fetch import read_url
 
     doc = _bundled()
-    url = url or (doc["base_url"].rstrip("/") + "/inventory.json")
+    # NOT derived from base_url: that is pinned to an immutable tag so a released
+    # version's checksums can never go stale, and deriving from it would make
+    # this function re-read the very snapshot the caller is trying to look past.
+    url = url or doc.get("live_inventory_url") or (
+        doc["base_url"].rstrip("/") + "/inventory.json")
     fresh = json.loads(read_url(url, timeout=timeout).decode("utf-8"))
     if "objects" not in fresh:
         raise ValueError("refreshed inventory has no 'objects' key")

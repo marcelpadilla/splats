@@ -97,7 +97,9 @@ def fetch(
             f"checksum mismatch for {obj_id!r}\n"
             f"  expected {expected}\n  got      {got}\n"
             f"  from     {url}\n"
-            "The file was NOT saved. Re-run to retry, or report this if it persists."
+            "The file was NOT saved. Re-running cannot help: this means the bytes\n"
+            "on the server are not the bytes this release was built against. Try\n"
+            "splatset.refresh_inventory(), or upgrade the package."
         )
     os.replace(tmp, dest)
     return dest

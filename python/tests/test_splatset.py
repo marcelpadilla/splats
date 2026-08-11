@@ -34,12 +34,50 @@ def test_ids_nonempty():
 def test_every_record_has_required_fields():
     for r in splatset.inventory():
         for key in ("id", "title", "category", "source_method", "file", "sha256",
-                    "splats", "bytes", "license"):
+                    "splats", "bytes", "license", "extent"):
             assert key in r, f"{r.get('id')} is missing {key!r}"
         assert r["category"] in splatset.categories()
         assert r["source_method"] in splatset.source_methods()
         assert len(r["sha256"]) == 64
         assert r["splats"] * 32 == r["bytes"], "a .splat is exactly 32 bytes per gaussian"
+
+
+@needs_data
+@pytest.mark.parametrize("record", splatset.inventory(), ids=lambda r: r["id"])
+def test_default_tier_is_normalized(record):
+    """Every object is centred on the origin with its longest side 1.
+
+    This is the property the whole 2026-08-06 pass was for, and nothing guarded
+    it: promote_to_dataset.py measures extent *from the file* and never asserts
+    it, so an unnormalized object would promote with a perfectly self-consistent
+    checksum and sail through the rest of this suite.
+    """
+    a = np.fromfile(DATA / record["file"], dtype=np.uint8).reshape(-1, 32)
+    pos = a[:, 0:12].copy().view(np.float32).reshape(-1, 3)
+    lo, hi = pos.min(axis=0), pos.max(axis=0)
+    side = float((hi - lo).max())
+    centre = np.abs((hi + lo) / 2).max()
+    assert side == pytest.approx(1.0, abs=2e-3), f"longest side {side}"
+    assert centre < 2e-3, f"not centred on the origin: {centre}"
+    assert np.allclose(record["extent"], hi - lo, atol=1e-3),         "the inventory's extent disagrees with the file"
+
+
+@needs_data
+@pytest.mark.parametrize("record", [r for r in splatset.inventory() if r.get("lods")],
+                         ids=lambda r: r["id"])
+def test_lod_tiers_share_one_scale(record):
+    """Coarser tiers inherit the object's scale rather than being renormalized.
+
+    Renormalizing each tier to its own box would make a viewer switching level of
+    detail see the object jump, so decimation is allowed to shrink the box a
+    little. It is 1% on the worst tier in the collection (dragon_10k), never
+    more.
+    """
+    for tier in record["lods"]:
+        a = np.fromfile(DATA / tier["file"], dtype=np.uint8).reshape(-1, 32)
+        pos = a[:, 0:12].copy().view(np.float32).reshape(-1, 3)
+        side = float((pos.max(axis=0) - pos.min(axis=0)).max())
+        assert 0.98 <= side <= 1.01, f"{tier['file']} longest side {side}"
 
 
 def test_source_method_filter():

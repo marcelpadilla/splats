@@ -171,15 +171,41 @@ def stamp_updated(doc: dict) -> bool:
     return True
 
 
+def stamp_citation(doc: dict) -> bool:
+    """Put the snapshot and the object count into the citation.
+
+    The same URL served 2 objects on 2026-07-23, 19 on 2026-07-28 and 109 with
+    every coordinate rescaled on 2026-08-06. Without a snapshot in the entry, two
+    papers cite datasets that differ by 50x in size with identical BibTeX. Both
+    strings are regenerated from the inventory here, for the same reason
+    `updated` is: a hand-maintained copy of a number is a number that goes stale.
+    """
+    n = len(doc["objects"])
+    ref = doc.get("data_ref") or doc.get("updated", "")
+    note = f"Snapshot {ref}, {n} objects"
+    bib = ("@misc{padilla_splats,\n"
+           "  author       = {Marcel Padilla},\n"
+           "  title        = {splats: a small collection of Gaussian splat objects},\n"
+           "  year         = {2026},\n"
+           f"  note         = {{{note}}},\n"
+           f"  howpublished = {{\\url{{{doc['homepage']}}}}}\n"
+           "}")
+    text = (f"Marcel Padilla. splats: a small collection of Gaussian splat objects. "
+            f"2026. {note}. {doc['homepage']}")
+    before = doc.get("citation")
+    doc["citation"] = {"bibtex": bib, "text": text}
+    return doc["citation"] != before
+
+
 def main() -> int:
     if not SRC.is_file():
         print(f"source inventory not found: {SRC}", file=sys.stderr)
         return 1
     doc = json.loads(SRC.read_text(encoding="utf-8"))
 
-    if stamp_updated(doc):
+    if stamp_updated(doc) | stamp_citation(doc):
         SRC.write_text(json.dumps(doc, indent=2) + "\n", encoding="utf-8")
-        print(f"updated    {SRC}  (updated -> {doc['updated']})")
+        print(f"updated    {SRC}  (updated -> {doc['updated']}, citation restamped)")
 
     was = PKG_COPY.read_bytes() if PKG_COPY.is_file() else None
     PKG_COPY.parent.mkdir(parents=True, exist_ok=True)

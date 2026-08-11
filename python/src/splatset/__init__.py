@@ -19,9 +19,16 @@ offline and instant. Only the splat bytes are downloaded, once, into a per-user
 cache directory, and every download is verified against the SHA-256 recorded in
 the inventory.
 
+Every object is normalized to the same size: its bounding box is centred on the
+origin and its longest side is 1, so any two load at the same scale. That is a
+relative scale, not a metric one. Coarser ``lod`` tiers share their object's
+scale factor rather than being renormalized, so switching tier never makes the
+object jump.
+
 The data's license is per object -- see ``splatset.summary()`` and each record's
-``license``. This package's code is 0BSD, so the code itself needs no
-attribution.
+``license``. Note that ``find(open_license=True)`` means Creative Commons or
+public domain, not "no attribution required": most of what it keeps is CC-BY.
+This package's code is 0BSD, so the code itself needs no attribution.
 """
 
 from __future__ import annotations
@@ -311,7 +318,7 @@ def load_all(**filters: Any) -> Iterator[Splat]:
         >>> for s in splatset.load_all(category="object"):
         ...     print(s.id, len(s))
         >>> for s in splatset.load_all(source_method="mesh2splat", lod="10k"):
-        ...     print(s.id, len(s))          # 10k each, ~3 MB for the whole set
+        ...     print(s.id, len(s))          # 10k each, 13 MB for all 41
     """
     lod = filters.get("lod")
     for record in find(**filters):
