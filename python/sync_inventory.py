@@ -34,7 +34,8 @@ INV_END = "<!-- inventory:end -->"
 CITE_START = "<!-- citation:start -->"
 CITE_END = "<!-- citation:end -->"
 
-RAW = "https://raw.githubusercontent.com/marcelpadilla/splats/main/data/"
+OWNER_REPO = "marcelpadilla/splats"
+RAW = f"https://raw.githubusercontent.com/{OWNER_REPO}/main/data/"
 
 # How each source_method reads in the human-facing "Type" column, combined with
 # category so a reader sees both what it is and how it was made in one phrase.
@@ -181,7 +182,7 @@ def stamp_citation(doc: dict) -> bool:
     `updated` is: a hand-maintained copy of a number is a number that goes stale.
     """
     n = len(doc["objects"])
-    ref = doc.get("data_ref") or doc.get("updated", "")
+    ref = doc.get("release_ref") or doc.get("updated", "")
     note = f"Snapshot {ref}, {n} objects"
     bib = ("@misc{padilla_splats,\n"
            "  author       = {Marcel Padilla},\n"
@@ -197,6 +198,31 @@ def stamp_citation(doc: dict) -> bool:
     return doc["citation"] != before
 
 
+#: Fields whose value differs between the file on `main` and the copy in the
+#: wheel. Everything else must be identical, and a test checks that.
+PINNED_FIELDS = ("base_url", "zip_url")
+
+
+def pinned(doc: dict) -> dict:
+    """The inventory as it ships inside the wheel: same objects, frozen URLs.
+
+    The file on `main` has to stay live, because the website reads it from there
+    and builds every asset URL from ``base_url``: pin that copy and the next
+    promotion lists an object the pinned ref does not contain. A wheel has the
+    opposite requirement, since it bundles checksums that a later edit to the
+    data would invalidate with no version number to show for it. So the source of
+    truth is live and the shipped copy is pinned, here, at the one point that
+    produces it.
+    """
+    ref = doc.get("release_ref")
+    if not ref:
+        raise SystemExit("data/inventory.json has no release_ref to pin the wheel to")
+    out = dict(doc)
+    out["base_url"] = f"https://raw.githubusercontent.com/{OWNER_REPO}/{ref}/data/"
+    out["zip_url"] = f"https://github.com/{OWNER_REPO}/archive/refs/tags/{ref}.zip"
+    return out
+
+
 def main() -> int:
     if not SRC.is_file():
         print(f"source inventory not found: {SRC}", file=sys.stderr)
@@ -209,8 +235,10 @@ def main() -> int:
 
     was = PKG_COPY.read_bytes() if PKG_COPY.is_file() else None
     PKG_COPY.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(SRC, PKG_COPY)
-    print(f"{'unchanged' if was == SRC.read_bytes() else 'updated  '}  {PKG_COPY}")
+    PKG_COPY.write_text(json.dumps(pinned(doc), indent=2) + "\n", encoding="utf-8")
+    now = PKG_COPY.read_bytes()
+    print(f"{'unchanged' if was == now else 'updated  '}  {PKG_COPY}  "
+          f"(pinned to {doc.get('release_ref')})")
 
     text = README.read_text(encoding="utf-8")
     new = splice(text, INV_START, INV_END, gallery(doc), "gallery")

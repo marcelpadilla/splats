@@ -395,10 +395,27 @@ def test_helpers():
 
 @needs_data
 def test_bundled_inventory_matches_data_dir():
+    """The wheel's copy is the source of truth with its URLs frozen, nothing else.
+
+    The two must differ in exactly two fields. The file on `main` stays live
+    because the website reads it from there and builds asset URLs from
+    ``base_url``, so pinning it would make the next promotion list an object the
+    pinned ref does not contain. The wheel needs the opposite, since it bundles
+    checksums a later edit to the data would invalidate.
+    """
     packaged = json.loads(
         (Path(splatset.__file__).with_name("inventory.json")).read_text(encoding="utf-8"))
     source = json.loads((DATA / "inventory.json").read_text(encoding="utf-8"))
-    assert packaged == source, "run python/sync_inventory.py"
+
+    ref = source["release_ref"]
+    assert packaged["base_url"] == (
+        f"https://raw.githubusercontent.com/marcelpadilla/splats/{ref}/data/"),         "the shipped inventory must point at the release tag, not at a branch"
+    assert "/main/" not in packaged["base_url"] and "/main/" not in packaged["zip_url"]
+    assert "/main/" in source["base_url"],         "data/inventory.json must stay live: the website reads it from main"
+
+    ignore = ("base_url", "zip_url")
+    assert ({k: v for k, v in packaged.items() if k not in ignore}
+            == {k: v for k, v in source.items() if k not in ignore}),         "run python/sync_inventory.py"
 
 
 @needs_data

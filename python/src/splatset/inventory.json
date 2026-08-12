@@ -8,8 +8,8 @@
   "attribution": "Marcel Padilla",
   "base_url": "https://raw.githubusercontent.com/marcelpadilla/splats/data-2026-08-11/data/",
   "zip_url": "https://github.com/marcelpadilla/splats/archive/refs/tags/data-2026-08-11.zip",
+  "release_ref": "data-2026-08-11",
   "live_inventory_url": "https://raw.githubusercontent.com/marcelpadilla/splats/main/data/inventory.json",
-  "data_ref": "data-2026-08-11",
   "updated": "2026-08-06",
   "categories": [
     "object",
