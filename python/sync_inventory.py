@@ -149,8 +149,11 @@ def citation_block(doc: dict) -> str:
     return "```bibtex\n" + bib + "\n```"
 
 
-def splice(text: str, start: str, end: str, body: str, what: str) -> str:
+def splice(text: str, start: str, end: str, body: str, what: str,
+           required: bool = True) -> str:
     if start not in text or end not in text:
+        if not required:
+            return text
         raise SystemExit(f"markers {start} / {end} not found in {README}")
     head, rest = text.split(start, 1)
     _, tail = rest.split(end, 1)
@@ -241,7 +244,10 @@ def main() -> int:
           f"(pinned to {doc.get('release_ref')})")
 
     text = README.read_text(encoding="utf-8")
-    new = splice(text, INV_START, INV_END, gallery(doc), "gallery")
+    # The gallery table is optional. The README points at the project page for
+    # the collection rather than restating it, so there may be no markers to
+    # fill, and that is not an error.
+    new = splice(text, INV_START, INV_END, gallery(doc), "gallery", required=False)
     new = splice(new, CITE_START, CITE_END, citation_block(doc), "citation")
     changed = new != text
     README.write_text(new, encoding="utf-8")
