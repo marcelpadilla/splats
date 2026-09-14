@@ -1,0 +1,38 @@
+# Line endings.
+#
+# 120 text files here were committed with CRLF and 7 with LF, with nothing
+# declaring which was intended. The visible cost was that every diff between
+# two refs looked like a whole-file rewrite: `git diff v0.4.0..main` reported
+# 15,000 changed lines, while `git diff --ignore-cr-at-eol v0.4.0..main`
+# reported roughly 150. A reviewer (or a release-time `git diff --exit-code`)
+# could not tell a real change from a re-saved file.
+#
+# Normalising to LF in the repository fixes that at the source. `text=auto`
+# lets git decide what is text; `eol=lf` pins the checkout so a Windows clone
+# produces the same bytes as a macOS one.
+* text=auto eol=lf
+
+# The payloads. `binary` is git's macro for `-text -diff`: never convert these,
+# never try to diff them as lines.
+#
+# This is not cosmetic. Every entry in data/inventory.json carries a sha256 of
+# its .splat file, test_files_match_their_checksums_and_counts verifies each
+# one, and python/src/splatset/_fetch.py re-checks the digest of every download.
+# One byte rewritten in transit invalidates the checksum, which breaks loading
+# for every user rather than failing a build. The .png thumbnails are likewise
+# compressed streams where a line-ending translation would corrupt the image.
+*.splat binary
+*.png   binary
+
+# Stated explicitly rather than relying on auto-detection, so the intent
+# survives a future edit to the rules above.
+*.py    text eol=lf
+*.md    text eol=lf
+*.json  text eol=lf
+*.toml  text eol=lf
+*.yml   text eol=lf
+*.txt   text eol=lf
+
+# A zero-byte marker file with no extension: auto-detection cannot classify it,
+# so say so here or it shows up as churn on every platform.
+py.typed text eol=lf

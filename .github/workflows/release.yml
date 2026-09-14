@@ -49,6 +49,7 @@ jobs:
   build:
     name: build distributions
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
 
@@ -128,6 +129,11 @@ jobs:
     name: upload to PyPI
     needs: build
     runs-on: ubuntu-latest
+    # There is no longer an approval gate here, so this job starts as soon as the
+    # build hands over its artifact and should finish in well under a minute.
+    # 15 is slack, not a target. Without it, a publish that hangs inside PyPI
+    # would sit for the six-hour default with the version half-shipped.
+    timeout-minutes: 15
     environment: pypi
     # Two publishes must never overlap: both would ship the same version and the
     # loser would fail on a duplicate upload. Queue rather than cancel, since a
