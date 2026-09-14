@@ -14,19 +14,31 @@ name: release
 # Triggered by publishing a GitHub Release. Bump the version in
 # python/pyproject.toml first: PyPI refuses to overwrite an existing version.
 #
-# IMPORTANT, and the reason this comment exists: the `pypi` environment has a
-# "Required reviewers" protection rule. The publish job therefore does NOT run
-# when the release is published. It parks in a "Waiting" state until a listed
-# reviewer clicks "Approve and deploy" on the run page. Nothing notifies you
-# that this is needed, and GitHub expires the pending approval after 30 days,
-# at which point the run fails with:
+# On required reviewers, and why there are none on this environment any more.
+#
+# Roughly 2026-07-23 the `pypi` environment was given a "Required reviewers"
+# rule. The effect was that the publish job did not run when a release was
+# published: it parked in a "Waiting" state until a listed reviewer clicked
+# "Approve and deploy" on the run page. Nothing notified anyone that a click
+# was needed, and GitHub expires a pending approval after 30 days, at which
+# point the run fails with:
 #
 #   The deployment was rejected or didn't satisfy other protection rules.
 #
-# That is not a build failure. It is an approval that was never given. If you
-# are the only reviewer, approve it immediately, or drop the rule entirely
-# (Settings -> Environments -> pypi) since Trusted Publishing is already
-# gated by OIDC identity rather than by a human.
+# That message reads like a broken build. It is not. v0.4.0 was lost to it (the
+# build job passed, the publish job ran zero steps), and the failure only
+# surfaced a month later, long after the release had been forgotten about.
+#
+# The rule was removed on 2026-09-14 (Settings -> Environments -> pypi). The
+# environment itself was deliberately KEPT: its name is part of the Trusted
+# Publisher identity registered on PyPI, and deleting it would drop the
+# `environment` claim from the OIDC token, breaking publishing with
+# `invalid-publisher`. Removing the rule only removes the human gate.
+#
+# So: do not re-add required reviewers. Trusted Publishing is already gated by
+# OIDC identity, which proves that only this repository, this workflow and this
+# environment may upload. A reviewer click adds no real protection for a
+# single-maintainer package: it is an unattended, silently-expiring outage.
 
 on:
   release:
