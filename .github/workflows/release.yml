@@ -13,6 +13,20 @@ name: release
 #
 # Triggered by publishing a GitHub Release. Bump the version in
 # python/pyproject.toml first: PyPI refuses to overwrite an existing version.
+#
+# IMPORTANT, and the reason this comment exists: the `pypi` environment has a
+# "Required reviewers" protection rule. The publish job therefore does NOT run
+# when the release is published. It parks in a "Waiting" state until a listed
+# reviewer clicks "Approve and deploy" on the run page. Nothing notifies you
+# that this is needed, and GitHub expires the pending approval after 30 days,
+# at which point the run fails with:
+#
+#   The deployment was rejected or didn't satisfy other protection rules.
+#
+# That is not a build failure. It is an approval that was never given. If you
+# are the only reviewer, approve it immediately, or drop the rule entirely
+# (Settings -> Environments -> pypi) since Trusted Publishing is already
+# gated by OIDC identity rather than by a human.
 
 on:
   release:
@@ -51,6 +65,48 @@ jobs:
           python -m pip install --upgrade pip build
           python -m build python
 
+      # Fail here, with a sentence a human can act on, rather than in the
+      # publish job with PyPI's "File already exists" 400. A re-run of an old
+      # release, or a release cut before the version was bumped, otherwise
+      # looks like a broken workflow when it is really a version collision.
+      - name: Refuse to publish a version PyPI already has
+        run: |
+          python - <<'PY'
+          import json, pathlib, re, sys, urllib.error, urllib.request
+
+          version = re.search(
+              r'^version = "([^"]+)"',
+              pathlib.Path("python/pyproject.toml").read_text(encoding="utf-8"),
+              re.MULTILINE,
+          ).group(1)
+
+          try:
+              with urllib.request.urlopen(
+                      "https://pypi.org/pypi/splatset/json", timeout=30) as r:
+                  release_doc = json.load(r)
+              existing = [v for v, files in release_doc["releases"].items() if files]
+          except urllib.error.HTTPError as exc:
+              if exc.code == 404:
+                  existing = []          # the project does not exist yet
+              else:
+                  print(f"::warning::could not read PyPI metadata ({exc}); "
+                        f"skipping the duplicate-version check")
+                  sys.exit(0)
+          except Exception as exc:       # a network blip must not block a release
+              print(f"::warning::could not reach PyPI ({exc}); "
+                    f"skipping the duplicate-version check")
+              sys.exit(0)
+
+          if version in existing:
+              raise SystemExit(
+                  f"splatset {version} is already on PyPI, so this release would "
+                  f"be rejected with 'File already exists'. Bump the version in "
+                  f"python/pyproject.toml and cut a new release: PyPI never allows "
+                  f"a version to be uploaded twice."
+              )
+          print(f"splatset {version} is not on PyPI yet, so it is free to publish")
+          PY
+
       - uses: actions/upload-artifact@v7
         with:
           name: dist
@@ -61,6 +117,13 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     environment: pypi
+    # Two publishes must never overlap: both would ship the same version and the
+    # loser would fail on a duplicate upload. Queue rather than cancel, since a
+    # cancelled publish could be cancelled after PyPI already accepted the file.
+    # Scoped to this job so a pending approval cannot hold up the next build.
+    concurrency:
+      group: release-pypi
+      cancel-in-progress: false
     permissions:
       # Mandatory for Trusted Publishing. Nothing else is needed, and no
       # username, password or token is set anywhere in this workflow.
